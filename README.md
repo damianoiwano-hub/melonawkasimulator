@@ -1,20 +1,26 @@
-# Melonawka Użytkownik Simulator V5
+# Melonawka Użytkownik Simulator V7
 
-Wersja **career-only**. Użytkownik nie może dodawać, usuwać, edytować, importować ani eksportować eventów. Gra korzysta wyłącznie z dołączonej, stałej bazy 172 eventów.
+Wersja V7 rozwija symulator o coroczną galę **Złote Melony** oraz zdarzenia automatyczne bez decyzji.
 
-## Zasady
-- każda nowa kariera zaczyna się od **LVL 1 i 0 XP**,
-- czas kariery jest liczony w **tygodniach**,
-- każdy event ma dokładnie trzy możliwe typy skutku: **pozytywny, negatywny, neutralny**,
-- kolejność trzech odpowiedzi jest losowana, więc nie da się rozpoznać typu skutku po pozycji przycisku,
-- punkty i zmiany statystyk są ujawniane dopiero po decyzji,
-- neutralna odpowiedź nie zmienia statystyk,
-- poziom rośnie co 250 XP i jest pokazany paskiem postępu.
+## Złote Melony
+- kariera zaczyna się w roku 2026,
+- 52 tygodnie symulatora = 1 rok,
+- w każdym roku można przeprowadzić galę dokładnie raz,
+- w panelu gali można dodawać dowolnych użytkowników / nominowanych,
+- aktywny użytkownik kariery jest nominowany automatycznie,
+- kategoria `Użytkownik Roku` jest rozstrzygana całkowicie losowo,
+- po gali zapisywany jest pełny ranking i zwycięzca,
+- po przejściu do kolejnego roku dostępna jest nowa edycja gali.
 
-## Zakończenia
-**Moderator:** LVL 10+, zaufanie 80+, reputacja 75+, kontrowersyjność do 35 i minimum 26 tygodni kariery.
+## Losowe zdarzenia bez decyzji
+Aplikacja posiada osobną bazę `data/automatic-events.json`. Te sytuacje pojawiają się losowo podczas kariery i są rozstrzygane automatycznie — gracz nie dostaje żadnego przycisku decyzji.
 
-**Ban:** reputacja <= 3 albo zaufanie <= 3 albo kontrowersyjność >= 98.
+Bazę można rozwijać bez modyfikacji kodu. Szczegóły: `data/README_ZDARZENIA_AUTOMATYCZNE.md`.
+
+## Zwykłe eventy
+Pozostają w paczkach wymienionych w `data/database.json`. Gracz nie ma dostępu do edytora eventów z poziomu interfejsu.
 
 ## Uruchomienie
-Uruchom `run.bat`. Aplikacja otworzy się na `http://localhost:8790/`.
+Uruchom `run.bat`. Wersja lokalna startuje na porcie 8797.
+
+Docelowa domena projektu pozostaje: `https://melonawkasimulator.pl/`.

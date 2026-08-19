@@ -1,7 +1,7 @@
 {
   "name": "Melonawka Użytkownik Simulator",
   "short_name": "Melonawka Sim",
-  "start_url": "./index.html",
+  "start_url": "https://melonawkasimulator.pl/",
   "display": "standalone",
   "background_color": "#0d0b10",
   "theme_color": "#151218",
@@ -12,5 +12,7 @@
       "type": "image/svg+xml",
       "purpose": "any maskable"
     }
-  ]
+  ],
+  "scope": "https://melonawkasimulator.pl/",
+  "id": "https://melonawkasimulator.pl/"
 }
