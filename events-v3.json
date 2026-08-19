@@ -1,0 +1,6826 @@
+[
+  {
+    "id": "first_post",
+    "title": "Pierwszy większy post",
+    "category": "SPOŁECZNOŚĆ",
+    "description": "Masz okazję napisać coś, co zobaczy spora część Melonawki.",
+    "weight": 14,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Napisz rzeczowo",
+        "result": "Post został dobrze przyjęty.",
+        "effects": {
+          "reputation": 6,
+          "activity": 5,
+          "trust": 4,
+          "popularity": 2,
+          "score": 30
+        }
+      },
+      {
+        "label": "Idź w kontrowersję",
+        "result": "Dyskusja eksplodowała.",
+        "effects": {
+          "popularity": 8,
+          "controversy": 10,
+          "reputation": -3,
+          "activity": 6,
+          "score": 18
+        }
+      },
+      {
+        "label": "Obróć to w żart",
+        "result": "Zamiast pompować temat, rozładowujesz sytuację żartem.",
+        "effects": {
+          "popularity": 3,
+          "trust": 2,
+          "controversy": -1,
+          "score": 16
+        }
+      }
+    ]
+  },
+  {
+    "id": "meme",
+    "title": "Mem trafia w punkt",
+    "category": "MEMY",
+    "description": "Wrzucony przez ciebie mem zaczyna krążyć po społeczności.",
+    "weight": 12,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Dokręć serię",
+        "result": "Kolejne memy też wchodzą dobrze.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "reputation": 3,
+          "streak": 1,
+          "score": 35
+        }
+      },
+      {
+        "label": "Zakończ na szczycie",
+        "result": "Jeden dobry mem wystarczył.",
+        "effects": {
+          "popularity": 5,
+          "trust": 3,
+          "reputation": 4,
+          "score": 28
+        }
+      },
+      {
+        "label": "Wrzuć tylko reakcję",
+        "result": "Nie dokładasz kolejnego posta, ale zostawiasz po sobie ślad.",
+        "effects": {
+          "activity": 2,
+          "popularity": 3,
+          "score": 14
+        }
+      }
+    ]
+  },
+  {
+    "id": "drama",
+    "title": "Nocna drama",
+    "category": "DRAMA",
+    "description": "Ktoś oznacza cię w gorącej dyskusji i oczekuje reakcji.",
+    "weight": 9,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Odpuść",
+        "result": "Drama sama wygasła.",
+        "effects": {
+          "trust": 7,
+          "reputation": 5,
+          "activity": -2,
+          "controversy": -4,
+          "score": 30
+        }
+      },
+      {
+        "label": "Wchodzę w to",
+        "result": "Przez godzinę jesteś centrum dramy.",
+        "effects": {
+          "activity": 10,
+          "popularity": 7,
+          "controversy": 15,
+          "trust": -7,
+          "reputation": -5,
+          "score": 15
+        }
+      },
+      {
+        "label": "Wycofaj się z popcornem",
+        "result": "Nie gasisz pożaru i nie dolewasz benzyny. Po prostu patrzysz z boku.",
+        "effects": {
+          "controversy": -3,
+          "trust": 2,
+          "activity": -1,
+          "score": 12
+        }
+      }
+    ]
+  },
+  {
+    "id": "help",
+    "title": "Nowy użytkownik prosi o pomoc",
+    "category": "SPOŁECZNOŚĆ",
+    "description": "Świeże konto zadaje pytanie, na które znasz odpowiedź.",
+    "weight": 11,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Pomóż dokładnie",
+        "result": "Pomoc została doceniona.",
+        "effects": {
+          "trust": 8,
+          "reputation": 7,
+          "activity": 4,
+          "score": 40
+        }
+      },
+      {
+        "label": "Krótka odpowiedź",
+        "result": "Problem rozwiązany bez rozgłosu.",
+        "effects": {
+          "trust": 3,
+          "reputation": 2,
+          "activity": 2,
+          "score": 18
+        }
+      },
+      {
+        "label": "Obróć to w żart",
+        "result": "Zamiast pompować temat, rozładowujesz sytuację żartem.",
+        "effects": {
+          "popularity": 3,
+          "trust": 2,
+          "controversy": -1,
+          "score": 16
+        }
+      }
+    ]
+  },
+  {
+    "id": "inside",
+    "title": "Rodzisz inside joke",
+    "category": "KULTURA",
+    "description": "Jedno twoje zdanie zaczyna być cytowane przez innych.",
+    "weight": 8,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podtrzymuj żart",
+        "result": "Żart staje się częścią lokalnego folkloru.",
+        "effects": {
+          "popularity": 12,
+          "reputation": 5,
+          "activity": 8,
+          "score": 55
+        }
+      },
+      {
+        "label": "Udawaj, że nie wiesz",
+        "result": "Dystans tylko napędza popularność.",
+        "effects": {
+          "popularity": 8,
+          "trust": 4,
+          "score": 38
+        }
+      },
+      {
+        "label": "Zrób z tego lokalny mem",
+        "result": "Przekuwasz sytuację w żart, który żyje jeszcze kilka dni.",
+        "effects": {
+          "popularity": 5,
+          "activity": 3,
+          "score": 24
+        }
+      }
+    ]
+  },
+  {
+    "id": "warning",
+    "title": "Ostrzeżenie moderacji",
+    "category": "MODERACJA",
+    "description": "Twoja ostatnia aktywność przekroczyła granicę regulaminu.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przyjmij ostrzeżenie",
+        "result": "Temat szybko się kończy.",
+        "effects": {
+          "controversy": -6,
+          "trust": 3,
+          "reputation": 2,
+          "score": 12
+        }
+      },
+      {
+        "label": "Kłóć się publicznie",
+        "result": "Konflikt robi się większy.",
+        "effects": {
+          "controversy": 14,
+          "popularity": 6,
+          "trust": -10,
+          "reputation": -8,
+          "score": -5
+        }
+      },
+      {
+        "label": "Napisz prywatnie",
+        "result": "Załatwiasz sprawę poza publicznym kanałem i ograniczasz widowisko.",
+        "effects": {
+          "trust": 5,
+          "controversy": -4,
+          "reputation": 2,
+          "score": 20
+        }
+      }
+    ]
+  },
+  {
+    "id": "community",
+    "title": "Wspólna akcja społeczności",
+    "category": "EVENT",
+    "description": "Rusza większa akcja organizowana przez użytkowników.",
+    "weight": 10,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Pomóż organizować",
+        "result": "Twój wkład jest widoczny.",
+        "effects": {
+          "activity": 12,
+          "trust": 10,
+          "reputation": 8,
+          "popularity": 4,
+          "melons": 25,
+          "score": 65
+        }
+      },
+      {
+        "label": "Tylko obserwuj",
+        "result": "Łapiesz kontekst bez presji.",
+        "effects": {
+          "trust": 2,
+          "controversy": -3,
+          "score": 10
+        }
+      },
+      {
+        "label": "Wpadnij tylko na chwilę",
+        "result": "Pojawiasz się, zostawiasz reakcję i nie bierzesz całego ciężaru na siebie.",
+        "effects": {
+          "activity": 3,
+          "trust": 3,
+          "score": 18
+        }
+      }
+    ]
+  },
+  {
+    "id": "viral",
+    "title": "Opinia staje się viralem",
+    "category": "DYSKUSJA",
+    "description": "Twój komentarz wychodzi poza Melonawkę.",
+    "weight": 7,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Wykorzystaj zasięg",
+        "result": "Budujesz rozpoznawalność.",
+        "effects": {
+          "popularity": 15,
+          "activity": 7,
+          "controversy": 4,
+          "reputation": 3,
+          "score": 70
+        }
+      },
+      {
+        "label": "Usuń komentarz",
+        "result": "Unikasz eskalacji.",
+        "effects": {
+          "trust": 6,
+          "controversy": -8,
+          "popularity": -2,
+          "score": 30
+        }
+      },
+      {
+        "label": "Zadaj jedno celne pytanie",
+        "result": "Zamiast pisać ścianę tekstu, wrzucasz pytanie, które zmienia ton rozmowy.",
+        "effects": {
+          "reputation": 4,
+          "trust": 3,
+          "controversy": -2,
+          "score": 22
+        }
+      }
+    ]
+  },
+  {
+    "id": "burnout",
+    "title": "Zmęczenie Melonawką",
+    "category": "ŻYCIE",
+    "description": "Po wielu aktywnych tygodniach potrzebujesz przerwy.",
+    "weight": 7,
+    "minTurn": 6,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zrób przerwę",
+        "result": "Wracasz z lepszym nastawieniem.",
+        "effects": {
+          "activity": -8,
+          "controversy": -7,
+          "trust": 4,
+          "reputation": 2,
+          "score": 20
+        }
+      },
+      {
+        "label": "Gram dalej",
+        "result": "Aktywność wysoka, ale rośnie ryzyko konfliktów.",
+        "effects": {
+          "activity": 7,
+          "controversy": 8,
+          "trust": -3,
+          "score": 12
+        }
+      },
+      {
+        "label": "Zrób pół kroku w tył",
+        "result": "Nie znikasz całkiem, ale ograniczasz obecność i odzyskujesz spokój.",
+        "effects": {
+          "activity": -3,
+          "controversy": -4,
+          "trust": 2,
+          "score": 15
+        }
+      }
+    ]
+  },
+  {
+    "id": "trusted",
+    "title": "Ludzie zaczynają ci ufać",
+    "category": "POZYCJA",
+    "description": "Coraz częściej inni oznaczają cię po opinię lub pomoc.",
+    "weight": 6,
+    "minTurn": 8,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Weź odpowiedzialność",
+        "result": "Stajesz się rozpoznawalnym użytkownikiem.",
+        "effects": {
+          "trust": 12,
+          "reputation": 10,
+          "popularity": 7,
+          "activity": 5,
+          "score": 80
+        }
+      },
+      {
+        "label": "Zachowaj dystans",
+        "result": "Twoja pozycja i tak rośnie.",
+        "effects": {
+          "trust": 6,
+          "reputation": 5,
+          "popularity": 3,
+          "score": 42
+        }
+      },
+      {
+        "label": "Zagraj skromnego",
+        "result": "Nie pompujesz ego. Ludzie i tak wiedzą swoje.",
+        "effects": {
+          "reputation": 5,
+          "trust": 5,
+          "popularity": 2,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "shitpost_spree",
+    "title": "Shitpostowa ofensywa",
+    "category": "MEMY",
+    "description": "Masz wenę i przez pół godziny wrzucasz jeden głupszy post za drugim. Ludzie albo płaczą ze śmiechu, albo chcą cię udusić.",
+    "weight": 11,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Jebać hamulce, lecimy",
+        "result": "Kanał tonie w twoich shitpostach. Zasięg rośnie jak pojebany.",
+        "effects": {
+          "activity": 12,
+          "popularity": 10,
+          "controversy": 8,
+          "reputation": -3,
+          "score": 42
+        }
+      },
+      {
+        "label": "Dobra, wystarczy tego gówna",
+        "result": "Kończysz zanim wszystkim odjebie.",
+        "effects": {
+          "trust": 5,
+          "reputation": 4,
+          "activity": 3,
+          "score": 24
+        }
+      },
+      {
+        "label": "Wrzuć tylko reakcję",
+        "result": "Nie dokładasz kolejnego posta, ale zostawiasz po sobie ślad.",
+        "effects": {
+          "activity": 2,
+          "popularity": 3,
+          "score": 14
+        }
+      }
+    ]
+  },
+  {
+    "id": "rage_quit_voice",
+    "title": "Ktoś drze mordę na voice",
+    "category": "WKURW",
+    "description": "Na voice ktoś od dziesięciu minut pierdoli dokładnie to samo i przerywa każdemu. Masz ochotę wyłączyć mu internet siłą woli.",
+    "weight": 10,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Powiedz: „zamknij wreszcie mordę”",
+        "result": "Zapada pięć sekund ciszy. Potem zaczyna się nowa drama.",
+        "effects": {
+          "controversy": 12,
+          "popularity": 5,
+          "activity": 6,
+          "trust": -4,
+          "score": 18
+        }
+      },
+      {
+        "label": "Wycisz i miej wyjebane",
+        "result": "Nagle odkrywasz piękno ciszy i zdrowia psychicznego.",
+        "effects": {
+          "controversy": -6,
+          "trust": 4,
+          "reputation": 3,
+          "score": 28
+        }
+      },
+      {
+        "label": "Policz do dziesięciu",
+        "result": "Wkurw nie znika, ale przynajmniej nie robisz z niego eventu tygodnia.",
+        "effects": {
+          "controversy": -5,
+          "trust": 3,
+          "reputation": 2,
+          "score": 18
+        }
+      }
+    ]
+  },
+  {
+    "id": "admin_ping",
+    "title": "@everyone o trzeciej w nocy",
+    "category": "CHAOS",
+    "description": "Ktoś odpala @everyone z wiadomością „WAŻNE!!!”, a w środku jest absolutne gówno niewarte powiadomienia.",
+    "weight": 9,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Napisz „po chuj pingujesz?”",
+        "result": "Połowa serwera przyznaje ci rację, druga połowa obudziła się tylko po to, żeby się pokłócić.",
+        "effects": {
+          "reputation": 4,
+          "controversy": 8,
+          "activity": 5,
+          "popularity": 3,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zignoruj to gówno",
+        "result": "Telefon odkładasz ekranem do dołu i śpisz dalej.",
+        "effects": {
+          "trust": 3,
+          "controversy": -4,
+          "score": 18
+        }
+      },
+      {
+        "label": "Wrzuć reakcję i zniknij",
+        "result": "Dajesz znać, że widziałeś ten absurd, po czym uciekasz zanim zrobi się gorzej.",
+        "effects": {
+          "popularity": 3,
+          "activity": 2,
+          "controversy": 1,
+          "score": 16
+        }
+      }
+    ]
+  },
+  {
+    "id": "stupid_poll",
+    "title": "Najgłupsza ankieta tygodnia",
+    "category": "MEMY",
+    "description": "Ktoś wrzuca ankietę tak bezsensowną, że aż piękną. Pytanie brzmi jak wymyślone po czterech energetykach i utracie godności.",
+    "weight": 9,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Dorzuć jeszcze głupszą opcję",
+        "result": "Ankieta staje się małym lokalnym arcydziełem debilizmu.",
+        "effects": {
+          "popularity": 7,
+          "activity": 6,
+          "reputation": 2,
+          "score": 30
+        }
+      },
+      {
+        "label": "Napisz „co za debil to wymyślił”",
+        "result": "Autor bierze to zaskakująco osobiście.",
+        "effects": {
+          "controversy": 7,
+          "trust": -2,
+          "popularity": 3,
+          "score": 14
+        }
+      },
+      {
+        "label": "Wrzuć tylko reakcję",
+        "result": "Nie dokładasz kolejnego posta, ale zostawiasz po sobie ślad.",
+        "effects": {
+          "activity": 2,
+          "popularity": 3,
+          "score": 14
+        }
+      }
+    ]
+  },
+  {
+    "id": "mod_power_trip",
+    "title": "Moderatorowi lekko odpierdoliło",
+    "category": "MODERACJA",
+    "description": "Moderator zaczyna kasować wiadomości jak kombajn, bo „porządek musi być”. Nikt nie wie, co dokładnie jest dziś zakazane.",
+    "weight": 8,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zapytaj publicznie „wszystko okej?”",
+        "result": "Pytanie jest grzeczne, ale wszyscy wiedzą, o co chodzi.",
+        "effects": {
+          "trust": 7,
+          "reputation": 5,
+          "controversy": 4,
+          "score": 34
+        }
+      },
+      {
+        "label": "Napisz „ale ci władza odjebała”",
+        "result": "Dostajesz reakcje, cytaty i bardzo szybkie zainteresowanie moderacji.",
+        "effects": {
+          "popularity": 8,
+          "controversy": 16,
+          "trust": -7,
+          "reputation": -5,
+          "score": 20
+        }
+      },
+      {
+        "label": "Napisz prywatnie",
+        "result": "Załatwiasz sprawę poza publicznym kanałem i ograniczasz widowisko.",
+        "effects": {
+          "trust": 5,
+          "controversy": -4,
+          "reputation": 2,
+          "score": 20
+        }
+      }
+    ]
+  },
+  {
+    "id": "friend_roast",
+    "title": "Kumpel wystawia cię do odstrzału",
+    "category": "EKIPA",
+    "description": "Znajomy wrzuca twoją starą kompromitującą wiadomość i podpisuje ją „nigdy nie zapominajmy”. Skurczybyk czekał na ten moment miesiącami.",
+    "weight": 9,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Odpłać jeszcze gorszym screenem",
+        "result": "Rozpoczyna się pełnoprawna wojna archiwalnych kompromitacji.",
+        "effects": {
+          "activity": 9,
+          "popularity": 9,
+          "controversy": 5,
+          "trust": 2,
+          "score": 40
+        }
+      },
+      {
+        "label": "Przyjmij roast na klatę",
+        "result": "Śmiejesz się z siebie i wychodzisz z tego z klasą.",
+        "effects": {
+          "reputation": 7,
+          "trust": 7,
+          "popularity": 4,
+          "score": 38
+        }
+      },
+      {
+        "label": "Odbij żart pół-żartem",
+        "result": "Nie odpuszczasz całkiem, ale też nie odpalasz wojny totalnej.",
+        "effects": {
+          "popularity": 4,
+          "trust": 3,
+          "controversy": 2,
+          "score": 20
+        }
+      }
+    ]
+  },
+  {
+    "id": "bad_take",
+    "title": "Palnąłeś kompletną głupotę",
+    "category": "DYSKUSJA",
+    "description": "Piszesz komentarz z pełnym przekonaniem, po czym okazuje się, że nie masz racji nawet w połowie. Cytaty już lecą.",
+    "weight": 10,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przyznaj „dobra, zjebałem”",
+        "result": "Ku zaskoczeniu wszystkich internet się nie zawalił po przyznaniu do błędu.",
+        "effects": {
+          "trust": 10,
+          "reputation": 7,
+          "controversy": -4,
+          "score": 40
+        }
+      },
+      {
+        "label": "Brnij w to gówno dalej",
+        "result": "Każda kolejna wiadomość jest jak łopata pogłębiająca dół.",
+        "effects": {
+          "controversy": 15,
+          "trust": -12,
+          "reputation": -10,
+          "popularity": 6,
+          "score": -8
+        }
+      },
+      {
+        "label": "Zadaj jedno celne pytanie",
+        "result": "Zamiast pisać ścianę tekstu, wrzucasz pytanie, które zmienia ton rozmowy.",
+        "effects": {
+          "reputation": 4,
+          "trust": 3,
+          "controversy": -2,
+          "score": 22
+        }
+      }
+    ]
+  },
+  {
+    "id": "deleted_message",
+    "title": "Ktoś usuwa wiadomość sekundę za późno",
+    "category": "DRAMA",
+    "description": "Widzisz wiadomość, która znika po dwóch sekundach. Niestety zdążyłeś przeczytać i było tam grubo.",
+    "weight": 8,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Udawaj, że nic nie widziałeś",
+        "result": "Zachowujesz wiedzę dla siebie. Rare internet W.",
+        "effects": {
+          "trust": 8,
+          "reputation": 4,
+          "controversy": -3,
+          "score": 35
+        }
+      },
+      {
+        "label": "Napisz „XDDDD ZA PÓŹNO”",
+        "result": "Autor wie już, że katastrofa została zarejestrowana przez świadków.",
+        "effects": {
+          "popularity": 6,
+          "controversy": 10,
+          "activity": 6,
+          "trust": -3,
+          "score": 24
+        }
+      },
+      {
+        "label": "Wycofaj się z popcornem",
+        "result": "Nie gasisz pożaru i nie dolewasz benzyny. Po prostu patrzysz z boku.",
+        "effects": {
+          "controversy": -3,
+          "trust": 2,
+          "activity": -1,
+          "score": 12
+        }
+      }
+    ]
+  },
+  {
+    "id": "copypasta",
+    "title": "Powstaje pasta o tobie",
+    "category": "KULTURA",
+    "description": "Ktoś przerabia twoją wypowiedź na copypastę. Teraz pojawia się wszędzie, nawet tam gdzie kompletnie nie pasuje.",
+    "weight": 7,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podpisz się pod tym cyrkiem",
+        "result": "Przejmujesz żart i oficjalnie stajesz się częścią memicznego folkloru.",
+        "effects": {
+          "popularity": 13,
+          "reputation": 5,
+          "activity": 5,
+          "score": 58
+        }
+      },
+      {
+        "label": "Wkurw się i żądaj kasowania",
+        "result": "Efekt Streisand robi swoje. Pasta żyje dwa razy mocniej.",
+        "effects": {
+          "popularity": 15,
+          "controversy": 10,
+          "trust": -5,
+          "reputation": -3,
+          "score": 30
+        }
+      },
+      {
+        "label": "Zrób z tego lokalny mem",
+        "result": "Przekuwasz sytuację w żart, który żyje jeszcze kilka dni.",
+        "effects": {
+          "popularity": 5,
+          "activity": 3,
+          "score": 24
+        }
+      }
+    ]
+  },
+  {
+    "id": "fake_leak",
+    "title": "Ktoś wrzuca „wyciek”",
+    "category": "DRAMA",
+    "description": "Na serwer wpada screen wyglądający jak potężny wyciek. Problem w tym, że może być równie dobrze zrobiony w Paincie przez znudzonego idiotę.",
+    "weight": 7,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Sprawdź zanim zaczniesz pierdolić",
+        "result": "Okazuje się, że screen był spreparowany. Oszczędzasz sobie kompromitacji.",
+        "effects": {
+          "trust": 9,
+          "reputation": 7,
+          "controversy": -4,
+          "score": 45
+        }
+      },
+      {
+        "label": "Podaj dalej bez sprawdzania",
+        "result": "Fake rozchodzi się szeroko, a potem wszyscy pytają, kto to kurwa wrzucił pierwszy.",
+        "effects": {
+          "activity": 8,
+          "popularity": 7,
+          "controversy": 16,
+          "trust": -13,
+          "reputation": -9,
+          "score": -5
+        }
+      },
+      {
+        "label": "Wycofaj się z popcornem",
+        "result": "Nie gasisz pożaru i nie dolewasz benzyny. Po prostu patrzysz z boku.",
+        "effects": {
+          "controversy": -3,
+          "trust": 2,
+          "activity": -1,
+          "score": 12
+        }
+      }
+    ]
+  },
+  {
+    "id": "spam_dm",
+    "title": "Dziwny typ spamuje ci DM",
+    "category": "WKURW",
+    "description": "Dostajesz serię piętnastu wiadomości „halo?”, „jesteś?”, „odpisz”, „???”. Minęły trzy minuty.",
+    "weight": 9,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Odpisz „człowieku, opanuj się”",
+        "result": "Spam ustaje, choć atmosfera robi się kwaśna.",
+        "effects": {
+          "controversy": 4,
+          "trust": 2,
+          "reputation": 2,
+          "score": 20
+        }
+      },
+      {
+        "label": "Blok i święty spokój",
+        "result": "Jednym kliknięciem odzyskujesz wolność.",
+        "effects": {
+          "controversy": -5,
+          "trust": 4,
+          "score": 26
+        }
+      },
+      {
+        "label": "Policz do dziesięciu",
+        "result": "Wkurw nie znika, ale przynajmniej nie robisz z niego eventu tygodnia.",
+        "effects": {
+          "controversy": -5,
+          "trust": 3,
+          "reputation": 2,
+          "score": 18
+        }
+      }
+    ]
+  },
+  {
+    "id": "server_down",
+    "title": "Melonawka leży i kwiczy",
+    "category": "CHAOS",
+    "description": "Serwer albo usługa pada dokładnie wtedy, gdy dzieje się coś ciekawego. Wszyscy spamują „DZIAŁA WAM?”.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zacznij relację „koniec świata”",
+        "result": "Robisz z awarii event sam w sobie.",
+        "effects": {
+          "activity": 8,
+          "popularity": 6,
+          "score": 30
+        }
+      },
+      {
+        "label": "Idź dotknąć trawy",
+        "result": "Przez trzydzieści minut jesteś człowiekiem wolnym od powiadomień.",
+        "effects": {
+          "controversy": -5,
+          "trust": 2,
+          "activity": -3,
+          "score": 18
+        }
+      },
+      {
+        "label": "Wrzuć reakcję i zniknij",
+        "result": "Dajesz znać, że widziałeś ten absurd, po czym uciekasz zanim zrobi się gorzej.",
+        "effects": {
+          "popularity": 3,
+          "activity": 2,
+          "controversy": 1,
+          "score": 16
+        }
+      }
+    ]
+  },
+  {
+    "id": "bad_nickname",
+    "title": "Nick dnia: absolutny dramat",
+    "category": "MEMY",
+    "description": "Nowy użytkownik wchodzi z nickiem tak przekombinowanym, że nikt nie jest w stanie go przeczytać bez zająknięcia.",
+    "weight": 8,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Wymyśl mu normalną ksywę",
+        "result": "Nowa ksywa przykleja się natychmiast i ratuje wszystkim życie.",
+        "effects": {
+          "popularity": 5,
+          "reputation": 4,
+          "activity": 4,
+          "score": 28
+        }
+      },
+      {
+        "label": "Roastuj nick bez litości",
+        "result": "Publiczność ma ubaw, właściciel nicku trochę mniej.",
+        "effects": {
+          "popularity": 7,
+          "controversy": 7,
+          "trust": -3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Wrzuć tylko reakcję",
+        "result": "Nie dokładasz kolejnego posta, ale zostawiasz po sobie ślad.",
+        "effects": {
+          "activity": 2,
+          "popularity": 3,
+          "score": 14
+        }
+      }
+    ]
+  },
+  {
+    "id": "voice_echo",
+    "title": "Mikrofon z piekła rodem",
+    "category": "WKURW",
+    "description": "Ktoś ma echo tak potężne, że słyszysz własny głos z opóźnieniem trzy razy. Psychika zaczyna się rozpadać.",
+    "weight": 9,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Poproś normalnie o poprawę mikrofonu",
+        "result": "Po chwili jest ciszej i wszyscy odzyskują rozum.",
+        "effects": {
+          "trust": 5,
+          "reputation": 3,
+          "score": 22
+        }
+      },
+      {
+        "label": "Krzyknij „KURWA WYŁĄCZ TO”",
+        "result": "Technicznie problem rozwiązany. Dyplomatycznie — niekoniecznie.",
+        "effects": {
+          "activity": 5,
+          "controversy": 8,
+          "popularity": 3,
+          "trust": -4,
+          "score": 16
+        }
+      },
+      {
+        "label": "Policz do dziesięciu",
+        "result": "Wkurw nie znika, ale przynajmniej nie robisz z niego eventu tygodnia.",
+        "effects": {
+          "controversy": -5,
+          "trust": 3,
+          "reputation": 2,
+          "score": 18
+        }
+      }
+    ]
+  },
+  {
+    "id": "old_post_bump",
+    "title": "Ktoś odkopuje post sprzed wieków",
+    "category": "CHAOS",
+    "description": "Użytkownik odpowiada na dyskusję sprzed dwóch lat tak, jakby wydarzyła się pięć minut temu.",
+    "weight": 7,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Napisz „archeolog roku”",
+        "result": "Komentarz staje się jedyną rozsądną odpowiedzią na całą sytuację.",
+        "effects": {
+          "popularity": 5,
+          "reputation": 3,
+          "score": 24
+        }
+      },
+      {
+        "label": "Wejdź w dyskusję jakby nic się nie stało",
+        "result": "Stary trup wstaje z grobu i znowu zaczyna się napierdalanka argumentów.",
+        "effects": {
+          "activity": 9,
+          "controversy": 8,
+          "popularity": 4,
+          "score": 25
+        }
+      },
+      {
+        "label": "Wrzuć reakcję i zniknij",
+        "result": "Dajesz znać, że widziałeś ten absurd, po czym uciekasz zanim zrobi się gorzej.",
+        "effects": {
+          "popularity": 3,
+          "activity": 2,
+          "controversy": 1,
+          "score": 16
+        }
+      }
+    ]
+  },
+  {
+    "id": "overreaction",
+    "title": "Ktoś obraża się o absolutne nic",
+    "category": "DRAMA",
+    "description": "Niewinny żart zostaje potraktowany jak deklaracja wojny. Powstaje ściana tekstu dłuższa niż regulamin.",
+    "weight": 10,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Spróbuj rozbroić sytuację",
+        "result": "Po kilku wiadomościach napięcie schodzi. Cud.",
+        "effects": {
+          "trust": 8,
+          "reputation": 6,
+          "controversy": -5,
+          "score": 35
+        }
+      },
+      {
+        "label": "Napisz „ale cię odkleiło”",
+        "result": "Jedno zdanie działa jak benzyna na ognisko.",
+        "effects": {
+          "popularity": 5,
+          "controversy": 13,
+          "trust": -5,
+          "score": 15
+        }
+      },
+      {
+        "label": "Wycofaj się z popcornem",
+        "result": "Nie gasisz pożaru i nie dolewasz benzyny. Po prostu patrzysz z boku.",
+        "effects": {
+          "controversy": -3,
+          "trust": 2,
+          "activity": -1,
+          "score": 12
+        }
+      }
+    ]
+  },
+  {
+    "id": "screenshot_out_context",
+    "title": "Screen wyrwany z kontekstu",
+    "category": "DRAMA",
+    "description": "Ktoś wrzuca fragment twojej wypowiedzi bez wiadomości przed i po. Wygląda to dużo gorzej niż powinno.",
+    "weight": 8,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Wrzuć cały kontekst",
+        "result": "Pełny zapis prostuje sytuację i część ludzi przeprasza.",
+        "effects": {
+          "trust": 9,
+          "reputation": 8,
+          "controversy": -7,
+          "score": 48
+        }
+      },
+      {
+        "label": "Odpal kontratak",
+        "result": "Zamiast wyjaśnienia dostajecie trzy godziny wojny screenów.",
+        "effects": {
+          "activity": 12,
+          "controversy": 14,
+          "popularity": 7,
+          "trust": -7,
+          "score": 22
+        }
+      },
+      {
+        "label": "Wycofaj się z popcornem",
+        "result": "Nie gasisz pożaru i nie dolewasz benzyny. Po prostu patrzysz z boku.",
+        "effects": {
+          "controversy": -3,
+          "trust": 2,
+          "activity": -1,
+          "score": 12
+        }
+      }
+    ]
+  },
+  {
+    "id": "bad_joke",
+    "title": "Żart nie siadł ani trochę",
+    "category": "MEMY",
+    "description": "Rzucasz żart i zapada cisza tak potężna, że słychać wentylator w komputerze.",
+    "weight": 10,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Napisz „dobra, chujowy był”",
+        "result": "Autoironia ratuje sytuację.",
+        "effects": {
+          "reputation": 5,
+          "trust": 4,
+          "popularity": 2,
+          "score": 25
+        }
+      },
+      {
+        "label": "Tłumacz żart przez pięć minut",
+        "result": "Każde wyjaśnienie tylko pogarsza sprawę.",
+        "effects": {
+          "reputation": -5,
+          "popularity": -3,
+          "controversy": 3,
+          "score": 5
+        }
+      },
+      {
+        "label": "Wrzuć tylko reakcję",
+        "result": "Nie dokładasz kolejnego posta, ale zostawiasz po sobie ślad.",
+        "effects": {
+          "activity": 2,
+          "popularity": 3,
+          "score": 14
+        }
+      }
+    ]
+  },
+  {
+    "id": "energy_drink_night",
+    "title": "Noc na czterech energetykach",
+    "category": "NOCNA MELINA",
+    "description": "Jest 04:17, normalni ludzie śpią, a wy dyskutujecie czy hot dog jest kanapką. Logika opuściła budynek godzinę temu.",
+    "weight": 8,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Ciągnij debatę do rana",
+        "result": "Powstaje 600 wiadomości, zero wniosków i kilka nowych inside joke’ów.",
+        "effects": {
+          "activity": 14,
+          "popularity": 6,
+          "controversy": 5,
+          "trust": 2,
+          "score": 44
+        }
+      },
+      {
+        "label": "Idź spać, do cholery",
+        "result": "Podejmujesz pierwszą rozsądną decyzję tej nocy.",
+        "effects": {
+          "activity": -4,
+          "controversy": -5,
+          "trust": 3,
+          "score": 22
+        }
+      },
+      {
+        "label": "Idź po wodę i wróć później",
+        "result": "Na kilka minut znikasz z pola rażenia. To zaskakująco rozsądne.",
+        "effects": {
+          "controversy": -4,
+          "trust": 2,
+          "activity": -1,
+          "score": 14
+        }
+      }
+    ]
+  },
+  {
+    "id": "terrible_music",
+    "title": "Ktoś puszcza muzykę z ziemniaka",
+    "category": "NOCNA MELINA",
+    "description": "Na voice ktoś odpala kawałek przez mikrofon telefonu. Jakość brzmi jak radio z kibla w 2007 roku.",
+    "weight": 7,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Poproś o normalny link",
+        "result": "Po chwili muzyka brzmi jak muzyka, a nie egzorcyzm urządzenia audio.",
+        "effects": {
+          "trust": 5,
+          "reputation": 3,
+          "score": 24
+        }
+      },
+      {
+        "label": "Napisz „wyłącz to gówno”",
+        "result": "Muzyka znika natychmiast. Razem z dobrym humorem autora.",
+        "effects": {
+          "controversy": 7,
+          "popularity": 2,
+          "trust": -3,
+          "score": 14
+        }
+      },
+      {
+        "label": "Idź po wodę i wróć później",
+        "result": "Na kilka minut znikasz z pola rażenia. To zaskakująco rozsądne.",
+        "effects": {
+          "controversy": -4,
+          "trust": 2,
+          "activity": -1,
+          "score": 14
+        }
+      }
+    ]
+  },
+  {
+    "id": "ratio_attempt",
+    "title": "Ktoś próbuje cię „zratioować”",
+    "category": "DYSKUSJA",
+    "description": "Użytkownik wrzuca odpowiedź „ratio” i czeka na triumf. Problem: nikt nie reaguje.",
+    "weight": 7,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zostaw go w tej ciszy",
+        "result": "Najokrutniejsza odpowiedź to brak odpowiedzi.",
+        "effects": {
+          "reputation": 4,
+          "trust": 4,
+          "controversy": -2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Odpisz „ale przypał”",
+        "result": "Publiczność zauważa porażkę i robi się z tego mem.",
+        "effects": {
+          "popularity": 8,
+          "controversy": 5,
+          "activity": 4,
+          "score": 32
+        }
+      },
+      {
+        "label": "Zadaj jedno celne pytanie",
+        "result": "Zamiast pisać ścianę tekstu, wrzucasz pytanie, które zmienia ton rozmowy.",
+        "effects": {
+          "reputation": 4,
+          "trust": 3,
+          "controversy": -2,
+          "score": 22
+        }
+      }
+    ]
+  },
+  {
+    "id": "massive_typo",
+    "title": "Literówka zmienia sens wszystkiego",
+    "category": "CHAOS",
+    "description": "Jedna literówka sprawia, że normalne zdanie wygląda absurdalnie albo podejrzanie. Oczywiście ktoś już zrobił screen.",
+    "weight": 9,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Edytuj i śmiej się z siebie",
+        "result": "Sytuacja zostaje memem na pięć minut i znika.",
+        "effects": {
+          "reputation": 4,
+          "popularity": 4,
+          "trust": 3,
+          "score": 24
+        }
+      },
+      {
+        "label": "Udawaj, że tak miało być",
+        "result": "Brnięcie w błąd robi z literówki pełnoprawny inside joke.",
+        "effects": {
+          "popularity": 8,
+          "controversy": 3,
+          "activity": 5,
+          "score": 28
+        }
+      },
+      {
+        "label": "Wrzuć reakcję i zniknij",
+        "result": "Dajesz znać, że widziałeś ten absurd, po czym uciekasz zanim zrobi się gorzej.",
+        "effects": {
+          "popularity": 3,
+          "activity": 2,
+          "controversy": 1,
+          "score": 16
+        }
+      }
+    ]
+  },
+  {
+    "id": "fake_departure",
+    "title": "Ktoś ogłasza „ODCHODZĘ NA ZAWSZE”",
+    "category": "DRAMA",
+    "description": "Powstaje emocjonalne pożegnanie na czterdzieści linijek. Ta sama osoba wraca po jedenastu minutach.",
+    "weight": 7,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Nic nie komentuj",
+        "result": "Wszyscy po cichu udają, że nie widzieli wielkiego powrotu.",
+        "effects": {
+          "trust": 3,
+          "controversy": -3,
+          "score": 18
+        }
+      },
+      {
+        "label": "Napisz „szybkie to zawsze”",
+        "result": "Jedno zdanie wystarcza, żeby cały dramat wrócił z podwójną siłą.",
+        "effects": {
+          "popularity": 6,
+          "controversy": 10,
+          "activity": 5,
+          "score": 22
+        }
+      },
+      {
+        "label": "Wycofaj się z popcornem",
+        "result": "Nie gasisz pożaru i nie dolewasz benzyny. Po prostu patrzysz z boku.",
+        "effects": {
+          "controversy": -3,
+          "trust": 2,
+          "activity": -1,
+          "score": 12
+        }
+      }
+    ]
+  },
+  {
+    "id": "mod_application",
+    "title": "Ktoś proponuje ci moderację",
+    "category": "MODERACJA",
+    "description": "Dostajesz propozycję wejścia do moderacji. Nagle zamiast czytać dramy możesz je sprzątać. Co za kurwa awans.",
+    "weight": 5,
+    "minTurn": 8,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Biorę ten syf na siebie",
+        "result": "Zyskujesz zaufanie i obowiązki. Głównie obowiązki.",
+        "effects": {
+          "trust": 14,
+          "reputation": 10,
+          "activity": 8,
+          "controversy": -3,
+          "score": 90
+        }
+      },
+      {
+        "label": "Nie, dzięki, chcę żyć",
+        "result": "Zachowujesz wolność i zdrowie psychiczne.",
+        "effects": {
+          "trust": 5,
+          "reputation": 4,
+          "controversy": -4,
+          "score": 40
+        }
+      },
+      {
+        "label": "Napisz prywatnie",
+        "result": "Załatwiasz sprawę poza publicznym kanałem i ograniczasz widowisko.",
+        "effects": {
+          "trust": 5,
+          "controversy": -4,
+          "reputation": 2,
+          "score": 20
+        }
+      }
+    ]
+  },
+  {
+    "id": "public_apology",
+    "title": "Publiczne przeprosiny",
+    "category": "DRAMA",
+    "description": "Po ostrej wymianie zdań druga osoba publicznie przeprasza. Teraz cała sala patrzy, czy będziesz normalny, czy odpalisz drugą rundę.",
+    "weight": 6,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przyjmij przeprosiny",
+        "result": "Drama kończy się jakimś cudem dojrzale.",
+        "effects": {
+          "trust": 12,
+          "reputation": 10,
+          "controversy": -10,
+          "score": 60
+        }
+      },
+      {
+        "label": "Dojeb jeszcze na koniec",
+        "result": "Wygrywasz ostatnie słowo i przegrywasz sympatię połowy obserwatorów.",
+        "effects": {
+          "popularity": 5,
+          "controversy": 13,
+          "trust": -10,
+          "reputation": -8,
+          "score": 10
+        }
+      },
+      {
+        "label": "Wycofaj się z popcornem",
+        "result": "Nie gasisz pożaru i nie dolewasz benzyny. Po prostu patrzysz z boku.",
+        "effects": {
+          "controversy": -3,
+          "trust": 2,
+          "activity": -1,
+          "score": 12
+        }
+      }
+    ]
+  },
+  {
+    "id": "mysterious_ping",
+    "title": "Ping bez kontekstu",
+    "category": "WKURW",
+    "description": "Ktoś cię oznacza. Tylko tyle. Żadnego pytania, żadnego zdania. Sam ping i absolutna pustka.",
+    "weight": 10,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Odpisz „no kurwa?”",
+        "result": "Okazuje się, że osoba „tylko sprawdzała czy jesteś”.",
+        "effects": {
+          "controversy": 4,
+          "activity": 3,
+          "popularity": 2,
+          "score": 16
+        }
+      },
+      {
+        "label": "Nie reaguj",
+        "result": "Po dziesięciu minutach autor jednak przypomina sobie, czego chciał.",
+        "effects": {
+          "trust": 3,
+          "score": 18
+        }
+      },
+      {
+        "label": "Policz do dziesięciu",
+        "result": "Wkurw nie znika, ale przynajmniej nie robisz z niego eventu tygodnia.",
+        "effects": {
+          "controversy": -5,
+          "trust": 3,
+          "reputation": 2,
+          "score": 18
+        }
+      }
+    ]
+  },
+  {
+    "id": "broken_bot",
+    "title": "Bot dostał pierdolca",
+    "category": "CHAOS",
+    "description": "Bot zaczyna odpowiadać na każdą wiadomość tym samym tekstem. Kanał w sekundę zamienia się w spamowisko.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Dołącz do spamu dla beki",
+        "result": "Przez chwilę nikt nie wie, które wiadomości są bota, a które ludzi.",
+        "effects": {
+          "activity": 10,
+          "popularity": 5,
+          "controversy": 5,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zgłoś i przeczekaj",
+        "result": "Bot zostaje wyłączony, zanim kanał całkiem umrze.",
+        "effects": {
+          "trust": 6,
+          "reputation": 4,
+          "score": 30
+        }
+      },
+      {
+        "label": "Wrzuć reakcję i zniknij",
+        "result": "Dajesz znać, że widziałeś ten absurd, po czym uciekasz zanim zrobi się gorzej.",
+        "effects": {
+          "popularity": 3,
+          "activity": 2,
+          "controversy": 1,
+          "score": 16
+        }
+      }
+    ]
+  },
+  {
+    "id": "nickname_war",
+    "title": "Wojna o zmianę nicku",
+    "category": "EKIPA",
+    "description": "Ekipa zaczyna masowo zmieniać sobie nicki na przeróbki twojego. Po pięciu minutach nie wiadomo, kto jest kim.",
+    "weight": 7,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zmień nick na jeszcze głupszy",
+        "result": "Chaos osiąga poziom, którego nie przewidział żaden regulamin.",
+        "effects": {
+          "popularity": 10,
+          "activity": 8,
+          "reputation": 3,
+          "score": 42
+        }
+      },
+      {
+        "label": "Nie bierz udziału w tym burdelu",
+        "result": "Jesteś jedynym kontem, które da się rozpoznać.",
+        "effects": {
+          "trust": 5,
+          "reputation": 4,
+          "score": 28
+        }
+      },
+      {
+        "label": "Odbij żart pół-żartem",
+        "result": "Nie odpuszczasz całkiem, ale też nie odpalasz wojny totalnej.",
+        "effects": {
+          "popularity": 4,
+          "trust": 3,
+          "controversy": 2,
+          "score": 20
+        }
+      }
+    ]
+  },
+  {
+    "id": "voice_sleep",
+    "title": "Ktoś zasnął na voice",
+    "category": "NOCNA MELINA",
+    "description": "Rozmowa trwa, ale jedna osoba od dziesięciu minut milczy. Potem słyszycie chrapanie. No pięknie.",
+    "weight": 6,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zostaw go w spokoju",
+        "result": "Budzi się godzinę później i nie rozumie, czemu wciąż jest na kanale.",
+        "effects": {
+          "trust": 5,
+          "reputation": 3,
+          "score": 22
+        }
+      },
+      {
+        "label": "Zróbcie z tego event",
+        "result": "Chrapanie dostaje własny komentarz sportowy i status kultowy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 7,
+          "controversy": 3,
+          "score": 35
+        }
+      },
+      {
+        "label": "Idź po wodę i wróć później",
+        "result": "Na kilka minut znikasz z pola rażenia. To zaskakująco rozsądne.",
+        "effects": {
+          "controversy": -4,
+          "trust": 2,
+          "activity": -1,
+          "score": 14
+        }
+      }
+    ]
+  },
+  {
+    "id": "bad_advice",
+    "title": "Ktoś daje katastrofalną poradę",
+    "category": "SPOŁECZNOŚĆ",
+    "description": "Nowy użytkownik pyta o pomoc, a ktoś odpowiada kompletną bzdurą z pewnością eksperta po pięciu doktoratach.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Popraw spokojnie",
+        "result": "Pytający dostaje właściwą odpowiedź, a ty punkty za kompetencję.",
+        "effects": {
+          "trust": 10,
+          "reputation": 8,
+          "score": 45
+        }
+      },
+      {
+        "label": "Napisz „nie pierdol głupot”",
+        "result": "Merytorycznie masz rację. Forma robi dodatkowy event.",
+        "effects": {
+          "reputation": 4,
+          "controversy": 8,
+          "popularity": 3,
+          "trust": -2,
+          "score": 25
+        }
+      },
+      {
+        "label": "Obróć to w żart",
+        "result": "Zamiast pompować temat, rozładowujesz sytuację żartem.",
+        "effects": {
+          "popularity": 3,
+          "trust": 2,
+          "controversy": -1,
+          "score": 16
+        }
+      }
+    ]
+  },
+  {
+    "id": "double_standard",
+    "title": "Podwójne standardy",
+    "category": "DRAMA",
+    "description": "Ta sama rzecz jednego dnia jest „żartem”, a drugiego „skandalem”, zależnie od tego kto ją napisał. Ludzie zaczynają to wytykać.",
+    "weight": 7,
+    "minTurn": 6,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Wypunktuj spokojnie różnicę",
+        "result": "Dyskusja robi się niewygodna, ale konkretna.",
+        "effects": {
+          "reputation": 8,
+          "trust": 7,
+          "controversy": 4,
+          "score": 42
+        }
+      },
+      {
+        "label": "Napisz „ale hipokryzja, ja pierdolę”",
+        "result": "Przekaz trafia, choć ton odpala kilka osób.",
+        "effects": {
+          "popularity": 5,
+          "controversy": 11,
+          "reputation": 2,
+          "score": 25
+        }
+      },
+      {
+        "label": "Wycofaj się z popcornem",
+        "result": "Nie gasisz pożaru i nie dolewasz benzyny. Po prostu patrzysz z boku.",
+        "effects": {
+          "controversy": -3,
+          "trust": 2,
+          "activity": -1,
+          "score": 12
+        }
+      }
+    ]
+  },
+  {
+    "id": "mass_ping_revenge",
+    "title": "Odwet pingiem",
+    "category": "CHAOS",
+    "description": "Ktoś pingował cię bez sensu przez tydzień. Masz idealną okazję oddać mu dokładnie tym samym.",
+    "weight": 6,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Nie zniżaj się do tego",
+        "result": "Cykl wkurwiania zostaje przerwany.",
+        "effects": {
+          "trust": 7,
+          "reputation": 5,
+          "controversy": -5,
+          "score": 34
+        }
+      },
+      {
+        "label": "PINGUJ SKURCZYBYKA",
+        "result": "Satysfakcja trwa piętnaście sekund. Potem zaczyna się wojna powiadomień.",
+        "effects": {
+          "activity": 8,
+          "controversy": 12,
+          "popularity": 4,
+          "trust": -5,
+          "score": 18
+        }
+      },
+      {
+        "label": "Wrzuć reakcję i zniknij",
+        "result": "Dajesz znać, że widziałeś ten absurd, po czym uciekasz zanim zrobi się gorzej.",
+        "effects": {
+          "popularity": 3,
+          "activity": 2,
+          "controversy": 1,
+          "score": 16
+        }
+      }
+    ]
+  },
+  {
+    "id": "dumb_argument",
+    "title": "Kłótnia o totalną pierdołę",
+    "category": "DYSKUSJA",
+    "description": "Dwadzieścia osób dyskutuje od pół godziny o rzeczy, która nie ma żadnego znaczenia. Nikt już nie pamięta początku.",
+    "weight": 10,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Dorzucić absurdalny argument",
+        "result": "Dyskusja odkleja się od rzeczywistości i staje się zabawna.",
+        "effects": {
+          "popularity": 7,
+          "activity": 8,
+          "controversy": 4,
+          "score": 30
+        }
+      },
+      {
+        "label": "Napisz „czy wy się słyszycie?”",
+        "result": "Na chwilę zapada refleksja. Na chwilę.",
+        "effects": {
+          "reputation": 5,
+          "trust": 4,
+          "controversy": -2,
+          "score": 25
+        }
+      },
+      {
+        "label": "Zadaj jedno celne pytanie",
+        "result": "Zamiast pisać ścianę tekstu, wrzucasz pytanie, które zmienia ton rozmowy.",
+        "effects": {
+          "reputation": 4,
+          "trust": 3,
+          "controversy": -2,
+          "score": 22
+        }
+      }
+    ]
+  },
+  {
+    "id": "accidental_voice",
+    "title": "Przypadkowo włączony mikrofon",
+    "category": "NOCNA MELINA",
+    "description": "Ktoś nie wie, że ma włączony mikrofon. Słychać prywatną tyradę o „tych jebanych ludziach z serwera”.",
+    "weight": 6,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Napisz prywatnie, że mikrofon działa",
+        "result": "Mikrofon znika w pół sekundy. Temat nie wypływa szerzej.",
+        "effects": {
+          "trust": 11,
+          "reputation": 6,
+          "score": 46
+        }
+      },
+      {
+        "label": "Milcz i słuchaj dramy",
+        "result": "Dowiadujesz się za dużo, a potem ktoś zauważa zieloną ikonkę mikrofonu.",
+        "effects": {
+          "popularity": 4,
+          "controversy": 12,
+          "trust": -8,
+          "score": 15
+        }
+      },
+      {
+        "label": "Idź po wodę i wróć później",
+        "result": "Na kilka minut znikasz z pola rażenia. To zaskakująco rozsądne.",
+        "effects": {
+          "controversy": -4,
+          "trust": 2,
+          "activity": -1,
+          "score": 14
+        }
+      }
+    ]
+  },
+  {
+    "id": "server_legend",
+    "title": "Ktoś nazywa cię legendą serwera",
+    "category": "POZYCJA",
+    "description": "Nowy użytkownik pyta, kim jesteś, a ktoś odpowiada: „to długa historia, ten pojeb jest tu od zawsze”. Brzmi jak komplement.",
+    "weight": 5,
+    "minTurn": 10,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przyjmij tytuł z dumą",
+        "result": "Status starego wyjadacza zostaje oficjalnie przypieczętowany.",
+        "effects": {
+          "reputation": 10,
+          "popularity": 12,
+          "trust": 7,
+          "score": 85
+        }
+      },
+      {
+        "label": "Odpowiedz „niestety”",
+        "result": "Autoironia tylko wzmacnia legendę.",
+        "effects": {
+          "reputation": 8,
+          "popularity": 9,
+          "trust": 6,
+          "score": 70
+        }
+      },
+      {
+        "label": "Zagraj skromnego",
+        "result": "Nie pompujesz ego. Ludzie i tak wiedzą swoje.",
+        "effects": {
+          "reputation": 5,
+          "trust": 5,
+          "popularity": 2,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "shitstorm",
+    "title": "Pełnoprawny shitstorm",
+    "category": "DRAMA",
+    "description": "Wchodzisz po godzinie nieobecności i masz 400 nowych wiadomości, trzy usunięte wątki i ludzi piszących „to już zaszło za daleko”. Kurwa, pięknie.",
+    "weight": 5,
+    "minTurn": 7,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Czytaj wszystko i mediuj",
+        "result": "Po długim czasie udaje się uspokoić część konfliktu.",
+        "effects": {
+          "activity": 12,
+          "trust": 13,
+          "reputation": 10,
+          "controversy": -6,
+          "score": 90
+        }
+      },
+      {
+        "label": "Wejdź i napisz „CO TU SIĘ ODJebało?”",
+        "result": "Nie pomagasz, ale przynajmniej wszyscy dostają chwilę komediowego resetu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 8,
+          "controversy": 6,
+          "score": 36
+        }
+      },
+      {
+        "label": "Wycofaj się z popcornem",
+        "result": "Nie gasisz pożaru i nie dolewasz benzyny. Po prostu patrzysz z boku.",
+        "effects": {
+          "controversy": -3,
+          "trust": 2,
+          "activity": -1,
+          "score": 12
+        }
+      }
+    ]
+  },
+  {
+    "id": "voice_food",
+    "title": "Ktoś żre prosto do mikrofonu",
+    "category": "WKURW",
+    "description": "Na voice słychać chrupanie tak głośne, jakby mikrofon leżał w paczce chipsów.",
+    "weight": 11,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Powiedz „kurwa, odsuń ten mikrofon”",
+        "result": "Jedzenie na moment cichnie, ale autor bierze uwagę do siebie.",
+        "effects": {
+          "reputation": 3,
+          "controversy": 6,
+          "activity": 4,
+          "score": 22
+        }
+      },
+      {
+        "label": "Wycisz delikwenta",
+        "result": "Odzyskujesz ciszę bez robienia przedstawienia.",
+        "effects": {
+          "trust": 3,
+          "controversy": -4,
+          "score": 20
+        }
+      },
+      {
+        "label": "Zacznij chrupać jeszcze głośniej",
+        "result": "Voice zamienia się w pojedynek na najgorszy ASMR świata.",
+        "effects": {
+          "popularity": 8,
+          "activity": 8,
+          "controversy": 7,
+          "score": 32
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_channel",
+    "title": "Wrzucasz wiadomość na kompletnie zły kanał",
+    "category": "CHAOS",
+    "description": "Piszesz coś prywatnego tam, gdzie widzi to pół serwera. Masz trzy sekundy, zanim ktoś zrobi screena.",
+    "weight": 12,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Usuń natychmiast",
+        "result": "Kasujesz wiadomość tak szybko, że część ludzi nawet jej nie zauważa.",
+        "effects": {
+          "controversy": -3,
+          "trust": 1,
+          "score": 14
+        }
+      },
+      {
+        "label": "Udawaj, że tak miało być",
+        "result": "Brawura działa połowicznie. Ludzie nie wiedzą, czy jesteś geniuszem czy idiotą.",
+        "effects": {
+          "popularity": 6,
+          "controversy": 6,
+          "reputation": -2,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dopisz „kurwa, nie ten kanał”",
+        "result": "Szczerość wywołuje lawinę reakcji i memów.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "trust": 3,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "ghost_return",
+    "title": "Wraca typ, który zniknął pół roku temu",
+    "category": "SPOŁECZNOŚĆ",
+    "description": "Bez słowa pojawia się stary użytkownik i pisze tylko „co tam kurwa słychać?”.",
+    "weight": 8,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przywitaj jak rodzinę",
+        "result": "Powrót zamienia się w serię wspomnień i starych historii.",
+        "effects": {
+          "trust": 7,
+          "activity": 6,
+          "reputation": 4,
+          "score": 32
+        }
+      },
+      {
+        "label": "Napisz „kto ty jesteś?”",
+        "result": "Żart wchodzi dobrze, choć przez chwilę wygląda jak amnezja.",
+        "effects": {
+          "popularity": 5,
+          "controversy": 2,
+          "score": 20
+        }
+      },
+      {
+        "label": "Wyciągnij stare screeny",
+        "result": "Archiwum zostaje otwarte. Nikt nie wychodzi z niego bez obrażeń.",
+        "effects": {
+          "popularity": 9,
+          "activity": 8,
+          "controversy": 5,
+          "score": 38
+        }
+      }
+    ]
+  },
+  {
+    "id": "bad_stream",
+    "title": "Stream odpala się jak pokaz slajdów",
+    "category": "WKURW",
+    "description": "Ktoś zaprasza wszystkich na stream, który działa w jakości „ziemniak 144p” i tnie co trzy sekundy.",
+    "weight": 9,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Pomóż ogarnąć ustawienia",
+        "result": "Po kilku minutach da się to oglądać bez bólu oczu.",
+        "effects": {
+          "trust": 8,
+          "reputation": 5,
+          "activity": 4,
+          "score": 36
+        }
+      },
+      {
+        "label": "Napisz „to jest kurwa prezentacja PowerPoint”",
+        "result": "Czat pęka ze śmiechu, streamer trochę mniej.",
+        "effects": {
+          "popularity": 8,
+          "controversy": 5,
+          "trust": -2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Udawaj, że wszystko działa idealnie",
+        "result": "Twoje przesadne pochwały stają się running joke.",
+        "effects": {
+          "popularity": 6,
+          "activity": 5,
+          "score": 24
+        }
+      }
+    ]
+  },
+  {
+    "id": "emoji_war",
+    "title": "Wojna o jedną emotkę",
+    "category": "DRAMA",
+    "description": "Dwie grupy ludzi zaczynają się żreć o to, czy nowa emotka jest śmieszna czy „cringe jak cholera”.",
+    "weight": 10,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Bronić emotki do końca",
+        "result": "Wchodzisz w absurdalnie poważną debatę o kilku pikselach.",
+        "effects": {
+          "activity": 8,
+          "controversy": 8,
+          "popularity": 5,
+          "score": 26
+        }
+      },
+      {
+        "label": "Powiedz, że obie strony mają nasrane",
+        "result": "Nikt nie jest zachwycony, ale kilka osób przyznaje ci rację.",
+        "effects": {
+          "reputation": 5,
+          "trust": 3,
+          "controversy": 4,
+          "score": 24
+        }
+      },
+      {
+        "label": "Zrób z emotki mem",
+        "result": "Konflikt przestaje być poważny, bo wszyscy zaczynają spamować przeróbkami.",
+        "effects": {
+          "popularity": 10,
+          "activity": 8,
+          "controversy": -2,
+          "score": 40
+        }
+      }
+    ]
+  },
+  {
+    "id": "role_beggar",
+    "title": "Ktoś żebrze o rangę",
+    "category": "MODERACJA",
+    "description": "Nowy użytkownik pyta piąty raz, kiedy dostanie rangę, mimo że regulamin mówi to w pierwszej linijce.",
+    "weight": 9,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Wklej mu regulamin",
+        "result": "Dostaje odpowiedź bez zbędnego teatru.",
+        "effects": {
+          "trust": 5,
+          "reputation": 4,
+          "score": 24
+        }
+      },
+      {
+        "label": "Napisz „jak jeszcze raz zapytasz, to nigdy”",
+        "result": "Poziom pedagogiki: średni. Poziom satysfakcji: wysoki.",
+        "effects": {
+          "popularity": 4,
+          "controversy": 7,
+          "trust": -2,
+          "score": 18
+        }
+      },
+      {
+        "label": "Nadaj mu żartobliwą rangę w rozmowie",
+        "result": "Powstaje chwilowy mem z „rangą żebraka”.",
+        "effects": {
+          "popularity": 7,
+          "activity": 6,
+          "controversy": 3,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "music_queue",
+    "title": "Kolejka muzyczna skręca w kosmos",
+    "category": "NOCNA MELINA",
+    "description": "Po północy każdy wrzuca po jednej piosence i nagle leci wszystko: techno, disco polo, metal i jakiś remix dźwięku pralki.",
+    "weight": 9,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Dorzuć największy absurd",
+        "result": "Twoja propozycja staje się najbardziej przeklętym numerem wieczoru.",
+        "effects": {
+          "popularity": 10,
+          "activity": 8,
+          "score": 38
+        }
+      },
+      {
+        "label": "Próbuj przywrócić normalną muzykę",
+        "result": "Przez chwilę jest spokojniej, po czym ktoś odpala kolejny remix.",
+        "effects": {
+          "trust": 5,
+          "reputation": 3,
+          "score": 22
+        }
+      },
+      {
+        "label": "Zostań DJ-em chaosu",
+        "result": "Przejmujesz kolejkę i robisz z tego pełnoprawny nocny event.",
+        "effects": {
+          "activity": 12,
+          "popularity": 12,
+          "controversy": 4,
+          "score": 52
+        }
+      }
+    ]
+  },
+  {
+    "id": "quote_chain",
+    "title": "Jedno zdanie zostaje cytowane 40 razy",
+    "category": "MEMY",
+    "description": "Napisałeś coś głupiego. Niestety było na tyle dobre, że ludzie cytują to pod absolutnie każdym tematem.",
+    "weight": 10,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Dołącz do spamu",
+        "result": "Sam zaczynasz cytować własny tekst. Poziom samozachwytu niebezpieczny.",
+        "effects": {
+          "popularity": 9,
+          "activity": 8,
+          "controversy": 3,
+          "score": 34
+        }
+      },
+      {
+        "label": "Proś, żeby przestali",
+        "result": "To oczywiście sprawia, że cytują jeszcze częściej.",
+        "effects": {
+          "popularity": 8,
+          "controversy": 5,
+          "score": 27
+        }
+      },
+      {
+        "label": "Zrób oficjalną wersję pasty",
+        "result": "Przerabiasz tekst na kompletną copypastę i oddajesz go społeczności.",
+        "effects": {
+          "popularity": 13,
+          "reputation": 4,
+          "activity": 6,
+          "score": 48
+        }
+      }
+    ]
+  },
+  {
+    "id": "fake_mod",
+    "title": "Ktoś udaje moderatora",
+    "category": "CHAOS",
+    "description": "Użytkownik z podobnym nickiem zaczyna wydawać polecenia innym, jakby nagle dostał uprawnienia od Boga.",
+    "weight": 7,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zdemaskuj go",
+        "result": "Szybko pokazujesz, że to tylko przebieraniec z ego.",
+        "effects": {
+          "trust": 7,
+          "reputation": 5,
+          "controversy": 2,
+          "score": 30
+        }
+      },
+      {
+        "label": "Podkręć żart",
+        "result": "Przez kilka minut wszyscy udają, że naprawdę rządzi serwerem.",
+        "effects": {
+          "popularity": 8,
+          "activity": 7,
+          "controversy": 5,
+          "score": 30
+        }
+      },
+      {
+        "label": "Poproś go o podwyżkę",
+        "result": "Absurd sytuacji wskakuje na kolejny poziom.",
+        "effects": {
+          "popularity": 6,
+          "activity": 5,
+          "score": 24
+        }
+      }
+    ]
+  },
+  {
+    "id": "wall_text",
+    "title": "Ściana tekstu dłuższa niż regulamin",
+    "category": "DYSKUSJA",
+    "description": "Ktoś wrzuca gigantyczny elaborat o sprawie, która zaczęła się od jednej reakcji emoji.",
+    "weight": 9,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przeczytaj i odpowiedz rzeczowo",
+        "result": "Robisz robotę, której nikt inny nie chciał zrobić.",
+        "effects": {
+          "reputation": 8,
+          "trust": 7,
+          "activity": 5,
+          "score": 42
+        }
+      },
+      {
+        "label": "Odpowiedz „nie czytam tego gówna”",
+        "result": "Krótko, brutalnie i bardzo internetowo.",
+        "effects": {
+          "popularity": 5,
+          "controversy": 8,
+          "trust": -3,
+          "score": 18
+        }
+      },
+      {
+        "label": "Poproś AI o streszczenie w jednym zdaniu",
+        "result": "Dyskusja zostaje sprowadzona do absurdu, ale przynajmniej wiadomo, o co chodzi.",
+        "effects": {
+          "popularity": 7,
+          "activity": 4,
+          "reputation": 2,
+          "score": 26
+        }
+      }
+    ]
+  },
+  {
+    "id": "nickname_copy",
+    "title": "Ktoś kopiuje twój nick",
+    "category": "CHAOS",
+    "description": "Nowy użytkownik ustawia prawie identyczny nick i zaczyna pisać w podobnym stylu. Ludzie przez chwilę nie wiedzą, kto jest kim.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zmień avatar na jeszcze bardziej charakterystyczny",
+        "result": "Szybko odzyskujesz własną tożsamość.",
+        "effects": {
+          "reputation": 4,
+          "trust": 4,
+          "score": 24
+        }
+      },
+      {
+        "label": "Zacznij kopiować jego nick",
+        "result": "Powstaje rosyjska lalka nicków i absolutny burdel.",
+        "effects": {
+          "popularity": 9,
+          "activity": 8,
+          "controversy": 5,
+          "score": 34
+        }
+      },
+      {
+        "label": "Napisz „podróbka z Temu”",
+        "result": "Tekst siada idealnie i robi rundkę po serwerze.",
+        "effects": {
+          "popularity": 8,
+          "controversy": 4,
+          "score": 30
+        }
+      }
+    ]
+  },
+  {
+    "id": "hot_mic_parent",
+    "title": "Mikrofon łapie rozmowę w tle",
+    "category": "NOCNA MELINA",
+    "description": "Na voice ktoś nie wycisza mikrofonu i pół kanału słyszy bardzo prywatną kłótnię z domownikiem.",
+    "weight": 7,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Napisz prywatnie, żeby się wyciszył",
+        "result": "Ratujesz człowieka przed jeszcze większym przypałem.",
+        "effects": {
+          "trust": 12,
+          "reputation": 6,
+          "score": 44
+        }
+      },
+      {
+        "label": "Wyjdź z kanału",
+        "result": "Nie chcesz uczestniczyć w czymś, czego nie powinieneś słyszeć.",
+        "effects": {
+          "trust": 5,
+          "controversy": -3,
+          "score": 22
+        }
+      },
+      {
+        "label": "Napisz na voice „mikrofon!”",
+        "result": "Sytuacja kończy się natychmiast, choć autor umiera wewnętrznie.",
+        "effects": {
+          "trust": 7,
+          "activity": 3,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_fact",
+    "title": "Ktoś szerzy bzdurę z pełnym przekonaniem",
+    "category": "DYSKUSJA",
+    "description": "Użytkownik powtarza kompletnie fałszywą informację i dorzuca „sprawdzone źródło: trust me bro”.",
+    "weight": 9,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podeślij źródło i sprostuj",
+        "result": "Dyskusja wraca na ziemię.",
+        "effects": {
+          "reputation": 8,
+          "trust": 8,
+          "score": 40
+        }
+      },
+      {
+        "label": "Wyśmiej „trust me bro”",
+        "result": "Robi się śmiesznie, ale autor okopuje się jeszcze bardziej.",
+        "effects": {
+          "popularity": 6,
+          "controversy": 6,
+          "score": 23
+        }
+      },
+      {
+        "label": "Zapytaj skąd to wytrzasnął",
+        "result": "Pytanie wystarcza, żeby pewność siebie zaczęła topnieć.",
+        "effects": {
+          "reputation": 5,
+          "trust": 5,
+          "controversy": -2,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "server_lore",
+    "title": "Odkrywasz starą serwerową legendę",
+    "category": "KULTURA",
+    "description": "Ktoś wrzuca screen sprzed lat i nagle wychodzi na jaw historia, o której nowi nie mieli pojęcia.",
+    "weight": 6,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Poproś o pełną historię",
+        "result": "Wieczór zamienia się w kronikę największych katastrof Melonawki.",
+        "effects": {
+          "activity": 8,
+          "trust": 5,
+          "popularity": 4,
+          "score": 32
+        }
+      },
+      {
+        "label": "Dopisz własne wspomnienie",
+        "result": "Dokładasz cegiełkę do lokalnego lore.",
+        "effects": {
+          "reputation": 6,
+          "popularity": 6,
+          "score": 34
+        }
+      },
+      {
+        "label": "Zrób z tego „dokument” w 5 punktach",
+        "result": "Twoje podsumowanie staje się cytowanym przewodnikiem dla nowych.",
+        "effects": {
+          "popularity": 10,
+          "reputation": 7,
+          "score": 48
+        }
+      }
+    ]
+  },
+  {
+    "id": "reaction_ratio",
+    "title": "Wiadomość zbiera podejrzanie dużo negatywnych reakcji",
+    "category": "DRAMA",
+    "description": "Jedno zdanie dostaje lawinę reakcji. Nie wiadomo, czy ludzie się śmieją, czy właśnie odbywa się publiczna egzekucja reputacji.",
+    "weight": 9,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Dopytaj, co jest nie tak",
+        "result": "Dostajesz konkretny feedback zamiast samego festiwalu emoji.",
+        "effects": {
+          "trust": 6,
+          "reputation": 4,
+          "controversy": -2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Dorzucaj reakcje samemu",
+        "result": "Przyjmujesz katastrofę z autoironią i odbierasz jej trochę mocy.",
+        "effects": {
+          "popularity": 7,
+          "reputation": 3,
+          "score": 27
+        }
+      },
+      {
+        "label": "Odpal kontratak",
+        "result": "Zaczynasz odpowiadać każdej reakcji osobno. To nie pomaga.",
+        "effects": {
+          "activity": 8,
+          "controversy": 13,
+          "trust": -6,
+          "score": 12
+        }
+      }
+    ]
+  },
+  {
+    "id": "bot_mutiny",
+    "title": "Bot zaczyna robić kompletnie losowe rzeczy",
+    "category": "CHAOS",
+    "description": "Bot rozdaje role nie tym ludziom, kasuje poprawne komendy i odpowiada memem na wszystko.",
+    "weight": 8,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Pomóż znaleźć błąd",
+        "result": "Udaje się ustalić, co go rozwaliło.",
+        "effects": {
+          "trust": 8,
+          "reputation": 6,
+          "activity": 5,
+          "score": 40
+        }
+      },
+      {
+        "label": "Spamuj komendami dla beki",
+        "result": "Bot produkuje jeszcze większy burdel, ale jest śmiesznie.",
+        "effects": {
+          "activity": 10,
+          "popularity": 7,
+          "controversy": 5,
+          "score": 28
+        }
+      },
+      {
+        "label": "Ogłoś bunt maszyn",
+        "result": "Tworzysz mini-event fabularny z awarii technicznej.",
+        "effects": {
+          "popularity": 10,
+          "activity": 7,
+          "score": 38
+        }
+      }
+    ]
+  },
+  {
+    "id": "event_no_show",
+    "title": "Organizator eventu sam nie przychodzi",
+    "category": "EVENT",
+    "description": "Wszyscy czekają, a człowiek, który od tygodnia spamował zapowiedziami, znika bez słowa.",
+    "weight": 7,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przejmij organizację",
+        "result": "Ratujesz wieczór i zdobywasz sporo wdzięczności.",
+        "effects": {
+          "trust": 12,
+          "reputation": 10,
+          "activity": 10,
+          "score": 70
+        }
+      },
+      {
+        "label": "Napisz „zajebiście zorganizowane”",
+        "result": "Sarkazm trafia w punkt, ale raczej nie poprawia atmosfery.",
+        "effects": {
+          "popularity": 7,
+          "controversy": 6,
+          "score": 24
+        }
+      },
+      {
+        "label": "Zrób spontaniczny zastępczy event",
+        "result": "Chaos zamienia się w coś lepszego niż oryginalny plan.",
+        "effects": {
+          "popularity": 10,
+          "trust": 8,
+          "activity": 10,
+          "score": 60
+        }
+      }
+    ]
+  },
+  {
+    "id": "old_beef",
+    "title": "Wraca stary konflikt",
+    "category": "DRAMA",
+    "description": "Dwie osoby, które od miesięcy się ignorowały, nagle zaczynają wyciągać stare brudy. Archeologia konfliktu rusza pełną parą.",
+    "weight": 6,
+    "minTurn": 6,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Spróbuj odciąć temat",
+        "result": "Przypominasz, że ten trup był już dawno zakopany.",
+        "effects": {
+          "trust": 8,
+          "reputation": 6,
+          "controversy": -7,
+          "score": 38
+        }
+      },
+      {
+        "label": "Poproś o pełne lore",
+        "result": "Nie pomagasz, ale dowiadujesz się rzeczy, których nie było w podręczniku historii.",
+        "effects": {
+          "activity": 7,
+          "popularity": 5,
+          "controversy": 8,
+          "score": 23
+        }
+      },
+      {
+        "label": "Rzuć memem rozbrajającym sytuację",
+        "result": "Napięcie spada, bo obie strony przez chwilę śmieją się z tego samego.",
+        "effects": {
+          "popularity": 8,
+          "controversy": -4,
+          "trust": 3,
+          "score": 32
+        }
+      }
+    ]
+  },
+  {
+    "id": "dm_confession",
+    "title": "Ktoś wysyła ci dziwną prywatną wiadomość",
+    "category": "DRAMA",
+    "description": "Na DM dostajesz „muszę ci coś powiedzieć, ale nikomu nie mów”. Już wiesz, że noc będzie długa.",
+    "weight": 7,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Wysłuchaj bez oceniania",
+        "result": "Zyskujesz zaufanie, ale bierzesz na siebie cudzy ciężar.",
+        "effects": {
+          "trust": 12,
+          "reputation": 4,
+          "activity": 2,
+          "score": 42
+        }
+      },
+      {
+        "label": "Powiedz, że nie chcesz być wciągany",
+        "result": "Stawiasz granicę i unikasz potencjalnej bomby.",
+        "effects": {
+          "trust": 3,
+          "controversy": -5,
+          "score": 24
+        }
+      },
+      {
+        "label": "Odpowiedz „kurwa, brzmi źle”",
+        "result": "Szczere podsumowanie okazuje się dokładnie tym, czego rozmówca potrzebował.",
+        "effects": {
+          "trust": 8,
+          "reputation": 3,
+          "score": 30
+        }
+      }
+    ]
+  },
+  {
+    "id": "status_message",
+    "title": "Opis profilu odpala dramę",
+    "category": "CHAOS",
+    "description": "Ktoś interpretuje twój status jako osobistą szpilę, mimo że pisałeś go tydzień temu o czymś zupełnie innym.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Wyjaśnij kontekst",
+        "result": "Nieporozumienie znika szybciej, niż powstało.",
+        "effects": {
+          "trust": 7,
+          "controversy": -6,
+          "reputation": 3,
+          "score": 28
+        }
+      },
+      {
+        "label": "Napisz „skoro pasuje, to może coś w tym jest”",
+        "result": "Gratulacje, właśnie dolałeś benzyny.",
+        "effects": {
+          "popularity": 5,
+          "controversy": 12,
+          "trust": -5,
+          "score": 16
+        }
+      },
+      {
+        "label": "Zmień status na jeszcze bardziej absurdalny",
+        "result": "Napięcie rozpada się pod ciężarem kompletnego bezsensu.",
+        "effects": {
+          "popularity": 8,
+          "controversy": -2,
+          "score": 30
+        }
+      }
+    ]
+  },
+  {
+    "id": "silent_lurker",
+    "title": "Cichy lurker nagle przemawia",
+    "category": "SPOŁECZNOŚĆ",
+    "description": "Konto, które od roku tylko czyta, nagle wrzuca perfekcyjnie celny komentarz. Wszyscy pytają, skąd się wziął.",
+    "weight": 8,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przywitaj go normalnie",
+        "result": "Nie robisz z człowieka eksponatu muzealnego.",
+        "effects": {
+          "trust": 6,
+          "reputation": 4,
+          "score": 26
+        }
+      },
+      {
+        "label": "Napisz „ON ŻYJE”",
+        "result": "Kanał wybucha reakcjami, a lurker chyba natychmiast tego żałuje.",
+        "effects": {
+          "popularity": 6,
+          "activity": 5,
+          "controversy": 2,
+          "score": 24
+        }
+      },
+      {
+        "label": "Nadaj mu legendarny status",
+        "result": "Z jednego komentarza rodzi się lokalny mit.",
+        "effects": {
+          "popularity": 9,
+          "activity": 5,
+          "score": 34
+        }
+      }
+    ]
+  },
+  {
+    "id": "ban_appeal",
+    "title": "Publiczne błaganie o unbana",
+    "category": "MODERACJA",
+    "description": "Zbanowany użytkownik wraca przez znajomego i publikuje epopeję o tym, dlaczego „to wszystko było wyrwane z kontekstu”.",
+    "weight": 6,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Nie mieszaj się",
+        "result": "Pozwalasz moderacji zająć się sprawą.",
+        "effects": {
+          "controversy": -5,
+          "trust": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Przeanalizuj argumenty",
+        "result": "Wyłapujesz kilka sensownych punktów i kilka kompletnych bzdur.",
+        "effects": {
+          "reputation": 7,
+          "trust": 5,
+          "activity": 5,
+          "score": 35
+        }
+      },
+      {
+        "label": "Napisz „stary, sam wkleiłeś dowody przeciw sobie”",
+        "result": "Najgorszy fragment odwołania okazuje się najbardziej przekonujący... dla bana.",
+        "effects": {
+          "popularity": 7,
+          "controversy": 5,
+          "score": 25
+        }
+      }
+    ]
+  },
+  {
+    "id": "calendar_fail",
+    "title": "Ktoś myli termin o cały tydzień",
+    "category": "EVENT",
+    "description": "Po tygodniu przypominania ktoś wpada i pyta „to dzisiaj?”, mimo że event był wczoraj.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Wyślij mu kalendarz",
+        "result": "Praktyczne rozwiązanie, zero zbędnej dramy.",
+        "effects": {
+          "trust": 5,
+          "reputation": 4,
+          "score": 24
+        }
+      },
+      {
+        "label": "Odpowiedz „tak, wczoraj”",
+        "result": "Suchar jest tak suchy, że aż działa.",
+        "effects": {
+          "popularity": 5,
+          "score": 20
+        }
+      },
+      {
+        "label": "Zrób fałszywy „drugi termin” dla żartu",
+        "result": "Przez moment połowa ludzi naprawdę nie wie, czy coś przegapiła.",
+        "effects": {
+          "popularity": 7,
+          "controversy": 4,
+          "activity": 4,
+          "score": 25
+        }
+      }
+    ]
+  },
+  {
+    "id": "caps_lock",
+    "title": "Ktoś odkrywa CAPS LOCK",
+    "category": "WKURW",
+    "description": "Jedna osoba przez dziesięć minut pisze WSZYSTKO WIELKIMI LITERAMI, bo „tak lepiej widać”.",
+    "weight": 10,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Poproś, żeby przestał",
+        "result": "Po chwili kanał znowu wygląda jak miejsce dla ludzi.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 22
+        }
+      },
+      {
+        "label": "ODPOWIADAJ TYLKO CAPSAMI",
+        "result": "Rozpoczyna się wojna na decybele w formie tekstowej.",
+        "effects": {
+          "activity": 9,
+          "popularity": 6,
+          "controversy": 6,
+          "score": 28
+        }
+      },
+      {
+        "label": "Zacznij szeptać małymi literami",
+        "result": "Kontrast jest tak głupi, że wszyscy zaczynają robić to samo.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "score": 30
+        }
+      }
+    ]
+  },
+  {
+    "id": "meme_theft",
+    "title": "Ktoś kradnie twojego mema",
+    "category": "MEMY",
+    "description": "Widzisz swój mem wrzucony przez kogoś innego bez podpisu, a do tego zbiera więcej reakcji niż u ciebie.",
+    "weight": 9,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zawołaj go publicznie",
+        "result": "Autor przyznaje, skąd to wziął, ale robi się trochę kwaśno.",
+        "effects": {
+          "reputation": 4,
+          "controversy": 6,
+          "popularity": 3,
+          "score": 24
+        }
+      },
+      {
+        "label": "Miej wyjebane",
+        "result": "Mem żyje własnym życiem. Ty oszczędzasz nerwy.",
+        "effects": {
+          "controversy": -4,
+          "trust": 2,
+          "score": 18
+        }
+      },
+      {
+        "label": "Ukradnij mu reakcję i zrób sequel",
+        "result": "Odbijasz sytuację kolejnym memem i wygrywasz narrację.",
+        "effects": {
+          "popularity": 12,
+          "activity": 7,
+          "reputation": 4,
+          "score": 44
+        }
+      }
+    ]
+  },
+  {
+    "id": "dm_spam_chain",
+    "title": "Łańcuszek na DM",
+    "category": "WKURW",
+    "description": "Dostajesz „wyślij to do 10 osób albo będziesz mieć pecha”. Jest 2026, a to gówno nadal żyje.",
+    "weight": 8,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Usuń i zablokuj",
+        "result": "Kończysz historię bez poświęcania kolejnych neuronów.",
+        "effects": {
+          "controversy": -4,
+          "score": 16
+        }
+      },
+      {
+        "label": "Odpowiedz „wypierdalaj z 2007 roku”",
+        "result": "Nadawca raczej nie wyśle ci kolejnego łańcuszka.",
+        "effects": {
+          "controversy": 5,
+          "popularity": 3,
+          "score": 18
+        }
+      },
+      {
+        "label": "Przerób łańcuszek na absurdalną pastę",
+        "result": "Z irytacji powstaje zaskakująco dobry materiał.",
+        "effects": {
+          "popularity": 9,
+          "activity": 5,
+          "score": 32
+        }
+      }
+    ]
+  },
+  {
+    "id": "voice_snore",
+    "title": "Ktoś zasypia na voice",
+    "category": "NOCNA MELINA",
+    "description": "Jest czwarta rano. Jedna osoba ewidentnie zasnęła, ale mikrofon nadal transmituje chrapanie jakości studyjnej.",
+    "weight": 7,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przenieś go na AFK",
+        "result": "Robisz porządek i ratujesz resztę przed nocnym koncertem.",
+        "effects": {
+          "trust": 6,
+          "reputation": 4,
+          "score": 24
+        }
+      },
+      {
+        "label": "Nagraj trzy sekundy dla żartu",
+        "result": "Materiał istnieje. Pytanie, czy powinien.",
+        "effects": {
+          "popularity": 6,
+          "controversy": 5,
+          "trust": -2,
+          "score": 20
+        }
+      },
+      {
+        "label": "Puść kołysankę",
+        "result": "Voice zamienia się w najbardziej absurdalny nocny rytuał.",
+        "effects": {
+          "popularity": 9,
+          "activity": 5,
+          "trust": 3,
+          "score": 34
+        }
+      }
+    ]
+  },
+  {
+    "id": "profile_picture",
+    "title": "Nowy avatar wywołuje śledztwo",
+    "category": "MEMY",
+    "description": "Zmieniasz avatar i nagle ludzie analizują go jak dowód w sprawie kryminalnej.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podaj prawdziwy kontekst",
+        "result": "Tajemnica znika, ale kilka osób docenia historię.",
+        "effects": {
+          "trust": 5,
+          "reputation": 3,
+          "score": 22
+        }
+      },
+      {
+        "label": "Wymyśl fałszywe lore",
+        "result": "Każda kolejna wersja jest bardziej absurdalna od poprzedniej.",
+        "effects": {
+          "popularity": 10,
+          "controversy": 3,
+          "activity": 6,
+          "score": 36
+        }
+      },
+      {
+        "label": "Nie wyjaśniaj nic",
+        "result": "Brak odpowiedzi tylko napędza teorie.",
+        "effects": {
+          "popularity": 7,
+          "score": 26
+        }
+      }
+    ]
+  },
+  {
+    "id": "bad_translation",
+    "title": "Automatyczne tłumaczenie robi katastrofę",
+    "category": "CHAOS",
+    "description": "Bot tłumaczący wiadomości zamienia zwykłe zdanie w coś, co brzmi jak groźba międzynarodowego konfliktu.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Wyjaśnij oryginał",
+        "result": "Sytuacja szybko wraca do normy.",
+        "effects": {
+          "trust": 7,
+          "reputation": 4,
+          "controversy": -4,
+          "score": 28
+        }
+      },
+      {
+        "label": "Zachowuj się, jakby tłumaczenie było poprawne",
+        "result": "Przez pięć minut wszyscy odgrywają kompletnie fałszywą dramę.",
+        "effects": {
+          "popularity": 8,
+          "activity": 7,
+          "controversy": 4,
+          "score": 30
+        }
+      },
+      {
+        "label": "Zbieraj najlepsze tłumaczenia",
+        "result": "Powstaje kolekcja najgorszych zdań tygodnia.",
+        "effects": {
+          "popularity": 10,
+          "activity": 5,
+          "score": 35
+        }
+      }
+    ]
+  },
+  {
+    "id": "unnecessary_mention",
+    "title": "Ktoś oznacza cię bez żadnego powodu",
+    "category": "WKURW",
+    "description": "Dostajesz ping. Otwierasz kanał. Wiadomość brzmi tylko „siema”. Nic więcej.",
+    "weight": 10,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Napisz „po chuj ping?”",
+        "result": "Nadawca poznaje cenę bezsensownego powiadomienia.",
+        "effects": {
+          "controversy": 6,
+          "reputation": 2,
+          "score": 18
+        }
+      },
+      {
+        "label": "Odpowiedz „siema”",
+        "result": "Akceptujesz bezsens i żyjesz dalej.",
+        "effects": {
+          "trust": 2,
+          "score": 14
+        }
+      },
+      {
+        "label": "Pingnij go godzinę później i napisz „nic”",
+        "result": "Zemsta jest mała, głupia i satysfakcjonująca.",
+        "effects": {
+          "popularity": 6,
+          "controversy": 7,
+          "activity": 3,
+          "score": 22
+        }
+      }
+    ]
+  },
+  {
+    "id": "broken_invite",
+    "title": "Link zaproszenia prowadzi donikąd",
+    "category": "CHAOS",
+    "description": "Ktoś przez pół dnia reklamuje event, ale link wygasł i nikt nie może wejść.",
+    "weight": 7,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Znajdź poprawny link",
+        "result": "Ratujesz organizację przed kompromitacją.",
+        "effects": {
+          "trust": 8,
+          "reputation": 6,
+          "score": 34
+        }
+      },
+      {
+        "label": "Napisz „profesjonalizm kurwa 10/10”",
+        "result": "Organizator dostaje zasłużoną porcję sarkazmu.",
+        "effects": {
+          "popularity": 5,
+          "controversy": 5,
+          "score": 20
+        }
+      },
+      {
+        "label": "Zrób alternatywne miejsce spotkania",
+        "result": "Ludzie zaczynają zbierać się u ciebie zamiast czekać.",
+        "effects": {
+          "trust": 7,
+          "activity": 7,
+          "popularity": 4,
+          "score": 38
+        }
+      }
+    ]
+  },
+  {
+    "id": "private_joke_public",
+    "title": "Prywatny żart trafia publicznie",
+    "category": "DRAMA",
+    "description": "Ktoś wrzuca na główny kanał żart z prywatnej rozmowy, który bez kontekstu wygląda fatalnie.",
+    "weight": 8,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Daj kontekst",
+        "result": "Po wyjaśnieniu sytuacja wygląda dużo mniej źle.",
+        "effects": {
+          "trust": 7,
+          "controversy": -6,
+          "reputation": 4,
+          "score": 30
+        }
+      },
+      {
+        "label": "Udawaj, że to nic takiego",
+        "result": "Brak wyjaśnienia zostawia ludziom dużo miejsca na interpretacje.",
+        "effects": {
+          "controversy": 8,
+          "trust": -4,
+          "score": 12
+        }
+      },
+      {
+        "label": "Obróć to w jeszcze większy absurd",
+        "result": "Dokładasz taki kontekst, że wszyscy rozumieją, że to już czysta komedia.",
+        "effects": {
+          "popularity": 8,
+          "controversy": 2,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "reaction_bot",
+    "title": "Bot reaguje nie tym emoji",
+    "category": "MEMY",
+    "description": "Bot automatycznie dodaje reakcję, ale przez błąd zamiast serduszka wrzuca coś kompletnie niepasującego.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Napraw konfigurację",
+        "result": "Problem znika zanim zrobi się z niego tradycja.",
+        "effects": {
+          "trust": 5,
+          "reputation": 4,
+          "score": 24
+        }
+      },
+      {
+        "label": "Zostaw błąd, bo jest śmieszny",
+        "result": "Przypadkowa reakcja staje się nowym lokalnym memem.",
+        "effects": {
+          "popularity": 10,
+          "activity": 5,
+          "score": 34
+        }
+      },
+      {
+        "label": "Dodaj jeszcze kilka złych reakcji",
+        "result": "Bot zaczyna wyglądać jak pijany automat do emoji.",
+        "effects": {
+          "popularity": 8,
+          "controversy": 4,
+          "activity": 6,
+          "score": 30
+        }
+      }
+    ]
+  },
+  {
+    "id": "friend_cancel",
+    "title": "Kumpel odwołuje wspólny plan pięć minut przed",
+    "category": "EKIPA",
+    "description": "Wszystko było ustalone, a pięć minut przed startem dostajesz „sorry, jednak nie dam rady”.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przyjmij bez dramy",
+        "result": "Plan przepada, ale relacja nie dostaje rykoszetem.",
+        "effects": {
+          "trust": 5,
+          "controversy": -3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Napisz „no zajebiście”",
+        "result": "Emocje są czytelne. Atmosfera też.",
+        "effects": {
+          "controversy": 6,
+          "trust": -3,
+          "score": 14
+        }
+      },
+      {
+        "label": "Zorganizuj coś z innymi",
+        "result": "Wieczór zostaje uratowany i może wychodzi nawet lepiej.",
+        "effects": {
+          "activity": 7,
+          "popularity": 4,
+          "trust": 3,
+          "score": 32
+        }
+      }
+    ]
+  },
+  {
+    "id": "overmoderation",
+    "title": "Kanał dostaje 30 nowych zasad",
+    "category": "MODERACJA",
+    "description": "Po jednym incydencie powstaje regulamin dłuższy niż konstytucja, z zasadą na każdą możliwą pierdołę.",
+    "weight": 7,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zaproponuj uproszczenie",
+        "result": "Kilka osób przyznaje, że połowy zasad nikt nie przeczyta.",
+        "effects": {
+          "reputation": 7,
+          "trust": 6,
+          "score": 34
+        }
+      },
+      {
+        "label": "Napisz „brakuje punktu o oddychaniu”",
+        "result": "Sarkazm jest oczywisty i bardzo popularny.",
+        "effects": {
+          "popularity": 8,
+          "controversy": 5,
+          "score": 28
+        }
+      },
+      {
+        "label": "Przeczytaj wszystko i znajdź sprzeczności",
+        "result": "Odkrywasz trzy zasady, które wzajemnie się wykluczają.",
+        "effects": {
+          "reputation": 6,
+          "activity": 5,
+          "controversy": 3,
+          "score": 32
+        }
+      }
+    ]
+  },
+  {
+    "id": "rage_delete",
+    "title": "Ktoś usuwa pół historii kanału w emocjach",
+    "category": "DRAMA",
+    "description": "Po kłótni jedna osoba zaczyna kasować swoje wiadomości masowo. Kanał wygląda, jakby przeszedł przez niszczarkę.",
+    "weight": 7,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Nie komentuj",
+        "result": "Nie dokładasz kolejnego powodu do eskalacji.",
+        "effects": {
+          "controversy": -5,
+          "trust": 2,
+          "score": 18
+        }
+      },
+      {
+        "label": "Napisz „archiwum płonie”",
+        "result": "Czarny humor trafia idealnie w moment.",
+        "effects": {
+          "popularity": 6,
+          "controversy": 4,
+          "score": 22
+        }
+      },
+      {
+        "label": "Zabezpiecz ważny kontekst",
+        "result": "Ratujesz potrzebne informacje zanim znikną.",
+        "effects": {
+          "trust": 8,
+          "reputation": 5,
+          "activity": 4,
+          "score": 36
+        }
+      }
+    ]
+  },
+  {
+    "id": "forgot_mute",
+    "title": "Ktoś zapomina o mute podczas przeklinania",
+    "category": "NOCNA MELINA",
+    "description": "Na voice leci pełna, kreatywna wiązanka przekleństw do gry, bo ktoś nie zauważył, że mikrofon jest otwarty.",
+    "weight": 8,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Powiedz mu, że jest live",
+        "result": "Orientuje się w sekundę i milknie.",
+        "effects": {
+          "trust": 6,
+          "score": 24
+        }
+      },
+      {
+        "label": "Dołącz do komentarza sportowego",
+        "result": "Wulgarny monolog zmienia się w absurdalną transmisję meczu.",
+        "effects": {
+          "popularity": 9,
+          "activity": 7,
+          "controversy": 4,
+          "score": 34
+        }
+      },
+      {
+        "label": "Nagraj tylko najlepszy tekst",
+        "result": "Jedno zdanie ma potencjał na mem, ale ryzykujesz zaufaniem.",
+        "effects": {
+          "popularity": 6,
+          "trust": -4,
+          "controversy": 5,
+          "score": 20
+        }
+      }
+    ]
+  },
+  {
+    "id": "argument_loop",
+    "title": "Dyskusja zatacza trzeci raz to samo koło",
+    "category": "DYSKUSJA",
+    "description": "Te same trzy argumenty wracają od godziny. Każdy odpowiada na coś, co już było odpowiedziane dziesięć minut temu.",
+    "weight": 9,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zrób krótkie podsumowanie",
+        "result": "Wreszcie ktoś porządkuje wątek i pokazuje, gdzie naprawdę jest spór.",
+        "effects": {
+          "reputation": 9,
+          "trust": 8,
+          "activity": 5,
+          "score": 44
+        }
+      },
+      {
+        "label": "Napisz „kurwa, czytacie w ogóle?”",
+        "result": "Celne, ale niekoniecznie dyplomatyczne.",
+        "effects": {
+          "controversy": 7,
+          "reputation": 2,
+          "score": 20
+        }
+      },
+      {
+        "label": "Wyjdź z rozmowy",
+        "result": "Oszczędzasz czas i nerwy.",
+        "effects": {
+          "controversy": -4,
+          "activity": -2,
+          "score": 16
+        }
+      }
+    ]
+  },
+  {
+    "id": "meme_dead",
+    "title": "Mem umiera z przejedzenia",
+    "category": "MEMY",
+    "description": "Ten sam żart jest wrzucany tak długo, że nawet jego największy fan już nie reaguje.",
+    "weight": 8,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Ogłoś oficjalny pogrzeb mema",
+        "result": "Tworzysz zabawne pożegnanie i zamykasz temat z klasą.",
+        "effects": {
+          "popularity": 8,
+          "reputation": 4,
+          "score": 30
+        }
+      },
+      {
+        "label": "Spamuj jeszcze mocniej",
+        "result": "Mema nie da się zabić, jeśli zniszczysz wszystkim psychikę.",
+        "effects": {
+          "activity": 9,
+          "controversy": 8,
+          "popularity": 4,
+          "score": 22
+        }
+      },
+      {
+        "label": "Znajdź nowy format",
+        "result": "Przerzucasz energię na świeży żart i ludzie szybko podchwytują.",
+        "effects": {
+          "popularity": 10,
+          "activity": 6,
+          "score": 38
+        }
+      }
+    ]
+  },
+  {
+    "id": "fake_news_server",
+    "title": "Fałszywa plotka obiega serwer",
+    "category": "DRAMA",
+    "description": "Ktoś rzuca „słyszałem, że...” i po dziesięciu minutach połowa osób traktuje to jak oficjalny komunikat.",
+    "weight": 7,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Sprawdź źródło",
+        "result": "Okazuje się, że źródłem był komentarz pod memem.",
+        "effects": {
+          "reputation": 8,
+          "trust": 9,
+          "controversy": -6,
+          "score": 42
+        }
+      },
+      {
+        "label": "Rozsiej jeszcze głupszą wersję",
+        "result": "Plotka staje się tak absurdalna, że ludzie zaczynają rozumieć żart.",
+        "effects": {
+          "popularity": 7,
+          "controversy": 8,
+          "trust": -3,
+          "score": 24
+        }
+      },
+      {
+        "label": "Poproś o dowody",
+        "result": "Rozmówca nagle przestaje być taki pewny.",
+        "effects": {
+          "reputation": 6,
+          "trust": 5,
+          "score": 30
+        }
+      }
+    ]
+  },
+  {
+    "id": "bot_points",
+    "title": "Bot rozdaje przypadkowe punkty",
+    "category": "CHAOS",
+    "description": "System punktów wariuje: ktoś dostaje tysiąc za „hej”, a komuś odejmuje za nic.",
+    "weight": 8,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zgłoś błąd",
+        "result": "Ranking zostaje naprawiony zanim ludzie zaczną traktować go serio.",
+        "effects": {
+          "trust": 7,
+          "reputation": 5,
+          "score": 32
+        }
+      },
+      {
+        "label": "Farm punkty póki można",
+        "result": "Przez chwilę czujesz się bogiem ekonomii serwera.",
+        "effects": {
+          "activity": 10,
+          "controversy": 7,
+          "melons": 40,
+          "score": 25
+        }
+      },
+      {
+        "label": "Zrób konkurs „kto dostanie więcej”",
+        "result": "Awaria zamienia się w spontaniczną zabawę.",
+        "effects": {
+          "popularity": 9,
+          "activity": 9,
+          "score": 38
+        }
+      }
+    ]
+  },
+  {
+    "id": "unfunny_prank",
+    "title": "Prank wychodzi fatalnie",
+    "category": "CHAOS",
+    "description": "Ktoś próbuje zrobić „epicki prank”, ale nikt poza autorem nie uważa go za śmieszny.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Powiedz wprost, że słabe",
+        "result": "Autor jest obrażony, ale przynajmniej wie, dlaczego jest cisza.",
+        "effects": {
+          "reputation": 4,
+          "controversy": 5,
+          "score": 20
+        }
+      },
+      {
+        "label": "Uratuj żart własnym komentarzem",
+        "result": "Dzięki twojej reakcji całość staje się śmieszna z zupełnie innego powodu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 5,
+          "score": 30
+        }
+      },
+      {
+        "label": "Nie reaguj",
+        "result": "Najokrutniejsza recenzja internetowego żartu: kompletna cisza.",
+        "effects": {
+          "controversy": -2,
+          "trust": 2,
+          "score": 16
+        }
+      }
+    ]
+  },
+  {
+    "id": "all_nighter",
+    "title": "Nocny maraton rozmów",
+    "category": "NOCNA MELINA",
+    "description": "Miało być „jeszcze pięć minut”, a jest piąta rano i właśnie dyskutujecie o tym, czy pingwiny mają kolana.",
+    "weight": 8,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zostań do końca",
+        "result": "Rano nie żyjesz, ale noc przechodzi do historii.",
+        "effects": {
+          "activity": 12,
+          "popularity": 8,
+          "trust": 6,
+          "score": 44
+        }
+      },
+      {
+        "label": "Idź spać jak człowiek",
+        "result": "Tracisz końcówkę, zyskujesz funkcjonujący mózg.",
+        "effects": {
+          "activity": -3,
+          "controversy": -2,
+          "trust": 2,
+          "score": 18
+        }
+      },
+      {
+        "label": "Zadaj jeszcze głupsze pytanie",
+        "result": "Rozmowa schodzi poziom niżej i właśnie dlatego robi się lepsza.",
+        "effects": {
+          "popularity": 10,
+          "activity": 8,
+          "score": 36
+        }
+      }
+    ]
+  },
+  {
+    "id": "award_fail",
+    "title": "Nagroda trafia do złej osoby",
+    "category": "EVENT",
+    "description": "Podczas rozdania nagród prowadzący czyta złą linijkę i gratuluje kompletnie nie temu użytkownikowi.",
+    "weight": 7,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Szybko sprostuj",
+        "result": "Pomyłka zostaje naprawiona zanim zrobi się niezręcznie.",
+        "effects": {
+          "trust": 8,
+          "reputation": 5,
+          "score": 34
+        }
+      },
+      {
+        "label": "Zagraj, że tak miało być",
+        "result": "Przez minutę wszyscy uczestniczą w absurdalnej fikcji.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "score": 26
+        }
+      },
+      {
+        "label": "Nadaj obu „nagrodę chaosu”",
+        "result": "Z błędu powstaje dodatkowa, śmieszna kategoria.",
+        "effects": {
+          "popularity": 9,
+          "trust": 4,
+          "score": 34
+        }
+      }
+    ]
+  },
+  {
+    "id": "ping_storm",
+    "title": "Burza pingów po jednej wiadomości",
+    "category": "WKURW",
+    "description": "Ktoś oznacza trzy osoby, one oznaczają kolejne i po minucie wygląda to jak łańcuch powiadomień z piekła.",
+    "weight": 9,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przerwij łańcuch",
+        "result": "Piszesz bez oznaczania kogokolwiek i prosisz o koniec spamu.",
+        "effects": {
+          "trust": 5,
+          "controversy": -4,
+          "score": 24
+        }
+      },
+      {
+        "label": "Oznacz wszystkich po kolei",
+        "result": "Skoro świat ma płonąć, to przynajmniej równo.",
+        "effects": {
+          "activity": 10,
+          "controversy": 12,
+          "popularity": 5,
+          "score": 20
+        }
+      },
+      {
+        "label": "Zmień temat na mem",
+        "result": "Kilka osób przestaje pingować, bo zaczynają reagować obrazkami.",
+        "effects": {
+          "popularity": 7,
+          "controversy": -2,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "typo_name",
+    "title": "Autokorekta obraża użytkownika",
+    "category": "CHAOS",
+    "description": "Telefon zmienia czyjś nick na słowo, które brzmi jak obelga. Wiadomość idzie zanim zauważysz.",
+    "weight": 9,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Natychmiast wyjaśnij autokorektę",
+        "result": "Po chwili wszyscy wiedzą, że to nie był celowy strzał.",
+        "effects": {
+          "trust": 7,
+          "controversy": -5,
+          "score": 28
+        }
+      },
+      {
+        "label": "Udawaj, że nic się nie stało",
+        "result": "Brak wyjaśnienia sprawia, że żart żyje własnym życiem.",
+        "effects": {
+          "popularity": 5,
+          "controversy": 5,
+          "score": 18
+        }
+      },
+      {
+        "label": "Zrób z błędu nowy pseudonim",
+        "result": "Przejęzyczenie zamienia się w sympatyczny lokalny alias.",
+        "effects": {
+          "popularity": 9,
+          "trust": 4,
+          "score": 34
+        }
+      }
+    ]
+  },
+  {
+    "id": "rage_game",
+    "title": "Wspólna gra zmienia się w festiwal wkurwu",
+    "category": "WKURW",
+    "description": "Miało być luźno, ale po trzech porażkach wszyscy zaczynają przeklinać mechanikę, serwery i własne życie.",
+    "weight": 9,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zaproponuj przerwę",
+        "result": "Pięć minut bez gry ratuje atmosferę.",
+        "effects": {
+          "trust": 7,
+          "controversy": -5,
+          "score": 28
+        }
+      },
+      {
+        "label": "Dokręć trash talk",
+        "result": "Mecz przegrywacie, ale komentarz głosowy jest wybitny.",
+        "effects": {
+          "popularity": 8,
+          "activity": 8,
+          "controversy": 8,
+          "score": 28
+        }
+      },
+      {
+        "label": "Zmieńcie grę na coś głupiego",
+        "result": "Rywalizacja znika i wraca zwykła zabawa.",
+        "effects": {
+          "trust": 6,
+          "popularity": 6,
+          "controversy": -3,
+          "score": 32
+        }
+      }
+    ]
+  },
+  {
+    "id": "public_dm",
+    "title": "Ktoś wrzuca screen z prywatnej rozmowy",
+    "category": "DRAMA",
+    "description": "Na publicznym kanale pojawia się screen z DM. Kontekst jest niepełny, a atmosfera od razu robi się ciężka.",
+    "weight": 6,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Powiedz, żeby usunął screen",
+        "result": "Bronisz granicy między prywatnym a publicznym.",
+        "effects": {
+          "trust": 10,
+          "reputation": 7,
+          "controversy": -5,
+          "score": 42
+        }
+      },
+      {
+        "label": "Wejdź w analizę screena",
+        "result": "Każdy zaczyna interpretować każde słowo jak biegły sądowy.",
+        "effects": {
+          "activity": 8,
+          "controversy": 12,
+          "popularity": 4,
+          "score": 18
+        }
+      },
+      {
+        "label": "Zapytaj o zgodę drugiej osoby",
+        "result": "Proste pytanie nagle zmienia całą rozmowę.",
+        "effects": {
+          "trust": 8,
+          "reputation": 6,
+          "score": 36
+        }
+      }
+    ]
+  },
+  {
+    "id": "fake_quit",
+    "title": "Ktoś znowu „odchodzi na zawsze”",
+    "category": "DRAMA",
+    "description": "Ta sama osoba po raz trzeci w miesiącu pisze pożegnalny manifest i usuwa avatar.",
+    "weight": 7,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Życz powodzenia i nie komentuj",
+        "result": "Nie karmisz kolejnego odcinka serialu.",
+        "effects": {
+          "controversy": -5,
+          "trust": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Napisz „do jutra”",
+        "result": "Jedno zdanie, a poziom celności brutalny.",
+        "effects": {
+          "popularity": 8,
+          "controversy": 6,
+          "score": 24
+        }
+      },
+      {
+        "label": "Zrób zakład, kiedy wróci",
+        "result": "Powstaje nieoficjalny bukmacher Melonawki.",
+        "effects": {
+          "popularity": 10,
+          "activity": 6,
+          "controversy": 5,
+          "score": 32
+        }
+      }
+    ]
+  },
+  {
+    "id": "survey_war",
+    "title": "Ankieta dzieli społeczność 50/50",
+    "category": "DYSKUSJA",
+    "description": "Wynik ankiety jest idealnie równy, więc obie strony uznają, że właśnie wygrały.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zorganizuj dogrywkę",
+        "result": "Jeszcze więcej osób głosuje i wynik robi się jeszcze bardziej absurdalny.",
+        "effects": {
+          "activity": 8,
+          "popularity": 5,
+          "score": 28
+        }
+      },
+      {
+        "label": "Ogłoś remis",
+        "result": "Próbujesz zakończyć temat bez koronowania kogokolwiek.",
+        "effects": {
+          "trust": 5,
+          "controversy": -3,
+          "score": 24
+        }
+      },
+      {
+        "label": "Dodaj trzecią opcję „wszyscy macie źle”",
+        "result": "Nowa opcja natychmiast zaczyna prowadzić.",
+        "effects": {
+          "popularity": 9,
+          "controversy": 3,
+          "score": 34
+        }
+      }
+    ]
+  },
+  {
+    "id": "soundboard",
+    "title": "Soundboard przejmuje voice",
+    "category": "NOCNA MELINA",
+    "description": "Ktoś odkrywa soundboard i przez dziesięć minut każdą wypowiedź puentuje losowym dźwiękiem.",
+    "weight": 8,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Poproś o limit",
+        "result": "Dźwięków jest mniej i znowu da się rozmawiać.",
+        "effects": {
+          "trust": 4,
+          "controversy": -3,
+          "score": 22
+        }
+      },
+      {
+        "label": "Dołącz własnym soundboardem",
+        "result": "Rozmowa kończy się, zaczyna się wojna efektów.",
+        "effects": {
+          "activity": 10,
+          "popularity": 8,
+          "controversy": 6,
+          "score": 32
+        }
+      },
+      {
+        "label": "Wybierz jeden idealny dźwięk",
+        "result": "Czekasz pięć minut i odpalasz go dokładnie w najlepszym momencie.",
+        "effects": {
+          "popularity": 10,
+          "reputation": 3,
+          "score": 36
+        }
+      }
+    ]
+  },
+  {
+    "id": "forgot_birthday",
+    "title": "Serwer zapomina o czyichś urodzinach",
+    "category": "SPOŁECZNOŚĆ",
+    "description": "Dopiero wieczorem ktoś orientuje się, że ważny użytkownik ma dziś urodziny i nikt nic nie napisał.",
+    "weight": 7,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zorganizuj szybkie życzenia",
+        "result": "W kilka minut powstaje spontaniczna akcja i sytuacja zostaje uratowana.",
+        "effects": {
+          "trust": 10,
+          "reputation": 7,
+          "activity": 6,
+          "score": 46
+        }
+      },
+      {
+        "label": "Napisz prywatnie",
+        "result": "Bez wielkiego show, ale szczerze.",
+        "effects": {
+          "trust": 7,
+          "score": 30
+        }
+      },
+      {
+        "label": "Zrób przesadzony urodzinowy spam",
+        "result": "Kanał zalewa fala życzeń, gifów i kompletnie zbędnych fajerwerków.",
+        "effects": {
+          "popularity": 7,
+          "activity": 8,
+          "trust": 5,
+          "score": 36
+        }
+      }
+    ]
+  },
+  {
+    "id": "challenge",
+    "title": "Ktoś rzuca idiotyczne wyzwanie",
+    "category": "CHAOS",
+    "description": "Pada propozycja: „kto przegra, ustawia najgorszy avatar na tydzień”. Oczywiście wszyscy są zainteresowani.",
+    "weight": 8,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Wejdź w zakład",
+        "result": "Ryzykujesz godność dla rozrywki społeczności.",
+        "effects": {
+          "activity": 8,
+          "popularity": 7,
+          "controversy": 3,
+          "score": 30
+        }
+      },
+      {
+        "label": "Podnieś stawkę",
+        "result": "Dodajesz jeszcze gorszy warunek i nagle robi się naprawdę poważnie.",
+        "effects": {
+          "activity": 10,
+          "popularity": 9,
+          "controversy": 7,
+          "score": 34
+        }
+      },
+      {
+        "label": "Zostań sędzią",
+        "result": "Nie ryzykujesz avatara, ale kontrolujesz cały chaos.",
+        "effects": {
+          "trust": 7,
+          "reputation": 5,
+          "score": 32
+        }
+      }
+    ]
+  },
+  {
+    "id": "voice_dj",
+    "title": "Ktoś puszcza muzykę przez mikrofon",
+    "category": "WKURW",
+    "description": "Jakość jest tak tragiczna, że trudno rozpoznać, czy leci piosenka, czy odkurzacz umiera.",
+    "weight": 9,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Poproś o wyłączenie",
+        "result": "Po krótkiej rozmowie muzyka znika.",
+        "effects": {
+          "trust": 4,
+          "controversy": -3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Napisz „audio jak z kibla”",
+        "result": "Komentarz trafia w punkt, właściciel mikrofonu mniej zachwycony.",
+        "effects": {
+          "popularity": 7,
+          "controversy": 6,
+          "score": 22
+        }
+      },
+      {
+        "label": "Zacznij zgadywać utwór po zniekształceniach",
+        "result": "Z katastrofy audio powstaje mini-teleturniej.",
+        "effects": {
+          "popularity": 9,
+          "activity": 7,
+          "score": 34
+        }
+      }
+    ]
+  },
+  {
+    "id": "thread_necromancy",
+    "title": "Ktoś odkopuje temat sprzed dwóch lat",
+    "category": "CHAOS",
+    "description": "Powiadomienie wygląda aktualnie, dopóki nie zauważasz daty pierwszej wiadomości: dwa lata temu.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Odpowiedz normalnie",
+        "result": "Stary temat okazuje się nadal zaskakująco aktualny.",
+        "effects": {
+          "activity": 4,
+          "reputation": 3,
+          "score": 22
+        }
+      },
+      {
+        "label": "Napisz „archeolog roku”",
+        "result": "Odkopywanie wątku dostaje zasłużony komentarz.",
+        "effects": {
+          "popularity": 6,
+          "score": 22
+        }
+      },
+      {
+        "label": "Odkop jeszcze starszy temat",
+        "result": "Rozpoczyna się konkurs na najstarszy żywy wątek.",
+        "effects": {
+          "popularity": 8,
+          "activity": 7,
+          "controversy": 3,
+          "score": 30
+        }
+      }
+    ]
+  },
+  {
+    "id": "event_prize",
+    "title": "Nagroda okazuje się kompletnie absurdalna",
+    "category": "EVENT",
+    "description": "Po godzinie konkursu zwycięzca dowiaduje się, że główną nagrodą jest specjalna ranga „KURWA MISTRZ” na 24 godziny.",
+    "weight": 7,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Świętuj jak mistrzostwo świata",
+        "result": "Robisz z głupiej nagrody wydarzenie wieczoru.",
+        "effects": {
+          "popularity": 9,
+          "activity": 7,
+          "score": 36
+        }
+      },
+      {
+        "label": "Zażądaj pucharu",
+        "result": "Organizator tworzy prowizoryczny puchar z emoji.",
+        "effects": {
+          "popularity": 7,
+          "trust": 3,
+          "score": 28
+        }
+      },
+      {
+        "label": "Oddaj rangę komuś innemu",
+        "result": "Gest zostaje odebrany zaskakująco pozytywnie.",
+        "effects": {
+          "trust": 8,
+          "reputation": 5,
+          "score": 34
+        }
+      }
+    ]
+  },
+  {
+    "id": "mod_mistake",
+    "title": "Moderator banuje nie tę osobę",
+    "category": "MODERACJA",
+    "description": "Dwa podobne nicki, jeden szybki klik i nagle niewinny użytkownik znika z serwera.",
+    "weight": 6,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Pomóż szybko wyjaśnić",
+        "result": "Błąd zostaje cofnięty i moderacja przeprasza.",
+        "effects": {
+          "trust": 9,
+          "reputation": 7,
+          "score": 42
+        }
+      },
+      {
+        "label": "Napisz „sprawiedliwość działa zajebiście”",
+        "result": "Sarkazm jest popularny, ale moderator nie ma najlepszego humoru.",
+        "effects": {
+          "popularity": 6,
+          "controversy": 6,
+          "score": 22
+        }
+      },
+      {
+        "label": "Zaproponuj procedurę weryfikacji",
+        "result": "Po incydencie powstaje prosty sposób, żeby to się nie powtórzyło.",
+        "effects": {
+          "trust": 10,
+          "reputation": 8,
+          "score": 48
+        }
+      }
+    ]
+  },
+  {
+    "id": "meme_context",
+    "title": "Mem wymaga pięciu poziomów kontekstu",
+    "category": "KULTURA",
+    "description": "Nowi pytają, czemu wszyscy śmieją się z obrazka, który dla nich nie ma absolutnie żadnego sensu.",
+    "weight": 6,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Wyjaśnij pełne lore",
+        "result": "Po dziesięciu minutach nowi żałują, że pytali, ale przynajmniej rozumieją.",
+        "effects": {
+          "trust": 6,
+          "activity": 5,
+          "reputation": 4,
+          "score": 30
+        }
+      },
+      {
+        "label": "Powiedz „nie da się tego wyjaśnić”",
+        "result": "Tajemnica tylko zwiększa zainteresowanie.",
+        "effects": {
+          "popularity": 6,
+          "score": 22
+        }
+      },
+      {
+        "label": "Stwórz przewodnik po lore",
+        "result": "Powstaje pół-żartem dokumentacja najważniejszych memów serwera.",
+        "effects": {
+          "reputation": 9,
+          "popularity": 8,
+          "trust": 6,
+          "score": 50
+        }
+      }
+    ]
+  },
+  {
+    "id": "awkward_silence",
+    "title": "Po ciężkim żarcie zapada martwa cisza",
+    "category": "DRAMA",
+    "description": "Ktoś rzuca żart, który nie siada. Nikt nie reaguje. Sekundy ciągną się jak minuty.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zmień temat",
+        "result": "Ratujesz rozmowę bez dodatkowego upokorzenia autora.",
+        "effects": {
+          "trust": 5,
+          "controversy": -3,
+          "score": 22
+        }
+      },
+      {
+        "label": "Wrzuć reakcję „💀”",
+        "result": "Cisza zostaje oficjalnie skomentowana.",
+        "effects": {
+          "popularity": 5,
+          "controversy": 3,
+          "score": 18
+        }
+      },
+      {
+        "label": "Zrób z ciszy żart",
+        "result": "„Dobra, to chyba umarło” rozładowuje niezręczność.",
+        "effects": {
+          "popularity": 7,
+          "trust": 3,
+          "score": 26
+        }
+      }
+    ]
+  },
+  {
+    "id": "admin_return",
+    "title": "Admin wraca po długiej nieobecności",
+    "category": "POZYCJA",
+    "description": "Osoba, której nikt nie widział od miesięcy, nagle pisze „widzę, że dalej tu burdel”.",
+    "weight": 5,
+    "minTurn": 6,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przywitaj i zdaj raport",
+        "result": "W pięciu punktach streszczasz najważniejsze katastrofy ostatnich miesięcy.",
+        "effects": {
+          "reputation": 8,
+          "trust": 6,
+          "activity": 5,
+          "score": 40
+        }
+      },
+      {
+        "label": "Napisz „nic się nie zmieniło”",
+        "result": "Krótka odpowiedź mówi wszystko.",
+        "effects": {
+          "popularity": 6,
+          "score": 24
+        }
+      },
+      {
+        "label": "Przedstaw najbardziej absurdalne lore",
+        "result": "Powrót admina zamienia się w wycieczkę po muzeum chaosu.",
+        "effects": {
+          "popularity": 9,
+          "activity": 7,
+          "score": 34
+        }
+      }
+    ]
+  },
+  {
+    "id": "double_ping",
+    "title": "Dwa pingi, zero wiadomości",
+    "category": "WKURW",
+    "description": "Telefon wibruje dwa razy. Otwierasz aplikację. Ktoś usunął obie wiadomości. Pięknie.",
+    "weight": 10,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zapytaj, czego chciał",
+        "result": "Okazuje się, że „już nieważne”. Oczywiście.",
+        "effects": {
+          "trust": 2,
+          "score": 14
+        }
+      },
+      {
+        "label": "Napisz „to po chuj pingujesz dwa razy”",
+        "result": "Pytanie retoryczne, ale satysfakcjonujące.",
+        "effects": {
+          "controversy": 6,
+          "score": 18
+        }
+      },
+      {
+        "label": "Odpowiedz dwoma pustymi pingami później",
+        "result": "Dziecinne? Tak. Skuteczne? Też tak.",
+        "effects": {
+          "popularity": 5,
+          "controversy": 7,
+          "activity": 3,
+          "score": 20
+        }
+      }
+    ]
+  },
+  {
+    "id": "webcam_fail",
+    "title": "Kamera włącza się przypadkiem",
+    "category": "NOCNA MELINA",
+    "description": "Ktoś naciska zły przycisk i przez sekundę pokazuje pokój w stanie po przejściu tornada.",
+    "weight": 7,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Udawaj, że nic nie widziałeś",
+        "result": "Dajesz człowiekowi szansę zachować resztki godności.",
+        "effects": {
+          "trust": 7,
+          "score": 26
+        }
+      },
+      {
+        "label": "Powiedz „ładny burdel”",
+        "result": "Prawda boli, ale przynajmniej jest szybka.",
+        "effects": {
+          "popularity": 5,
+          "controversy": 4,
+          "trust": -2,
+          "score": 18
+        }
+      },
+      {
+        "label": "Pokaż swój równie tragiczny kadr",
+        "result": "Solidaryzujesz się i nagle wszyscy zaczynają pokazywać chaos dookoła siebie.",
+        "effects": {
+          "trust": 6,
+          "popularity": 7,
+          "activity": 6,
+          "score": 32
+        }
+      }
+    ]
+  },
+  {
+    "id": "poll_mistake",
+    "title": "Ankieta ma złą odpowiedź jako jedyną opcję",
+    "category": "CHAOS",
+    "description": "Autor chciał dodać cztery możliwości, ale opublikował ankietę tylko z „TAK”.",
+    "weight": 9,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Głosuj „TAK”",
+        "result": "Frekwencja 100%, wynik też 100%. Demokracja idealna.",
+        "effects": {
+          "popularity": 4,
+          "score": 18
+        }
+      },
+      {
+        "label": "Napisz „wybór godny wyborów”",
+        "result": "Komentarz zbiera więcej reakcji niż sama ankieta.",
+        "effects": {
+          "popularity": 7,
+          "score": 24
+        }
+      },
+      {
+        "label": "Zrób konkurencyjną ankietę tylko z „NIE”",
+        "result": "Powstają dwa równoległe systemy polityczne.",
+        "effects": {
+          "popularity": 9,
+          "activity": 6,
+          "controversy": 3,
+          "score": 32
+        }
+      }
+    ]
+  },
+  {
+    "id": "avatar_dare",
+    "title": "Przegrywasz zakład o avatar",
+    "category": "EKIPA",
+    "description": "Przez tydzień masz ustawić avatar wybrany przez ekipę. Oczywiście wybierają najgorsze możliwe gówno.",
+    "weight": 7,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Dotrzymaj zakładu",
+        "result": "Przyjmujesz karę bez marudzenia i ludzie to doceniają.",
+        "effects": {
+          "trust": 8,
+          "popularity": 5,
+          "reputation": 4,
+          "score": 34
+        }
+      },
+      {
+        "label": "Próbuj negocjować",
+        "result": "Udaję ci się zbić wyrok do trzech dni.",
+        "effects": {
+          "trust": 3,
+          "controversy": 2,
+          "score": 20
+        }
+      },
+      {
+        "label": "Ustaw jeszcze gorszy samemu",
+        "result": "Przebijasz ich pomysł i przejmujesz kontrolę nad żartem.",
+        "effects": {
+          "popularity": 10,
+          "reputation": 3,
+          "score": 36
+        }
+      }
+    ]
+  },
+  {
+    "id": "server_name",
+    "title": "Kłótnia o nazwę kanału",
+    "category": "DRAMA",
+    "description": "Ktoś zmienia nazwę kanału dla żartu. Ktoś inny zmienia z powrotem. Zaczyna się wojna edycji.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przywróć normalną nazwę",
+        "result": "Kończysz ping-pong zanim zrobi się męczący.",
+        "effects": {
+          "trust": 5,
+          "controversy": -3,
+          "score": 22
+        }
+      },
+      {
+        "label": "Dołącz z własną nazwą",
+        "result": "Teraz kanał zmienia nazwę co trzydzieści sekund.",
+        "effects": {
+          "activity": 9,
+          "popularity": 6,
+          "controversy": 6,
+          "score": 26
+        }
+      },
+      {
+        "label": "Ustal głosowanie",
+        "result": "Chaos dostaje demokratyczne ramy i nagle wszyscy są zaangażowani.",
+        "effects": {
+          "trust": 6,
+          "activity": 5,
+          "popularity": 4,
+          "score": 32
+        }
+      }
+    ]
+  },
+  {
+    "id": "late_reply",
+    "title": "Ktoś odpowiada na wiadomość po 11 miesiącach",
+    "category": "CHAOS",
+    "description": "Dostajesz odpowiedź do pytania, o którym kompletnie zapomniałeś. Nadawca zachowuje się, jakby minęło pięć minut.",
+    "weight": 6,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Odpowiedz normalnie",
+        "result": "Kontynuujesz rozmowę z najbardziej absurdalnym opóźnieniem internetu.",
+        "effects": {
+          "trust": 4,
+          "score": 20
+        }
+      },
+      {
+        "label": "Napisz „szybko poszło”",
+        "result": "Sarkazm jest obowiązkowy.",
+        "effects": {
+          "popularity": 6,
+          "score": 22
+        }
+      },
+      {
+        "label": "Odpowiedz za kolejne 11 miesięcy",
+        "result": "Plan zemsty jest długoterminowy i niezdrowo konsekwentny.",
+        "effects": {
+          "controversy": 2,
+          "popularity": 5,
+          "score": 18
+        }
+      }
+    ]
+  },
+  {
+    "id": "bad_roleplay",
+    "title": "Improwizowany roleplay wymyka się spod kontroli",
+    "category": "CHAOS",
+    "description": "Jedna żartobliwa wiadomość zamienia się w półgodzinny roleplay, w którym ktoś ogłasza się królem kanału.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Dołącz jako minister chaosu",
+        "result": "Fabularny absurd osiąga nowy poziom.",
+        "effects": {
+          "popularity": 9,
+          "activity": 8,
+          "score": 34
+        }
+      },
+      {
+        "label": "Ogłoś rebelię",
+        "result": "Rozpoczyna się pełnoprawna wojna o fikcyjny tron.",
+        "effects": {
+          "activity": 10,
+          "controversy": 6,
+          "popularity": 8,
+          "score": 34
+        }
+      },
+      {
+        "label": "Napisz konstytucję w 5 punktach",
+        "result": "Nadajesz całemu idiotyzmowi zaskakująco formalną strukturę.",
+        "effects": {
+          "reputation": 5,
+          "popularity": 8,
+          "activity": 6,
+          "score": 38
+        }
+      }
+    ]
+  },
+  {
+    "id": "stream_sniper",
+    "title": "Ktoś zdradza wynik zanim reszta zobaczy",
+    "category": "WKURW",
+    "description": "Na wspólnym oglądaniu jedna osoba jest kilka sekund do przodu i krzyczy spoiler za spoilerem.",
+    "weight": 8,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Poproś o opóźnienie reakcji",
+        "result": "Po chwili wszystkim udaje się zsynchronizować.",
+        "effects": {
+          "trust": 5,
+          "controversy": -3,
+          "score": 24
+        }
+      },
+      {
+        "label": "Napisz „jeszcze jeden spoiler i mute”",
+        "result": "Groźba jest pół-żartem, pół-serio i działa.",
+        "effects": {
+          "reputation": 3,
+          "controversy": 5,
+          "score": 20
+        }
+      },
+      {
+        "label": "Sam przewiduj fałszywe wyniki",
+        "result": "Wprowadzasz tyle dezinformacji, że spoiler przestaje mieć moc.",
+        "effects": {
+          "popularity": 7,
+          "controversy": 4,
+          "score": 26
+        }
+      }
+    ]
+  },
+  {
+    "id": "server_census",
+    "title": "Ktoś robi spis „kto tu jeszcze żyje”",
+    "category": "SPOŁECZNOŚĆ",
+    "description": "Pada ping do aktywnych i zaczyna się sprawdzanie, kto jeszcze zagląda na Melonawkę.",
+    "weight": 6,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zgłoś obecność",
+        "result": "Proste „żyję” kończy się krótką rozmową ze starymi znajomymi.",
+        "effects": {
+          "activity": 4,
+          "trust": 4,
+          "score": 22
+        }
+      },
+      {
+        "label": "Napisz „niestety nadal”",
+        "result": "Autoironia dostaje serię reakcji.",
+        "effects": {
+          "popularity": 6,
+          "score": 23
+        }
+      },
+      {
+        "label": "Zawołaj dawno niewidzianych",
+        "result": "Kilka starych nicków nagle wraca na moment.",
+        "effects": {
+          "activity": 8,
+          "trust": 6,
+          "popularity": 5,
+          "score": 34
+        }
+      }
+    ]
+  },
+  {
+    "id": "fake_screenshot",
+    "title": "Podejrzany screen ma ucięty kontekst",
+    "category": "DRAMA",
+    "description": "Ktoś wrzuca screen „dowodzący wszystkiego”, ale dziwnym trafem brakuje wiadomości przed i po.",
+    "weight": 7,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Poproś o pełny kontekst",
+        "result": "Po pokazaniu całości sprawa wygląda zupełnie inaczej.",
+        "effects": {
+          "reputation": 9,
+          "trust": 8,
+          "controversy": -5,
+          "score": 42
+        }
+      },
+      {
+        "label": "Uwierz od razu",
+        "result": "Wskakujesz do pociągu oburzenia, zanim sprawdzisz tory.",
+        "effects": {
+          "activity": 7,
+          "controversy": 12,
+          "trust": -8,
+          "score": 10
+        }
+      },
+      {
+        "label": "Zrób mem o „uciętym kontekście”",
+        "result": "Wyśmiewasz metodę zamiast konkretnej osoby.",
+        "effects": {
+          "popularity": 8,
+          "controversy": 3,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "bot_personality",
+    "title": "Bot zaczyna brzmieć podejrzanie ludzko",
+    "category": "CHAOS",
+    "description": "Po aktualizacji odpowiedzi bota są tak sarkastyczne, że część ludzi pyta, czy ktoś siedzi po drugiej stronie.",
+    "weight": 7,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Testuj go pytaniami",
+        "result": "Zaczyna się grupowy eksperyment, który szybko skręca w absurd.",
+        "effects": {
+          "activity": 8,
+          "popularity": 6,
+          "score": 30
+        }
+      },
+      {
+        "label": "Ogłoś, że bot ma dość ludzi",
+        "result": "Teoria trafia idealnie w humor społeczności.",
+        "effects": {
+          "popularity": 9,
+          "score": 32
+        }
+      },
+      {
+        "label": "Próbuj go sprowokować",
+        "result": "Bot odpowiada jeszcze bardziej bezczelnie i wygrywa tę rundę.",
+        "effects": {
+          "popularity": 8,
+          "controversy": 4,
+          "activity": 5,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "sticker_spam",
+    "title": "Nowe naklejki powodują katastrofę",
+    "category": "MEMY",
+    "description": "Ktoś dodaje zestaw nowych naklejek. Przez godzinę normalne zdania praktycznie przestają istnieć.",
+    "weight": 9,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Dołącz do spamu",
+        "result": "Komunikacja zmienia się w hieroglify z memów.",
+        "effects": {
+          "activity": 10,
+          "popularity": 8,
+          "score": 32
+        }
+      },
+      {
+        "label": "Poproś o chwilę bez naklejek",
+        "result": "Po kilku minutach część ludzi wraca do alfabetu.",
+        "effects": {
+          "trust": 4,
+          "controversy": -3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Zrób ranking najlepszych naklejek",
+        "result": "Spam dostaje strukturę i powstaje nowy zestaw ulubieńców.",
+        "effects": {
+          "popularity": 9,
+          "activity": 6,
+          "score": 34
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_pronunciation",
+    "title": "Ktoś od lat źle wymawia twój nick",
+    "category": "EKIPA",
+    "description": "Na voice wychodzi, że połowa osób czyta twój nick kompletnie inaczej, niż zakładałeś.",
+    "weight": 7,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podaj właściwą wymowę",
+        "result": "Kilka osób próbuje się przestawić, reszta ma już nawyk.",
+        "effects": {
+          "trust": 4,
+          "score": 20
+        }
+      },
+      {
+        "label": "Zaakceptuj najgorszą wersję",
+        "result": "Błędna wymowa staje się oficjalnym przezwiskiem.",
+        "effects": {
+          "popularity": 8,
+          "trust": 3,
+          "score": 30
+        }
+      },
+      {
+        "label": "Wymyśl błędne wymowy wszystkim",
+        "result": "Voice zamienia się w konkurs fonetycznych zbrodni.",
+        "effects": {
+          "popularity": 10,
+          "activity": 7,
+          "score": 34
+        }
+      }
+    ]
+  },
+  {
+    "id": "suspicious_link",
+    "title": "Ktoś wrzuca podejrzany link",
+    "category": "MODERACJA",
+    "description": "Adres wygląda tak źle, że nawet przeglądarka chyba się go boi. Autor twierdzi, że „to tylko mem”.",
+    "weight": 7,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Nie klikaj i ostrzeż innych",
+        "result": "Oszczędzasz wszystkim potencjalnego problemu.",
+        "effects": {
+          "trust": 10,
+          "reputation": 8,
+          "score": 44
+        }
+      },
+      {
+        "label": "Sprawdź domenę bez otwierania",
+        "result": "Okazuje się, że link faktycznie prowadzi do zwykłego obrazka, tylko domena jest koszmarna.",
+        "effects": {
+          "reputation": 6,
+          "trust": 5,
+          "score": 32
+        }
+      },
+      {
+        "label": "Napisz „klikaj pierwszy, bohaterze”",
+        "result": "Autor zostaje poproszony o test własnego wynalazku.",
+        "effects": {
+          "popularity": 5,
+          "controversy": 3,
+          "score": 22
+        }
+      }
+    ]
+  },
+  {
+    "id": "event_rules",
+    "title": "Zasady konkursu zmieniają się w trakcie",
+    "category": "EVENT",
+    "description": "Prowadzący co pięć minut dopisuje nową regułę, bo ktoś znajduje kolejną dziurę w systemie.",
+    "weight": 7,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Pomóż uporządkować zasady",
+        "result": "Wreszcie powstaje jedna spójna wersja.",
+        "effects": {
+          "trust": 9,
+          "reputation": 7,
+          "activity": 5,
+          "score": 42
+        }
+      },
+      {
+        "label": "Eksploatuj luki póki można",
+        "result": "Zdobywasz przewagę, ale kilka osób zaczyna patrzeć krzywo.",
+        "effects": {
+          "activity": 8,
+          "controversy": 7,
+          "melons": 25,
+          "score": 28
+        }
+      },
+      {
+        "label": "Zaproponuj „tryb chaos” bez zasad",
+        "result": "Część ludzi woli absurd od kolejnych poprawek i powstaje osobna runda.",
+        "effects": {
+          "popularity": 8,
+          "activity": 8,
+          "score": 34
+        }
+      }
+    ]
+  },
+  {
+    "id": "old_username",
+    "title": "Ktoś przypomina twój stary żenujący nick",
+    "category": "KULTURA",
+    "description": "W archiwum wypływa nazwa konta, której od lat próbujesz nie pamiętać.",
+    "weight": 6,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przyznaj się bez walki",
+        "result": "Autoironia odbiera sytuacji całą broń.",
+        "effects": {
+          "reputation": 6,
+          "trust": 5,
+          "popularity": 3,
+          "score": 30
+        }
+      },
+      {
+        "label": "Zaprzeczaj mimo dowodów",
+        "result": "Screen ma datę, avatar i twoje wiadomości. Obrona jest trudna.",
+        "effects": {
+          "controversy": 5,
+          "popularity": 5,
+          "score": 16
+        }
+      },
+      {
+        "label": "Zmień go na godzinę dla żartu",
+        "result": "Duch przeszłości wraca oficjalnie i wszyscy są zachwyceni.",
+        "effects": {
+          "popularity": 10,
+          "activity": 5,
+          "score": 36
+        }
+      }
+    ]
+  },
+  {
+    "id": "voice_lag",
+    "title": "Opóźnienie na voice robi z rozmowy koszmar",
+    "category": "CHAOS",
+    "description": "Każdy słyszy każdego z innym opóźnieniem. Wszyscy wchodzą sobie w słowo i przepraszają jednocześnie.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przejdźcie na tekst",
+        "result": "Rozmowa zwalnia, ale odzyskuje sens.",
+        "effects": {
+          "trust": 4,
+          "controversy": -2,
+          "score": 20
+        }
+      },
+      {
+        "label": "Kontynuuj mimo lagu",
+        "result": "Po pięciu minutach rozmowa brzmi jak eksperymentalny podcast.",
+        "effects": {
+          "activity": 7,
+          "popularity": 5,
+          "controversy": 3,
+          "score": 24
+        }
+      },
+      {
+        "label": "Zróbcie z tego grę",
+        "result": "Kto pierwszy trafi z odpowiedzią w odpowiednie opóźnienie, wygrywa.",
+        "effects": {
+          "popularity": 8,
+          "activity": 8,
+          "score": 32
+        }
+      }
+    ]
+  },
+  {
+    "id": "comment_out_of_context",
+    "title": "Twój komentarz trafia poza serwer bez kontekstu",
+    "category": "DRAMA",
+    "description": "Ktoś przesyła twoje zdanie dalej i nagle ludzie, którzy nie znają sytuacji, interpretują je kompletnie inaczej.",
+    "weight": 6,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Wyjaśnij spokojnie",
+        "result": "Dajesz pełny kontekst i część osób odpuszcza.",
+        "effects": {
+          "reputation": 8,
+          "trust": 7,
+          "controversy": -5,
+          "score": 38
+        }
+      },
+      {
+        "label": "Odpowiedz wkurwiony",
+        "result": "Masz rację, ale ton sprawia, że temat rośnie zamiast maleć.",
+        "effects": {
+          "activity": 7,
+          "controversy": 12,
+          "trust": -5,
+          "score": 15
+        }
+      },
+      {
+        "label": "Zrób własny screen z pełnym kontekstem",
+        "result": "Przejmujesz narrację bez dodatkowego darcia mordy.",
+        "effects": {
+          "reputation": 9,
+          "trust": 6,
+          "popularity": 4,
+          "score": 42
+        }
+      }
+    ]
+  },
+  {
+    "id": "random_gift",
+    "title": "Ktoś daje ci prezent bez powodu",
+    "category": "SPOŁECZNOŚĆ",
+    "description": "Dostajesz drobny prezent / kod / rangę z wiadomością „bo tak”. Podejrzane, ale miłe.",
+    "weight": 6,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podziękuj normalnie",
+        "result": "Krótka, szczera reakcja robi robotę.",
+        "effects": {
+          "trust": 7,
+          "reputation": 4,
+          "melons": 20,
+          "score": 30
+        }
+      },
+      {
+        "label": "Odwdzięcz się",
+        "result": "Gest wraca do nadawcy i buduje dobrą atmosferę.",
+        "effects": {
+          "trust": 10,
+          "reputation": 6,
+          "melons": -10,
+          "score": 38
+        }
+      },
+      {
+        "label": "Napisz „co odjebałem, że zasłużyłem?”",
+        "result": "Wdzięczność połączona z podejrzliwością bawi wszystkich.",
+        "effects": {
+          "popularity": 5,
+          "trust": 5,
+          "melons": 20,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "staff_meeting_leak",
+    "title": "Ktoś zdradza fragment rozmowy ekipy",
+    "category": "DRAMA",
+    "description": "Na publicznym kanale pojawia się urwany fragment wewnętrznej rozmowy administracji. Brzmi gorzej niż pełny kontekst.",
+    "weight": 5,
+    "minTurn": 6,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Poczekaj na wyjaśnienie",
+        "result": "Nie dokładasz spekulacji do niepełnych informacji.",
+        "effects": {
+          "trust": 7,
+          "controversy": -5,
+          "score": 28
+        }
+      },
+      {
+        "label": "Dopytaj o pełny kontekst",
+        "result": "Rozmowa robi się konkretna zamiast opierać się na domysłach.",
+        "effects": {
+          "reputation": 6,
+          "trust": 5,
+          "score": 32
+        }
+      },
+      {
+        "label": "Rozkręć teorie",
+        "result": "Przez godzinę serwer żyje spiskami, z których większość jest kompletnie z dupy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 8,
+          "controversy": 13,
+          "trust": -6,
+          "score": 18
+        }
+      }
+    ]
+  },
+  {
+    "id": "too_many_channels",
+    "title": "Nikt nie wie, gdzie pisać",
+    "category": "CHAOS",
+    "description": "Serwer ma tyle kanałów, że trzy różne rozmowy o tym samym odbywają się w trzech różnych miejscach.",
+    "weight": 6,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zaproponuj porządek",
+        "result": "Kilka kanałów zostaje połączonych i wszystko robi się czytelniejsze.",
+        "effects": {
+          "reputation": 7,
+          "trust": 6,
+          "score": 34
+        }
+      },
+      {
+        "label": "Pisz wszędzie naraz",
+        "result": "Masz tę samą rozmowę w trzech oknach i sam już nie wiesz, komu odpowiedziałeś.",
+        "effects": {
+          "activity": 9,
+          "controversy": 4,
+          "score": 20
+        }
+      },
+      {
+        "label": "Zrób mapę kanałów",
+        "result": "Tworzysz absurdalnie potrzebny przewodnik.",
+        "effects": {
+          "reputation": 8,
+          "trust": 7,
+          "activity": 5,
+          "score": 40
+        }
+      }
+    ]
+  },
+  {
+    "id": "meme_revival",
+    "title": "Martwy mem wraca po roku",
+    "category": "MEMY",
+    "description": "Ktoś bez ostrzeżenia wrzuca format, którego nikt nie używał od miesięcy. Starsi użytkownicy reagują jak na powrót legendy.",
+    "weight": 5,
+    "minTurn": 6,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Wskrześ go na pełnej",
+        "result": "Przez dzień stary mem znowu jest wszędzie.",
+        "effects": {
+          "popularity": 10,
+          "activity": 8,
+          "score": 38
+        }
+      },
+      {
+        "label": "Napisz „nie, błagam”",
+        "result": "Sprzeciw oczywiście tylko zachęca innych.",
+        "effects": {
+          "popularity": 6,
+          "controversy": 3,
+          "score": 22
+        }
+      },
+      {
+        "label": "Zrób wersję 2026",
+        "result": "Aktualizujesz format i nadajesz mu nowe życie.",
+        "effects": {
+          "popularity": 12,
+          "reputation": 4,
+          "score": 44
+        }
+      }
+    ]
+  },
+  {
+    "id": "voice_argument",
+    "title": "Dwie osoby kłócą się równocześnie na voice",
+    "category": "DRAMA",
+    "description": "Nikt nikogo nie słyszy, wszyscy mówią głośniej, a argumenty zmieniają się w czysty hałas.",
+    "weight": 7,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zaproponuj mówienie po kolei",
+        "result": "Po chwili da się zrozumieć, o co w ogóle chodzi.",
+        "effects": {
+          "trust": 8,
+          "reputation": 6,
+          "controversy": -5,
+          "score": 38
+        }
+      },
+      {
+        "label": "Przekrzycz obu",
+        "result": "Strategia fatalna, ale przez sekundę naprawdę jesteś najgłośniejszy.",
+        "effects": {
+          "activity": 8,
+          "controversy": 12,
+          "popularity": 4,
+          "score": 14
+        }
+      },
+      {
+        "label": "Wyjdź i napisz podsumowanie na tekstowym",
+        "result": "Zmiana medium uspokaja emocje.",
+        "effects": {
+          "trust": 6,
+          "controversy": -4,
+          "score": 30
+        }
+      }
+    ]
+  },
+  {
+    "id": "bad_bot_command",
+    "title": "Komenda bota robi coś odwrotnego",
+    "category": "CHAOS",
+    "description": "Chcesz sprawdzić ranking, a bot oznacza połowę serwera i wysyła gigantyczny embed.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zgłoś błąd",
+        "result": "Komenda trafia do poprawki.",
+        "effects": {
+          "trust": 5,
+          "reputation": 4,
+          "score": 24
+        }
+      },
+      {
+        "label": "Odpal ją drugi raz",
+        "result": "Nauka przez powtórzenie porażki. Kanał eksploduje ponownie.",
+        "effects": {
+          "activity": 8,
+          "controversy": 7,
+          "popularity": 4,
+          "score": 20
+        }
+      },
+      {
+        "label": "Zrób screenshot zanim naprawią",
+        "result": "Awaria dostaje miejsce w muzeum serwerowych katastrof.",
+        "effects": {
+          "popularity": 7,
+          "score": 26
+        }
+      }
+    ]
+  },
+  {
+    "id": "late_night_truth",
+    "title": "Nocna rozmowa robi się zaskakująco szczera",
+    "category": "NOCNA MELINA",
+    "description": "Po trzeciej rano memy znikają i ludzie zaczynają mówić serio o życiu. Nikt nie planował tego tonu.",
+    "weight": 5,
+    "minTurn": 6,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Słuchaj i odpowiadaj serio",
+        "result": "Budujesz prawdziwe zaufanie zamiast kolejnego żartu.",
+        "effects": {
+          "trust": 13,
+          "reputation": 6,
+          "score": 48
+        }
+      },
+      {
+        "label": "Rozładuj ciężar delikatnym żartem",
+        "result": "Atmosfera robi się lżejsza bez wyśmiewania kogokolwiek.",
+        "effects": {
+          "trust": 8,
+          "popularity": 4,
+          "score": 34
+        }
+      },
+      {
+        "label": "Zostań tylko obserwatorem",
+        "result": "Nie musisz mówić dużo, żeby być obecnym.",
+        "effects": {
+          "trust": 5,
+          "activity": 2,
+          "score": 26
+        }
+      }
+    ]
+  },
+  {
+    "id": "role_color",
+    "title": "Wojna o kolor rangi",
+    "category": "DRAMA",
+    "description": "Dwie osoby chcą dokładnie ten sam kolor nicku i traktują to jak sprawę honoru.",
+    "weight": 7,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zaproponuj podobny odcień",
+        "result": "Kompromis jest nudny, ale działa.",
+        "effects": {
+          "trust": 5,
+          "controversy": -4,
+          "score": 24
+        }
+      },
+      {
+        "label": "Napisz „serio żrecie się o RGB?”",
+        "result": "Kilka osób nagle zauważa absurd sytuacji.",
+        "effects": {
+          "reputation": 4,
+          "popularity": 4,
+          "controversy": 3,
+          "score": 24
+        }
+      },
+      {
+        "label": "Zrób losowanie koloru",
+        "result": "Przypadek rozstrzyga spór i nikt nie może oskarżyć drugiej strony.",
+        "effects": {
+          "trust": 6,
+          "activity": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "mystery_account",
+    "title": "Pojawia się tajemnicze nowe konto",
+    "category": "CHAOS",
+    "description": "Nowy użytkownik zna za dużo starych żartów, żeby naprawdę być nowy. Rozpoczyna się śledztwo „czyj to alt?”.",
+    "weight": 6,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Nie baw się w detektywa",
+        "result": "Pozwalasz człowiekowi po prostu pisać.",
+        "effects": {
+          "trust": 4,
+          "controversy": -3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Zbieraj poszlaki",
+        "result": "Każda wiadomość staje się dowodem w absurdalnym dochodzeniu.",
+        "effects": {
+          "activity": 8,
+          "popularity": 5,
+          "controversy": 5,
+          "score": 26
+        }
+      },
+      {
+        "label": "Rzuć kompletnie fałszywą teorię",
+        "result": "Twoja teoria jest tak głupia, że staje się głównym memem śledztwa.",
+        "effects": {
+          "popularity": 9,
+          "activity": 5,
+          "score": 32
+        }
+      }
+    ]
+  },
+  {
+    "id": "meme_competition",
+    "title": "Nieoficjalny konkurs na najgorszego mema",
+    "category": "MEMY",
+    "description": "Ktoś rzuca wyzwanie: wygra mem tak zły, że aż dobry. Standardy spadają poniżej poziomu morza.",
+    "weight": 7,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przygotuj coś naprawdę fatalnego",
+        "result": "Twoja praca wywołuje jednocześnie śmiech i fizyczny ból.",
+        "effects": {
+          "popularity": 11,
+          "activity": 8,
+          "score": 40
+        }
+      },
+      {
+        "label": "Zostań jurorem",
+        "result": "Twoje brutalnie szczegółowe recenzje są lepsze niż same memy.",
+        "effects": {
+          "reputation": 5,
+          "popularity": 7,
+          "score": 34
+        }
+      },
+      {
+        "label": "Zmień zasady w połowie",
+        "result": "Konkurs robi się jeszcze głupszy, ale wszyscy się bawią.",
+        "effects": {
+          "activity": 8,
+          "controversy": 4,
+          "popularity": 8,
+          "score": 32
+        }
+      }
+    ]
+  },
+  {
+    "id": "broken_promise",
+    "title": "Ktoś obiecał coś zrobić i kompletnie zapomniał",
+    "category": "EKIPA",
+    "description": "Miał przygotować ważną rzecz „na jutro”. Minął tydzień. Wciąż nic.",
+    "weight": 7,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przypomnij spokojnie",
+        "result": "Okazuje się, że faktycznie zapomniał i zabiera się do roboty.",
+        "effects": {
+          "trust": 5,
+          "reputation": 3,
+          "score": 24
+        }
+      },
+      {
+        "label": "Napisz „jutro którego roku?”",
+        "result": "Sarkazm działa motywująco szybciej niż przypomnienie.",
+        "effects": {
+          "popularity": 5,
+          "controversy": 4,
+          "score": 22
+        }
+      },
+      {
+        "label": "Zrób to sam",
+        "result": "Problem znika, ale bierzesz na siebie dodatkową robotę.",
+        "effects": {
+          "reputation": 8,
+          "activity": 6,
+          "trust": 3,
+          "score": 38
+        }
+      }
+    ]
+  },
+  {
+    "id": "server_update",
+    "title": "Aktualizacja rozwala połowę ustawień",
+    "category": "MODERACJA",
+    "description": "Po zmianie konfiguracji role są w złej kolejności, bot nie działa, a kilka kanałów nagle stało się publicznych.",
+    "weight": 6,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Pomóż testować wszystko",
+        "result": "Lista problemów szybko się skraca.",
+        "effects": {
+          "trust": 10,
+          "reputation": 7,
+          "activity": 7,
+          "score": 48
+        }
+      },
+      {
+        "label": "Napisz „deploy w piątek, klasyk”",
+        "result": "Żart techniczny dostaje należne reakcje.",
+        "effects": {
+          "popularity": 6,
+          "score": 24
+        }
+      },
+      {
+        "label": "Rób screeny awarii",
+        "result": "Powstaje dokumentacja katastrofy do przyszłego śmiechu.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "stupid_argument_food",
+    "title": "Awantura o jedzenie",
+    "category": "DYSKUSJA",
+    "description": "Ktoś mówi, że ananas na pizzy jest dobry. Trzy minuty później reputacje ludzi stoją na szali.",
+    "weight": 10,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Broń swojej strony jak ekspert",
+        "result": "Tworzysz argumentację niewspółmiernie poważną do tematu.",
+        "effects": {
+          "activity": 8,
+          "popularity": 5,
+          "controversy": 5,
+          "score": 28
+        }
+      },
+      {
+        "label": "Powiedz „jedzcie co chcecie, kurwa”",
+        "result": "Głos rozsądku w najbardziej niepotrzebnej wojnie świata.",
+        "effects": {
+          "reputation": 6,
+          "trust": 5,
+          "controversy": -4,
+          "score": 32
+        }
+      },
+      {
+        "label": "Dodaj jeszcze gorszą opinię kulinarną",
+        "result": "Cała uwaga przenosi się na twoją herezję.",
+        "effects": {
+          "popularity": 9,
+          "controversy": 9,
+          "score": 30
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_timezone",
+    "title": "Ktoś zapomina o strefach czasowych",
+    "category": "EVENT",
+    "description": "Event „o 20:00” okazuje się być 20:00 w kompletnie innej strefie. Połowa ludzi przychodzi trzy godziny za wcześnie.",
+    "weight": 7,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Ustal jedną strefę i przypomnienie",
+        "result": "Kolejne terminy przestają być zagadką geograficzną.",
+        "effects": {
+          "trust": 7,
+          "reputation": 5,
+          "score": 32
+        }
+      },
+      {
+        "label": "Zostań z tymi, którzy przyszli wcześniej",
+        "result": "Z pomyłki robi się mały pre-event.",
+        "effects": {
+          "activity": 6,
+          "trust": 5,
+          "popularity": 3,
+          "score": 30
+        }
+      },
+      {
+        "label": "Napisz „czas jest konstruktem społecznym”",
+        "result": "Nikt nie wie, czy pomagasz, ale reakcje lecą.",
+        "effects": {
+          "popularity": 6,
+          "score": 22
+        }
+      }
+    ]
+  },
+  {
+    "id": "reaction_misclick",
+    "title": "Reagujesz sercem na najgorszą możliwą wiadomość",
+    "category": "CHAOS",
+    "description": "Palec zjeżdża i dajesz ❤️ pod wiadomością o czyjejś katastrofie. Widzisz to sekundę za późno.",
+    "weight": 9,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Usuń reakcję i przeproś",
+        "result": "Szybko wyjaśniasz niefortunny klik.",
+        "effects": {
+          "trust": 6,
+          "controversy": -4,
+          "score": 24
+        }
+      },
+      {
+        "label": "Udawaj, że nie widzisz",
+        "result": "Serce nadal świeci pod katastrofą. Odważna strategia.",
+        "effects": {
+          "controversy": 8,
+          "trust": -5,
+          "score": 8
+        }
+      },
+      {
+        "label": "Dodaj poprawną reakcję i wyjaśnienie",
+        "result": "Błąd zostaje zamieniony w krótki, ludzki moment.",
+        "effects": {
+          "trust": 8,
+          "reputation": 3,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "server_pet",
+    "title": "Społeczność wybiera „maskotkę” serwera",
+    "category": "KULTURA",
+    "description": "Losowy obrazek zwierzaka zaczyna pojawiać się wszędzie i ktoś ogłasza go oficjalną maskotką Melonawki.",
+    "weight": 6,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Poprzyj kandydaturę",
+        "result": "Maskotka dostaje własne emotki i natychmiast rośnie w siłę.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "score": 28
+        }
+      },
+      {
+        "label": "Zaproponuj kontrkandydata",
+        "result": "Rozpoczyna się absurdalna kampania wyborcza.",
+        "effects": {
+          "activity": 8,
+          "controversy": 4,
+          "popularity": 7,
+          "score": 30
+        }
+      },
+      {
+        "label": "Zrób plakat wyborczy",
+        "result": "Twój materiał staje się głównym memem kampanii.",
+        "effects": {
+          "popularity": 11,
+          "reputation": 4,
+          "score": 40
+        }
+      }
+    ]
+  },
+  {
+    "id": "rage_typing",
+    "title": "Ktoś pisze i kasuje przez pięć minut",
+    "category": "DRAMA",
+    "description": "Widzisz „pisze...” tak długo, że zaczynasz podejrzewać powstawanie manifestu. Nagle nic nie przychodzi.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Nie pytaj",
+        "result": "Szanujesz fakt, że ktoś jednak zrezygnował z wysłania wiadomości.",
+        "effects": {
+          "trust": 4,
+          "controversy": -2,
+          "score": 18
+        }
+      },
+      {
+        "label": "Napisz „dawaj ten esej”",
+        "result": "Nacisk sprawia, że wiadomość jednak przychodzi. Jest grubo.",
+        "effects": {
+          "activity": 6,
+          "controversy": 7,
+          "score": 20
+        }
+      },
+      {
+        "label": "Wyślij GIF z pisaniem na maszynie",
+        "result": "Napięcie pęka i autor sam zaczyna się śmiać.",
+        "effects": {
+          "popularity": 7,
+          "controversy": -2,
+          "score": 26
+        }
+      }
+    ]
+  },
+  {
+    "id": "random_role",
+    "title": "Dostajesz losową rangę bez wyjaśnienia",
+    "category": "CHAOS",
+    "description": "Nagle twój nick ma nowy kolor i rangę „Specjalista od problemów”. Nikt nie chce powiedzieć dlaczego.",
+    "weight": 7,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Noś ją z dumą",
+        "result": "Przyjmujesz absurd bez pytań.",
+        "effects": {
+          "popularity": 6,
+          "reputation": 3,
+          "score": 26
+        }
+      },
+      {
+        "label": "Domagaj się wyjaśnień",
+        "result": "Odpowiedzi są coraz mniej wiarygodne.",
+        "effects": {
+          "activity": 5,
+          "controversy": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Zacznij zachowywać się zgodnie z rangą",
+        "result": "Od tej pory komentujesz każdy problem jak zawodowy konsultant.",
+        "effects": {
+          "popularity": 9,
+          "activity": 6,
+          "score": 34
+        }
+      }
+    ]
+  },
+  {
+    "id": "mass_delete",
+    "title": "Ktoś przypadkiem kasuje cały wątek",
+    "category": "MODERACJA",
+    "description": "Jeden zły klik i kilkaset wiadomości znika. Zapada ta szczególna cisza po katastrofie.",
+    "weight": 6,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Pomóż odtworzyć ważne informacje",
+        "result": "Część rzeczy udaje się uratować z pamięci i screenów.",
+        "effects": {
+          "trust": 10,
+          "reputation": 7,
+          "activity": 6,
+          "score": 46
+        }
+      },
+      {
+        "label": "Napisz „F”",
+        "result": "To jedyne, co część ludzi jest w stanie z siebie wydusić.",
+        "effects": {
+          "popularity": 4,
+          "score": 18
+        }
+      },
+      {
+        "label": "Zrób nowy wątek „wersja 2.0”",
+        "result": "Katastrofa dostaje szybki restart i ludzie wracają do rozmowy.",
+        "effects": {
+          "activity": 7,
+          "trust": 5,
+          "score": 32
+        }
+      }
+    ]
+  },
+  {
+    "id": "bad_screenshot_crop",
+    "title": "Screen ucina dokładnie najważniejszą część",
+    "category": "CHAOS",
+    "description": "Ktoś wrzuca dowód, ale przyciął obraz tak, że brakuje nicku, godziny i połowy zdania.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Poproś o normalny screen",
+        "result": "Po chwili pojawia się wersja, z której da się coś wywnioskować.",
+        "effects": {
+          "trust": 5,
+          "reputation": 4,
+          "score": 24
+        }
+      },
+      {
+        "label": "Napisz „CSI Melonawka”",
+        "result": "Śledztwo z trzech pikseli staje się memem.",
+        "effects": {
+          "popularity": 7,
+          "score": 26
+        }
+      },
+      {
+        "label": "Próbuj zgadywać brakujący kontekst",
+        "result": "Każda teoria jest gorsza od poprzedniej.",
+        "effects": {
+          "popularity": 8,
+          "activity": 5,
+          "controversy": 3,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "voice_robot",
+    "title": "Mikrofon brzmi jak robot z piekła",
+    "category": "MEMY",
+    "description": "Połączenie komuś siada i każdy głos zamienia się w metaliczne „BRRZZK KURRRR”.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Pomóż naprawić połączenie",
+        "result": "Po chwili człowiek znowu brzmi jak człowiek.",
+        "effects": {
+          "trust": 6,
+          "reputation": 3,
+          "score": 26
+        }
+      },
+      {
+        "label": "Nagraj najlepszy fragment",
+        "result": "Powstaje dźwięk idealny do przyszłego soundboardu.",
+        "effects": {
+          "popularity": 8,
+          "controversy": 3,
+          "score": 28
+        }
+      },
+      {
+        "label": "Rozmawiaj z nim jak z robotem",
+        "result": "Cały kanał wchodzi w futurystyczny roleplay.",
+        "effects": {
+          "popularity": 9,
+          "activity": 7,
+          "score": 32
+        }
+      }
+    ]
+  },
+  {
+    "id": "argument_receipts",
+    "title": "Ktoś przychodzi z folderem screenów",
+    "category": "DRAMA",
+    "description": "Dyskusja wygląda zwyczajnie, dopóki jedna osoba nie wrzuca 17 screenów podpisanych datami. To już prezentacja dowodowa.",
+    "weight": 6,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przeczytaj całość",
+        "result": "Widzisz, że sprawa jest bardziej skomplikowana, niż wyglądała.",
+        "effects": {
+          "reputation": 7,
+          "trust": 6,
+          "activity": 5,
+          "score": 36
+        }
+      },
+      {
+        "label": "Napisz „kurwa, PowerPoint jeszcze zrób”",
+        "result": "Komentarz rozładowuje część napięcia, ale autor materiału nie jest zachwycony.",
+        "effects": {
+          "popularity": 6,
+          "controversy": 5,
+          "score": 22
+        }
+      },
+      {
+        "label": "Poproś o krótkie podsumowanie",
+        "result": "Siedemnaście screenów zostaje sprowadzone do trzech zdań.",
+        "effects": {
+          "trust": 6,
+          "controversy": -3,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "channel_wrong_topic",
+    "title": "Rozmowa totalnie wykoleja kanał",
+    "category": "CHAOS",
+    "description": "Na kanale o muzyce trwa właśnie dyskusja o podatkach, kebabach i awarii pralki jednocześnie.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przenieś temat gdzie trzeba",
+        "result": "Odrobina porządku wraca do rzeczywistości.",
+        "effects": {
+          "trust": 5,
+          "reputation": 4,
+          "score": 24
+        }
+      },
+      {
+        "label": "Dorzucaj kolejne losowe tematy",
+        "result": "Kanał traci ostatnie resztki sensu.",
+        "effects": {
+          "activity": 9,
+          "popularity": 6,
+          "controversy": 4,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób bingo off-topicu",
+        "result": "Chaos dostaje zasady i nagle jest zabawą.",
+        "effects": {
+          "popularity": 9,
+          "activity": 7,
+          "score": 34
+        }
+      }
+    ]
+  },
+  {
+    "id": "meme_ai",
+    "title": "AI generuje przeklęty obrazek",
+    "category": "MEMY",
+    "description": "Ktoś generuje obrazek tak dziwny, że nikt nie potrafi ustalić, czy to arcydzieło czy wizualna zbrodnia.",
+    "weight": 7,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Wrzuć go jako mem",
+        "result": "Obrazek zaczyna żyć własnym życiem w komentarzach.",
+        "effects": {
+          "popularity": 10,
+          "activity": 6,
+          "score": 36
+        }
+      },
+      {
+        "label": "Popraw prompt i generuj gorzej",
+        "result": "Każda kolejna wersja jest bardziej przeklęta.",
+        "effects": {
+          "popularity": 11,
+          "activity": 8,
+          "controversy": 3,
+          "score": 40
+        }
+      },
+      {
+        "label": "Zrób konkurs na opis obrazka",
+        "result": "Najlepsze podpisy stają się lepsze od samej grafiki.",
+        "effects": {
+          "popularity": 9,
+          "trust": 3,
+          "activity": 6,
+          "score": 34
+        }
+      }
+    ]
+  },
+  {
+    "id": "rage_reaction",
+    "title": "Ktoś daje ci 🤡 pod każdą wiadomością",
+    "category": "WKURW",
+    "description": "Niezależnie co napiszesz, jedna osoba reaguje klaunem. Piąty raz jeszcze bawi. Dwudziesty już mniej.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Zapytaj wprost, o co chodzi",
+        "result": "Okazuje się, że miało być „dla beki” i spam ustaje.",
+        "effects": {
+          "trust": 4,
+          "controversy": -2,
+          "score": 22
+        }
+      },
+      {
+        "label": "Odpowiadaj klaunem na wszystko jego",
+        "result": "Rozpoczyna się wojna cyrkowa.",
+        "effects": {
+          "activity": 8,
+          "popularity": 6,
+          "controversy": 8,
+          "score": 26
+        }
+      },
+      {
+        "label": "Ustaw klauna jako avatar",
+        "result": "Przejmujesz symbol i odbierasz mu całą moc.",
+        "effects": {
+          "popularity": 10,
+          "reputation": 4,
+          "score": 34
+        }
+      }
+    ]
+  },
+  {
+    "id": "admin_poll",
+    "title": "Administracja pyta społeczność o zmianę",
+    "category": "POZYCJA",
+    "description": "Pojawia się realne głosowanie o ważnej zmianie. Tym razem opinie faktycznie mogą coś zmienić.",
+    "weight": 5,
+    "minTurn": 6,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Napisz konkretną argumentację",
+        "result": "Twój komentarz staje się jednym z częściej cytowanych głosów.",
+        "effects": {
+          "reputation": 10,
+          "trust": 9,
+          "activity": 6,
+          "score": 52
+        }
+      },
+      {
+        "label": "Głosuj bez dyskusji",
+        "result": "Robisz swoje i nie dokładasz kolejnej ściany tekstu.",
+        "effects": {
+          "trust": 3,
+          "score": 22
+        }
+      },
+      {
+        "label": "Zaproponuj trzeci wariant",
+        "result": "Twój pomysł otwiera nowe rozwiązanie i zbiera poparcie.",
+        "effects": {
+          "reputation": 9,
+          "popularity": 6,
+          "trust": 7,
+          "score": 48
+        }
+      }
+    ]
+  },
+  {
+    "id": "chaos_week",
+    "title": "Tydzień, w którym wszystko się sypie",
+    "category": "CHAOS",
+    "description": "Bot pada, event się przesuwa, ktoś traci rolę, linki wygasają, a na koniec voice nie działa. Piękna kumulacja.",
+    "weight": 5,
+    "minTurn": 8,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Pomagaj po kolei",
+        "result": "Nie naprawiasz świata, ale każdy problem robi się trochę mniejszy.",
+        "effects": {
+          "trust": 14,
+          "reputation": 10,
+          "activity": 10,
+          "score": 80
+        }
+      },
+      {
+        "label": "Komentuj każdy fail memem",
+        "result": "Nie rozwiązujesz wiele, za to kronika katastrofy jest wybitna.",
+        "effects": {
+          "popularity": 12,
+          "activity": 9,
+          "controversy": 4,
+          "score": 48
+        }
+      },
+      {
+        "label": "Zniknij na dzień",
+        "result": "Czasem najlepsza strategia to nie być w epicentrum.",
+        "effects": {
+          "activity": -5,
+          "controversy": -5,
+          "trust": 2,
+          "score": 18
+        }
+      }
+    ]
+  },
+  {
+    "id": "legend_quote",
+    "title": "Twój stary tekst wraca jako klasyk",
+    "category": "POZYCJA",
+    "description": "Nowi użytkownicy cytują zdanie, które napisałeś miesiące temu, nawet nie wiedząc, że to było twoje.",
+    "weight": 4,
+    "minTurn": 9,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Przyznaj się do autorstwa",
+        "result": "Nagle dostajesz status człowieka od „tego tekstu”.",
+        "effects": {
+          "reputation": 8,
+          "popularity": 10,
+          "score": 50
+        }
+      },
+      {
+        "label": "Nie mów nic",
+        "result": "Patrzysz, jak własny żart funkcjonuje niezależnie od ciebie.",
+        "effects": {
+          "popularity": 7,
+          "trust": 3,
+          "score": 32
+        }
+      },
+      {
+        "label": "Napisz sequel",
+        "result": "Ryzykowne, ale druga część też siada zaskakująco dobrze.",
+        "effects": {
+          "popularity": 12,
+          "activity": 6,
+          "reputation": 5,
+          "score": 55
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_microwave",
+    "title": "Ktoś wrzuca zdjęcie spalonego jedzenia",
+    "category": "MEMY",
+    "description": "Fotografia wygląda jak dowód pożaru, a autor pyta, czy „da się jeszcze zjeść”.",
+    "weight": 7,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_weather",
+    "title": "Rozmowa o pogodzie zamienia się w katastrofizm",
+    "category": "DYSKUSJA",
+    "description": "Zwykłe „ale dziś gorąco” po pięciu minutach staje się debatą o końcu świata.",
+    "weight": 8,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_phone",
+    "title": "Autokorekta tworzy nową obelgę",
+    "category": "CHAOS",
+    "description": "Telefon produkuje słowo, którego nikt wcześniej nie widział, ale wszyscy od razu wiedzą, że brzmi obraźliwie.",
+    "weight": 9,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_coffee",
+    "title": "Ktoś deklaruje szóstą kawę",
+    "category": "NOCNA MELINA",
+    "description": "Jest późno, a ktoś z dumą informuje, że właśnie robi sobie kolejną kawę. Serce wysyła protest.",
+    "weight": 10,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_keyboard",
+    "title": "Klawiatura komuś zaczyna dublować litery",
+    "category": "MEMY",
+    "description": "Każda wiadomość wygląda jak pisana przez człowieka jadącego po bruku.",
+    "weight": 6,
+    "minTurn": 6,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_internet",
+    "title": "Internet jednej osoby umiera tylko podczas ważnego momentu",
+    "category": "WKURW",
+    "description": "Przez godzinę było idealnie, a dokładnie przy finale wszystko staje na klatce.",
+    "weight": 7,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_avatar_clone",
+    "title": "Trzy osoby ustawiają ten sam avatar",
+    "category": "CHAOS",
+    "description": "Kanał zaczyna wyglądać jak atak klonów i nikt nie wie, kto właśnie odpisał.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_quote_bot",
+    "title": "Bot cytuje najbardziej pechową wiadomość",
+    "category": "MEMY",
+    "description": "Automatyczny cytat dnia wybiera zdanie, które autor najchętniej usunąłby z historii.",
+    "weight": 9,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_old_photo",
+    "title": "Wypływa stare zdjęcie grupowe",
+    "category": "KULTURA",
+    "description": "Ktoś znajduje grafikę sprzed lat. Połowa nicków już nie istnieje, ale lore wraca natychmiast.",
+    "weight": 10,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_typo_poll",
+    "title": "Literówka w ankiecie zmienia sens pytania",
+    "category": "CHAOS",
+    "description": "Jedna litera sprawia, że ankieta pyta o coś kompletnie innego, a wyniki wyglądają podejrzanie.",
+    "weight": 6,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_meme_vote",
+    "title": "Głosowanie na mem miesiąca robi się polityczne",
+    "category": "DRAMA",
+    "description": "Ludzie zaczynają prowadzić kampanie, koalicje i oskarżenia o „kupowanie głosów” reakcjami.",
+    "weight": 7,
+    "minTurn": 6,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_sound_fail",
+    "title": "Dźwięk powiadomienia odpala się sto razy",
+    "category": "WKURW",
+    "description": "Ktoś testuje ustawienia i przez minutę wszyscy słyszą ten sam dźwięk w kółko.",
+    "weight": 8,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_gif_loop",
+    "title": "GIF nie chce przestać się ładować",
+    "category": "CHAOS",
+    "description": "Obrazek mieli wiecznie, a ludzie zaczynają obstawiać, co miało być w środku.",
+    "weight": 9,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_late_admin",
+    "title": "Moderator odpowiada na zgłoszenie po tygodniu",
+    "category": "MODERACJA",
+    "description": "Odpowiedź jest poprawna, tylko problem zdążył już umrzeć, odrodzić się i umrzeć drugi raz.",
+    "weight": 10,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_random_nick",
+    "title": "Ktoś zmienia nick pięć razy w godzinę",
+    "category": "CHAOS",
+    "description": "Za każdym razem, gdy zapamiętujesz nową nazwę, pojawia się kolejna.",
+    "weight": 6,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_voice_dog",
+    "title": "Pies przejmuje mikrofon",
+    "category": "NOCNA MELINA",
+    "description": "Przez minutę głównym uczestnikiem voice jest szczekający pies. Ma zaskakująco dużo do powiedzenia.",
+    "weight": 7,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_wrong_reply",
+    "title": "Odpowiadasz nie tej osobie",
+    "category": "CHAOS",
+    "description": "Twoja odpowiedź ma sens, tylko kompletnie nie w kontekście wiadomości, pod którą trafiła.",
+    "weight": 8,
+    "minTurn": 6,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_emoji_limit",
+    "title": "Kończy się miejsce na emotki",
+    "category": "MODERACJA",
+    "description": "Trzeba usunąć kilka starych emotek, a każda ma swoich obrońców gotowych na wojnę.",
+    "weight": 9,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_voice_cough",
+    "title": "Ktoś kaszle bez mute przez minutę",
+    "category": "WKURW",
+    "description": "Mikrofon wzmacnia każdy kaszel tak, jakby odbywał się wewnątrz twojej czaszki.",
+    "weight": 10,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "micro_meme_template",
+    "title": "Ktoś źle używa popularnego formatu",
+    "category": "MEMY",
+    "description": "Puenta jest po złej stronie, tekst nie pasuje, a mimo to mem zbiera reakcje.",
+    "weight": 6,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Podejdź normalnie",
+        "result": "Reagujesz bez dokładania niepotrzebnego zamieszania.",
+        "effects": {
+          "trust": 4,
+          "reputation": 3,
+          "score": 20
+        }
+      },
+      {
+        "label": "Dokręć żart",
+        "result": "Sytuacja staje się materiałem do kolejnych komentarzy.",
+        "effects": {
+          "popularity": 7,
+          "activity": 5,
+          "controversy": 2,
+          "score": 26
+        }
+      },
+      {
+        "label": "Zrób coś kompletnie losowego",
+        "result": "Twoja reakcja jest tak nieoczywista, że sama staje się częścią eventu.",
+        "effects": {
+          "popularity": 8,
+          "activity": 6,
+          "controversy": 4,
+          "score": 28
+        }
+      }
+    ]
+  }
+]
