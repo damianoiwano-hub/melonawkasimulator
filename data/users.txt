@@ -1,0 +1,22 @@
+# Lista użytkowników serwera dla gali „Złote Melony”
+# Jeden nick w każdej linii. Linie zaczynające się od # lub // są ignorowane.
+# Edytuj ten plik w repozytorium, aby aktualizować pulę losowania.
+
+Iwan111
+Melon
+Olos
+Myszowór
+Chunky
+Lawrenc
+Primożowy
+Kartofel
+Koziełło
+Kebiarz
+Kenaj
+Egzo
+Kubys
+Grzesiu
+Katner
+FanGerwyna
+OlaGa
+KubaDVD
