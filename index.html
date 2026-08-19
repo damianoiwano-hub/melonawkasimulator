@@ -8,15 +8,14 @@
 <meta property="og:url" content="https://melonawkasimulator.pl/">
 <meta property="og:title" content="Melonawka Użytkownik Simulator">
 <meta property="og:type" content="website">
-<link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles-v7.css?v=7.0.0">
+<link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles-v7.css?v=7.2.0">
 </head>
 <body>
 <div class="app">
 <header class="topbar">
-  <div class="brand"><div class="brand-logo">🍉</div><div><h1>MELONAWKA UŻYTKOWNIK SIMULATOR</h1><div class="subtitle">Twoja kariera. Twoje decyzje. Twój chaos. • V7.1</div></div></div>
+  <div class="brand"><div class="brand-logo">🍉</div><div><h1>MELONAWKA UŻYTKOWNIK SIMULATOR</h1><div class="subtitle">Twoja kariera. Twoje decyzje. Twój chaos. • V7.2</div></div></div>
   <div class="actions"><button class="btn small" id="optionsBtn">⚙ OPCJE</button><button class="btn small" id="saveBtn">💾 ZAPISZ</button></div>
 </header>
-
 <section id="startScreen" class="start panel">
   <div class="eyebrow">START KARIERY</div><h2>Witaj na Melonawce.</h2>
   <p class="lead">Stwórz użytkownika, rozwijaj profil i reaguj na losowe wydarzenia społeczności.</p>
@@ -28,7 +27,6 @@
   </div>
   <div class="db-status" id="dbStatusStart">Ładowanie bazy eventów…</div><button class="btn primary big" id="startBtn" disabled>ZACZNIJ KARIERĘ</button>
 </section>
-
 <section id="gameScreen" class="hidden">
 <div class="grid">
   <aside class="col">
@@ -39,35 +37,27 @@
     </div>
     <div class="panel stats"><h3>PARAMETRY UŻYTKOWNIKA</h3><div id="statsBars" class="bars"></div></div>
   </aside>
-
   <main class="col">
     <div class="panel turn"><div><div class="eyebrow">OKRES • ROK <span id="calendarYearValue">2026</span></div><h2 id="turnTitle">TYDZIEŃ 1</h2><p id="turnSubtitle">Pierwszy tydzień na Melonawce</p></div><button class="btn primary" id="nextEventBtn">LOSUJ EVENT</button></div>
-    <div class="panel event" id="eventCard"><div class="category" id="eventCategory">START</div><h2 id="eventTitle">Wszystko przed tobą.</h2><p id="eventDescription">Kliknij „Losuj event”, aby rozpocząć historię użytkownika.</p><div id="choiceGrid" class="choices"></div><div id="eventResult" class="result hidden"></div></div>
+    <div class="panel event" id="eventCard"><div class="category" id="eventCategory">START</div><h2 id="eventTitle">Wszystko przed tobą.</h2><p id="eventDescription">Kliknij „Losuj event”, aby rozpocząć historię użytkownika.</p><div id="choiceGrid" class="choices" style="grid-template-columns:repeat(2,minmax(0,1fr))"></div><div id="eventResult" class="result hidden"></div></div>
     <div class="panel history"><div class="section-head"><div><div class="eyebrow">HISTORIA</div><h3>Twoja Melonawka</h3></div><button class="btn small" id="clearHistoryBtn">WYCZYŚĆ</button></div><div id="historyList" class="history-list"></div></div>
   </main>
-
   <aside class="col side">
-    <div class="panel summary"><div class="eyebrow">BILANS KARIERY</div><div class="summary-grid"><div><span>Eventy</span><strong id="eventsCount">0</strong></div><div><span>Pozytywne</span><strong id="goodChoices">0</strong></div><div style="display:none"><span>Neutralne</span><strong id="neutralChoices">0</strong></div><div><span>Negatywne</span><strong id="badChoices">0</strong></div><div><span>Zdarzenia losowe</span><strong id="autoEventsCount">0</strong></div><div><span>Najwyższy LVL</span><strong id="bestLevel">1</strong></div></div></div>
+    <div class="panel summary"><div class="eyebrow">BILANS KARIERY</div><div class="summary-grid"><div><span>Eventy</span><strong id="eventsCount">0</strong></div><div><span>Pozytywne</span><strong id="goodChoices">0</strong></div><div><span>Negatywne</span><strong id="badChoices">0</strong></div><div><span>Zdarzenia losowe</span><strong id="autoEventsCount">0</strong></div><div><span>Najwyższy LVL</span><strong id="bestLevel">1</strong></div></div></div>
     <div class="panel milestones"><h3>OSIĄGNIĘCIA</h3><div id="milestonesList" class="milestones-list"></div></div>
     <div class="panel career-goals"><h3>MOŻLIWE ZAKOŃCZENIA</h3><div class="goal moderator"><b>🛡️ ZOSTAJESZ MODERATOREM</b><span>LVL 10+, reputacja 75+, zaufanie 80+, kontrowersyjność maks. 35 i co najmniej 26 tygodni.</span></div><div class="goal ban"><b>🔨 DOSTAJESZ BANA</b><span>Reputacja lub zaufanie spada do 3 albo kontrowersyjność dobija do 98.</span></div></div>
-    <div class="panel golden-melons-card"><div class="eyebrow">COROCZNA GALA</div><h3>🏆 ZŁOTE MELONY</h3><div class="gala-year">Edycja <strong id="goldenMelonsYear">2026</strong></div><p id="goldenMelonsStatus">Gala w tym roku nie została jeszcze zorganizowana.</p><button class="btn wide gold" id="goldenMelonsBtn">OTWÓRZ GALĘ / UŻYTKOWNICY</button></div>
+    <div class="panel golden-melons-card"><div class="eyebrow">COROCZNA GALA</div><h3>🏆 ZŁOTE MELONY</h3><div class="gala-year">Edycja <strong id="goldenMelonsYear">2026</strong></div><p id="goldenMelonsStatus">Gala uruchomi się automatycznie w 52. tygodniu.</p><button class="btn wide gold" id="goldenMelonsBtn">PODGLĄD GALI</button></div>
     <div class="panel quick"><h3>SZYBKIE AKCJE</h3><div class="db-status" id="dbStatusGame">Ładowanie bazy eventów…</div><button class="btn wide" id="exportSaveBtn">⬇ EKSPORTUJ ZAPIS</button><label class="btn wide filebtn">⬆ IMPORTUJ ZAPIS<input type="file" id="importSaveInput" accept=".json"></label><button class="btn wide danger" id="newCareerBtn">↻ NOWA KARIERA</button></div>
   </aside>
 </div>
 </section>
 </div>
-
-<div id="optionsModal" class="modal hidden"><div class="modal-window"><div class="modal-head"><div><div class="eyebrow">USTAWIENIA</div><h2>Opcje i zapis</h2></div><button class="close" data-close="optionsModal">×</button></div>
-<div class="option"><h3>Sloty zapisu</h3><div class="slots"><button class="btn" data-save-slot="1">ZAPISZ SLOT 1</button><button class="btn" data-load-slot="1">WCZYTAJ 1</button><button class="btn" data-save-slot="2">ZAPISZ SLOT 2</button><button class="btn" data-load-slot="2">WCZYTAJ 2</button><button class="btn" data-save-slot="3">ZAPISZ SLOT 3</button><button class="btn" data-load-slot="3">WCZYTAJ 3</button></div></div>
-
-</div></div>
-<div id="goldenMelonsModal" class="modal hidden"><div class="modal-window gala-window"><div class="modal-head"><div><div class="eyebrow">GALA OD 2026 ROKU</div><h2>🏆 Złote Melony <span id="galaModalYear">2026</span></h2></div><button class="close" data-close="goldenMelonsModal">×</button></div>
-<div class="gala-layout">
-  <section><h3>UŻYTKOWNICY / NOMINOWANI</h3><p class="gala-help">Nick aktywnej kariery jest dodawany automatycznie. Pozostałych użytkowników możesz dopisywać ręcznie.</p><div class="gala-add-row"><input id="galaUserInput" maxlength="32" placeholder="Nick użytkownika"><button class="btn green" id="addGalaUserBtn">+ DODAJ</button></div><div id="galaUsersList" class="gala-users-list"></div></section>
-  <section><h3>UŻYTKOWNIK ROKU</h3><div id="galaResults" class="gala-results"><div class="hint">Wyniki pojawią się po zorganizowaniu gali.</div></div><button class="btn gold big wide" id="runGoldenMelonsBtn">🎲 ZORGANIZUJ GALĘ I WYLOSUJ WYNIKI</button><p class="gala-once-note">Galę można przeprowadzić tylko raz w każdym roku kariery.</p></section>
+<div id="optionsModal" class="modal hidden"><div class="modal-window"><div class="modal-head"><div><div class="eyebrow">USTAWIENIA</div><h2>Opcje i zapis</h2></div><button class="close" data-close="optionsModal">×</button></div><div class="option"><h3>Sloty zapisu</h3><div class="slots"><button class="btn" data-save-slot="1">ZAPISZ SLOT 1</button><button class="btn" data-load-slot="1">WCZYTAJ 1</button><button class="btn" data-save-slot="2">ZAPISZ SLOT 2</button><button class="btn" data-load-slot="2">WCZYTAJ 2</button><button class="btn" data-save-slot="3">ZAPISZ SLOT 3</button><button class="btn" data-load-slot="3">WCZYTAJ 3</button></div></div></div></div>
+<div id="goldenMelonsModal" class="modal hidden"><div class="modal-window gala-window"><div class="modal-head"><div><div class="eyebrow">GALA OD 2026 ROKU</div><h2>🏆 Złote Melony <span id="galaModalYear">2026</span></h2></div><button class="close" data-close="goldenMelonsModal">×</button></div><div class="gala-layout">
+  <section><h3>UŻYTKOWNICY SERWERA</h3><p class="gala-help">Lista jest wczytywana automatycznie z pliku <code>data/users.txt</code>. Jeden nick = jedna linia. Nie można jej edytować z poziomu symulatora.</p><div id="galaUsersList" class="gala-users-list"></div></section>
+  <section><h3>UŻYTKOWNIK ROKU</h3><div id="galaResults" class="gala-results"><div class="hint">W 52. tygodniu gala uruchomi się automatycznie: system wybierze 3 nominowanych i jednego zwycięzcę.</div></div><p class="gala-once-note">Losowanie korzysta z rotacji nominowanych i zwycięzców, aby ograniczać powtórki między kolejnymi edycjami.</p></section>
 </div></div></div>
 <div id="endingModal" class="modal hidden"><div class="modal-window ending-window"><div class="ending-icon" id="endingIcon">🏁</div><div class="eyebrow">KONIEC KARIERY</div><h2 id="endingTitle">KARIERA ZAKOŃCZONA</h2><p id="endingText"></p><button class="btn primary big" id="endingNewCareerBtn">ROZPOCZNIJ NOWĄ KARIERĘ OD POZIOMU 1</button></div></div>
 <div id="toast" class="toast hidden"></div>
-<script src="app-v7.js?v=7.0.0"></script>
-<script src="two-choice-patch.js?v=7.1.0"></script>
+<script src="app-v72.js?v=7.2.0"></script>
 </body></html>
