@@ -1,0 +1,11 @@
+{
+  "databaseVersion": "7.0.0",
+  "updated": "2026-08-19",
+  "packs": [
+    "../events-v5.json"
+  ],
+  "automaticEventChance": 0.28,
+  "automaticPacks": [
+    "automatic-events.json"
+  ]
+}
