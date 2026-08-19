@@ -1,0 +1,242 @@
+[
+  {
+    "id": "auto_server_awaria",
+    "title": "Serwer znowu coś odwala",
+    "category": "ZDARZENIE LOSOWE",
+    "description": "Przez kilkanaście minut część kanałów działa jakby serwer był składany na kolanie.",
+    "result": "Awaria mija bez twojego udziału, ale aktywność całej społeczności na chwilę siada.",
+    "effects": {"activity": -3},
+    "weight": 10,
+    "minTurn": 1
+  },
+  {
+    "id": "auto_nowy_viral",
+    "title": "Losowy mem przejmuje Melonawkę",
+    "category": "ZDARZENIE LOSOWE",
+    "description": "Nikt nie wie, kto zaczął, ale przez cały tydzień wszędzie pojawia się ten sam absurdalny mem.",
+    "result": "Trend napędza aktywność i wszyscy są trochę bardziej online.",
+    "effects": {"activity": 4, "popularity": 1},
+    "weight": 12,
+    "minTurn": 1
+  },
+  {
+    "id": "auto_nocny_spam",
+    "title": "Nocny spam na głównym",
+    "category": "CHAOS",
+    "description": "Ktoś odpala serię wiadomości o trzeciej nad ranem i budzi pół serwera powiadomieniami.",
+    "result": "Atmosfera robi się nerwowa. Ty nie masz na to żadnego wpływu.",
+    "effects": {"controversy": 3, "trust": -1},
+    "weight": 8,
+    "minTurn": 2
+  },
+  {
+    "id": "auto_mod_czystki",
+    "title": "Moderacja robi porządki",
+    "category": "MODERACJA",
+    "description": "Ekipa nagle sprząta stare kanały, role i nieaktywne konta.",
+    "result": "Porządek poprawia ogólną atmosferę, a aktywni użytkownicy są bardziej widoczni.",
+    "effects": {"trust": 3, "reputation": 1},
+    "weight": 7,
+    "minTurn": 4
+  },
+  {
+    "id": "auto_wielki_powrot",
+    "title": "Wraca stary użytkownik",
+    "category": "SPOŁECZNOŚĆ",
+    "description": "Po wielu miesiącach nieobecności wraca osoba, którą pamięta większość starych bywalców.",
+    "result": "Powrót uruchamia falę wspomnień i podbija aktywność.",
+    "effects": {"activity": 5, "popularity": 2},
+    "weight": 7,
+    "minTurn": 5
+  },
+  {
+    "id": "auto_plotka",
+    "title": "Po serwerze krąży dziwna plotka",
+    "category": "DRAMA",
+    "description": "Nikt nie potrafi wskazać źródła, ale każdy ma swoją wersję tej samej historii.",
+    "result": "Plotka sama żyje swoim życiem i podkręca poziom kontrowersji.",
+    "effects": {"controversy": 5, "trust": -2},
+    "weight": 9,
+    "minTurn": 3
+  },
+  {
+    "id": "auto_event_frekwencja",
+    "title": "Niespodziewanie duża frekwencja",
+    "category": "EVENT",
+    "description": "Zwykły wieczór zamienia się w największy ruch od wielu tygodni.",
+    "result": "Duży ruch zwiększa twoją szansę na bycie zauważonym nawet bez specjalnego wysiłku.",
+    "effects": {"activity": 4, "popularity": 3},
+    "weight": 8,
+    "minTurn": 3
+  },
+  {
+    "id": "auto_cisza",
+    "title": "Tydzień kompletnej ciszy",
+    "category": "SPOŁECZNOŚĆ",
+    "description": "Nagle wszyscy mają życie poza internetem. Na serwerze jest podejrzanie spokojnie.",
+    "result": "Nie dzieje się prawie nic. Aktywność spada, ale kontrowersje również.",
+    "effects": {"activity": -5, "controversy": -3},
+    "weight": 9,
+    "minTurn": 1
+  },
+  {
+    "id": "auto_bot_awaria",
+    "title": "Bot przestaje działać",
+    "category": "TECHNICZNE",
+    "description": "Najczęściej używany bot przestaje odpowiadać akurat wtedy, gdy każdy go potrzebuje.",
+    "result": "Chaos trwa do czasu naprawy. Nie możesz nic z tym zrobić.",
+    "effects": {"activity": -2, "controversy": 2},
+    "weight": 7,
+    "minTurn": 2
+  },
+  {
+    "id": "auto_nowi_ludzie",
+    "title": "Napływ nowych użytkowników",
+    "category": "SPOŁECZNOŚĆ",
+    "description": "W jednym tygodniu dołącza znacznie więcej nowych osób niż zwykle.",
+    "result": "Społeczność rośnie, a aktywni stali bywalcy zyskują dodatkową widoczność.",
+    "effects": {"popularity": 4, "activity": 3},
+    "weight": 8,
+    "minTurn": 4
+  },
+  {
+    "id": "auto_kasowanie_kanalu",
+    "title": "Popularny kanał znika",
+    "category": "MODERACJA",
+    "description": "Jeden z popularnych kanałów zostaje zamknięty bez większej zapowiedzi.",
+    "result": "Część osób jest wkurzona, a dyskusje przenoszą się w inne miejsca.",
+    "effects": {"controversy": 4, "activity": 2, "trust": -2},
+    "weight": 6,
+    "minTurn": 6
+  },
+  {
+    "id": "auto_weekend_hype",
+    "title": "Weekendowy hype",
+    "category": "CHAOS",
+    "description": "Bez konkretnego powodu wszyscy są wyjątkowo aktywni i nakręceni.",
+    "result": "Twoja aktywność rośnie razem z całym serwerem.",
+    "effects": {"activity": 6, "score": 8},
+    "weight": 10,
+    "minTurn": 1
+  },
+  {
+    "id": "auto_fake_news",
+    "title": "Fałszywa informacja obiega serwer",
+    "category": "DRAMA",
+    "description": "Ktoś wrzuca informację, która brzmi wiarygodnie, ale po czasie okazuje się kompletną bzdurą.",
+    "result": "Zaufanie w społeczności chwilowo spada.",
+    "effects": {"trust": -4, "controversy": 3},
+    "weight": 7,
+    "minTurn": 5
+  },
+  {
+    "id": "auto_wspolna_zajawka",
+    "title": "Cała Melonawka ma nową zajawkę",
+    "category": "KULTURA",
+    "description": "Przez kilka dni wszyscy rozmawiają o jednej grze, serialu albo wydarzeniu.",
+    "result": "Wspólny temat poprawia atmosferę i aktywność.",
+    "effects": {"activity": 5, "trust": 2},
+    "weight": 9,
+    "minTurn": 2
+  },
+  {
+    "id": "auto_klotnia_modow",
+    "title": "Moderatorzy kłócą się między sobą",
+    "category": "MODERACJA",
+    "description": "Napięcie w ekipie staje się widoczne dla zwykłych użytkowników.",
+    "result": "Nikt nie pytał cię o zdanie, ale atmosfera robi się cięższa.",
+    "effects": {"trust": -5, "controversy": 5},
+    "weight": 5,
+    "minTurn": 10
+  },
+  {
+    "id": "auto_serwerowy_zart",
+    "title": "Serwerowy żart tygodnia",
+    "category": "MEMY",
+    "description": "Jeden tekst jest powtarzany tak długo, aż przestaje być śmieszny i znowu zaczyna być śmieszny.",
+    "result": "Jesteś częścią tłumu i łapiesz trochę społecznościowego rozpędu.",
+    "effects": {"popularity": 2, "activity": 3, "score": 5},
+    "weight": 11,
+    "minTurn": 1
+  },
+  {
+    "id": "auto_wyciek_screenow",
+    "title": "Wyciekają stare screeny",
+    "category": "DRAMA",
+    "description": "Ktoś odkopuje stare wiadomości i wrzuca je ponownie bez kontekstu.",
+    "result": "Wraca kilka starych konfliktów. Poziom dramy rośnie bez twojej decyzji.",
+    "effects": {"controversy": 6, "trust": -3},
+    "weight": 6,
+    "minTurn": 8
+  },
+  {
+    "id": "auto_nagly_spokoj",
+    "title": "Zaskakująco spokojny tydzień",
+    "category": "ŻYCIE",
+    "description": "Zero dram, zero awarii, zero wielkich wydarzeń. Podejrzane, ale przyjemne.",
+    "result": "Społeczność łapie oddech.",
+    "effects": {"controversy": -5, "trust": 2},
+    "weight": 8,
+    "minTurn": 1
+  },
+  {
+    "id": "auto_nowa_funkcja",
+    "title": "Pojawia się nowa funkcja serwera",
+    "category": "TECHNICZNE",
+    "description": "Ekipa wdraża nową funkcję, którą większość zaczyna testować od razu.",
+    "result": "Nowość chwilowo zwiększa ruch i zainteresowanie.",
+    "effects": {"activity": 5, "popularity": 1},
+    "weight": 7,
+    "minTurn": 7
+  },
+  {
+    "id": "auto_masowy_powrot",
+    "title": "Stara ekipa wpada na jeden wieczór",
+    "category": "NOSTALGIA",
+    "description": "Kilka dawnych nicków pojawia się jednocześnie i zaczyna wspominać stare czasy.",
+    "result": "Wspomnienia rozkręcają serwer i podnoszą ogólne zainteresowanie.",
+    "effects": {"activity": 4, "trust": 2, "popularity": 2},
+    "weight": 5,
+    "minTurn": 16
+  },
+  {
+    "id": "auto_przypadkowy_ping",
+    "title": "Ktoś przypadkiem pingował wszystkich",
+    "category": "CHAOS",
+    "description": "Jedno kliknięcie i setki powiadomień lecą do ludzi, którzy absolutnie ich nie potrzebowali.",
+    "result": "Przez chwilę każdy jest wkurzony. Potem temat umiera.",
+    "effects": {"controversy": 3, "trust": -1},
+    "weight": 8,
+    "minTurn": 1
+  },
+  {
+    "id": "auto_giveaway",
+    "title": "Niespodziewany giveaway",
+    "category": "EVENT",
+    "description": "Na serwerze pojawia się szybki konkurs, który przyciąga ludzi znikąd.",
+    "result": "Ruch rośnie, a ty korzystasz z większej widoczności.",
+    "effects": {"activity": 4, "popularity": 3, "melons": 8},
+    "weight": 6,
+    "minTurn": 5
+  },
+  {
+    "id": "auto_zmiana_regulaminu",
+    "title": "Zmienia się regulamin",
+    "category": "MODERACJA",
+    "description": "Pojawiają się nowe zasady i przez kilka dni każdy interpretuje je inaczej.",
+    "result": "Niepewność chwilowo obniża zaufanie i zwiększa dyskusje.",
+    "effects": {"trust": -2, "controversy": 3, "activity": 2},
+    "weight": 5,
+    "minTurn": 12
+  },
+  {
+    "id": "auto_melonowy_dzien",
+    "title": "Melonowy dzień",
+    "category": "KULTURA",
+    "description": "Bez planowania cała społeczność zaczyna wrzucać motywy związane z melonami.",
+    "result": "Absurdalna tradycja poprawia atmosferę.",
+    "effects": {"trust": 3, "popularity": 2, "melons": 10},
+    "weight": 7,
+    "minTurn": 4
+  }
+]
