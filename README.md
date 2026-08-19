@@ -1,26 +1,44 @@
-# Melonawka Użytkownik Simulator V7
+# Melonawka Użytkownik Simulator V7.2
 
-Wersja V7 rozwija symulator o coroczną galę **Złote Melony** oraz zdarzenia automatyczne bez decyzji.
+Wersja V7.2 rozwija symulator o automatyczną, coroczną galę **Złote Melony** oraz zdarzenia automatyczne bez decyzji.
 
 ## Złote Melony
 - kariera zaczyna się w roku 2026,
 - 52 tygodnie symulatora = 1 rok,
-- w każdym roku można przeprowadzić galę dokładnie raz,
-- w panelu gali można dodawać dowolnych użytkowników / nominowanych,
-- aktywny użytkownik kariery jest nominowany automatycznie,
-- kategoria `Użytkownik Roku` jest rozstrzygana całkowicie losowo,
-- po gali zapisywany jest pełny ranking i zwycięzca,
-- po przejściu do kolejnego roku dostępna jest nowa edycja gali.
+- gala uruchamia się **automatycznie w 52. tygodniu każdego roku**,
+- użytkowników nie dodaje się z poziomu strony,
+- jedynym źródłem puli użytkowników jest `data/users.txt`,
+- plik `users.txt` ma format: **jeden nick = jedna linia**,
+- system losuje dokładnie **3 nominowanych** do kategorii `Użytkownik Roku`,
+- następnie spośród tej trójki losowany jest zwycięzca,
+- historia nominacji i zwycięzców jest zapisywana w karierze,
+- system stosuje rotację, aby nie powtarzać nominowanych i zwycięzców, dopóki dana pula nie zostanie wykorzystana,
+- po wyczerpaniu puli cykl rozpoczyna się ponownie,
+- wcześniejsze wyniki gali są zachowywane w zapisie kariery.
+
+### Lista użytkowników
+Edytuj:
+
+`data/users.txt`
+
+Przykład:
+
+```text
+Iwan111
+Melon
+Olos
+Myszowór
+```
+
+Puste linie oraz linie rozpoczynające się od `#` lub `//` są ignorowane. Do przeprowadzenia gali potrzebne są minimum 3 osoby.
 
 ## Losowe zdarzenia bez decyzji
 Aplikacja posiada osobną bazę `data/automatic-events.json`. Te sytuacje pojawiają się losowo podczas kariery i są rozstrzygane automatycznie — gracz nie dostaje żadnego przycisku decyzji.
 
-Bazę można rozwijać bez modyfikacji kodu. Szczegóły: `data/README_ZDARZENIA_AUTOMATYCZNE.md`.
-
 ## Zwykłe eventy
-Pozostają w paczkach wymienionych w `data/database.json`. Gracz nie ma dostępu do edytora eventów z poziomu interfejsu.
+Pozostają w paczkach wymienionych w `data/database.json`. Każdy zwykły event ma w symulatorze tylko dwa warianty decyzji: pozytywny i negatywny.
 
-## Uruchomienie
-Uruchom `run.bat`. Wersja lokalna startuje na porcie 8797.
+## GitHub Pages
+Pliki `data/database.json`, `data/users.txt` i `data/automatic-events.json` muszą pozostać w katalogu `data/`. Aplikacja pobiera je bezpośrednio podczas działania strony.
 
-Docelowa domena projektu pozostaje: `https://melonawkasimulator.pl/`.
+Docelowa domena projektu: `https://melonawkasimulator.pl/`.
