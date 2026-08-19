@@ -1,5 +1,5 @@
 {
-  "databaseVersion": "7.2.0",
+  "databaseVersion": "7.3.0",
   "updated": "2026-08-19",
   "packs": [
     "../events-v5.json"
@@ -8,5 +8,23 @@
   "automaticPacks": [
     "automatic-events.json"
   ],
-  "usersFile": "users.txt"
+  "usersFile": "users.txt",
+  "decisionPointDefaults": {
+    "positive": {
+      "plusChanceMin": 65,
+      "plusChanceMax": 85,
+      "plusMultiplierMin": 0.9,
+      "plusMultiplierMax": 1.2,
+      "minusMultiplierMin": 0.45,
+      "minusMultiplierMax": 0.75
+    },
+    "negative": {
+      "plusChanceMin": 20,
+      "plusChanceMax": 45,
+      "plusMultiplierMin": 0.4,
+      "plusMultiplierMax": 0.7,
+      "minusMultiplierMin": 0.9,
+      "minusMultiplierMax": 1.25
+    }
+  }
 }
