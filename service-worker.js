@@ -1,5 +1,5 @@
-const CACHE='melonawka-sim-v7-4';
-const STATIC=['./','./index.html','./styles-v7.css','./discord-v74.css','./app-v73.js','./melon-economy-v74.js','./manifest.json','./icon.svg'];
+const CACHE='melonawka-sim-v7-5';
+const STATIC=['./','./index.html','./styles-v7.css','./discord-v74.css','./discord-nav-v75.css','./app-v73.js','./melon-economy-v74.js','./discord-nav-v75.js','./manifest.json','./icon.svg'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(STATIC)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{
@@ -9,7 +9,7 @@ self.addEventListener('fetch',e=>{
     e.respondWith(fetch(e.request,{cache:'no-store'}).catch(()=>caches.match(e.request)));
     return;
   }
-  const isApp=u.pathname.endsWith('/')||/index\.html$|app-v73\.js$|melon-economy-v74\.js$|styles-v7\.css$|discord-v74\.css$/.test(u.pathname);
+  const isApp=u.pathname.endsWith('/')||/index\.html$|app-v73\.js$|melon-economy-v74\.js$|discord-nav-v75\.js$|styles-v7\.css$|discord-v74\.css$|discord-nav-v75\.css$/.test(u.pathname);
   if(isApp){
     e.respondWith(fetch(e.request,{cache:'no-store'}).then(res=>{const copy=res.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));return res;}).catch(()=>caches.match(e.request)));
     return;
