@@ -37,7 +37,7 @@ function processAfterChoice(){if(!clickCtx)return;const ctx=clickCtx;clickCtx=nu
   if(ctx.decisionGood&&secureRandom()<clamp(Number(cfg.goodDecisionRewardChance??.45),0,1)){const min=Math.max(0,Math.trunc(Number(cfg.goodDecisionRewardMin??0))),max=Math.max(min,Math.trunc(Number(cfg.goodDecisionRewardMax??20)));const reward=randint(min,max);if(reward>0){state.melons=Number(state.melons||0)+reward;lines.push(`🍉 Bonus za dobrą decyzję: +${reward} Melonów.`);if(Array.isArray(state.history)&&state.history[0])state.history[0].detail=`${state.history[0].detail||''} Bonus walutowy: +${reward} Melonów.`}else lines.push('🍉 Tym razem dobra decyzja nie przyniosła dodatkowych Melonów.')}
   saveState(state);updateDom(state,lines);selected={cost:0,bonus:0,label:'Bez wsparcia'};renderBoostButtons();
 }
-function bind(){document.addEventListener('click',captureChoice,true);const grid=$('choiceGrid');if(grid)new MutationObserver(()=>setTimeout(showForChoices,0)).observe(grid,{childList:true,subtree:true});window.addEventListener('storage',()=>renderBoostButtons())}
+function bind(){document.addEventListener('click',captureChoice,true);const grid=$('choiceGrid');if(grid)new MutationObserver(()=>setTimeout(showForChoices,0)).observe(grid,{childList:true});window.addEventListener('storage',()=>renderBoostButtons())}
 async function init(){await loadConfig();ensurePanel();bind();showForChoices();if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./service-worker.js?v=7.4.0').catch(()=>{})}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
