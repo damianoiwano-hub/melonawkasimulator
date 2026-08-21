@@ -1,5 +1,5 @@
 {
-  "databaseVersion": "7.4.0",
+  "databaseVersion": "7.5.0",
   "updated": "2026-08-21",
   "packs": [
     "../events-v5.json"
