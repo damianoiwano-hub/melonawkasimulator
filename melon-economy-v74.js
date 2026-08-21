@@ -1,0 +1,43 @@
+(()=>{'use strict';
+const AUTO='melon_auto_v5';
+const MANIFEST='./data/database.json';
+const DEFAULT_CFG={
+  goodDecisionRewardChance:.45,
+  goodDecisionRewardMin:0,
+  goodDecisionRewardMax:20,
+  maxPositiveChance:95,
+  boosts:[
+    {label:'Bez wsparcia',cost:0,bonus:0},
+    {label:'+10 p.p.',cost:15,bonus:10},
+    {label:'+20 p.p.',cost:30,bonus:20},
+    {label:'+30 p.p.',cost:50,bonus:30}
+  ]
+};
+let cfg=structuredClone(DEFAULT_CFG),selected={cost:0,bonus:0,label:'Bez wsparcia'},clickCtx=null;
+const $=id=>document.getElementById(id);
+function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+function secureRandom(){try{const a=new Uint32Array(1);crypto.getRandomValues(a);return a[0]/4294967296}catch{return Math.random()}}
+function randint(a,b){return Math.floor(secureRandom()*(b-a+1))+a}
+function loadState(){try{return JSON.parse(localStorage.getItem(AUTO))}catch{return null}}
+function saveState(s){localStorage.setItem(AUTO,JSON.stringify(s))}
+function toast(t){let el=$('melonEconomyToast');if(!el){el=document.createElement('div');el.id='melonEconomyToast';el.className='melon-economy-toast';document.body.appendChild(el)}el.textContent=t;el.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('show'),2600)}
+async function loadConfig(){try{const r=await fetch(`${MANIFEST}?melonEconomy=${Date.now()}`,{cache:'no-store'});if(!r.ok)return;const m=await r.json();if(m.melonEconomy&&typeof m.melonEconomy==='object'){cfg={...DEFAULT_CFG,...m.melonEconomy};if(!Array.isArray(cfg.boosts)||!cfg.boosts.length)cfg.boosts=DEFAULT_CFG.boosts}}catch(e){console.warn('Melon economy config:',e)}}
+function ensurePanel(){let p=$('melonBoostPanel');if(p)return p;const grid=$('choiceGrid');if(!grid)return null;p=document.createElement('section');p.id='melonBoostPanel';p.className='melon-boost-panel hidden';p.innerHTML=`<div class="melon-boost-copy"><div><span class="melon-boost-kicker">🍉 MELON BOOST</span><strong>Zwiększ szansę na dodatni wynik punktowy</strong></div><div class="melon-wallet">Saldo: <b id="melonBoostBalance">0</b> 🍉</div></div><div class="melon-boost-options" id="melonBoostOptions"></div><div class="melon-boost-note" id="melonBoostNote">Wsparcie jest pobierane dopiero po kliknięciu decyzji.</div>`;grid.parentNode.insertBefore(p,grid);return p}
+function renderBoostButtons(){const p=ensurePanel();if(!p)return;const s=loadState();const bal=Math.max(0,Number(s?.melons||0));$('melonBoostBalance').textContent=bal;const holder=$('melonBoostOptions');holder.innerHTML=cfg.boosts.map((b,i)=>`<button type="button" class="melon-boost-btn ${selected.bonus===Number(b.bonus||0)&&selected.cost===Number(b.cost||0)?'active':''}" data-melon-boost="${i}" ${Number(b.cost||0)>bal?'disabled':''}><strong>${b.label||`+${b.bonus} p.p.`}</strong><span>${Number(b.cost||0)?`${b.cost} 🍉`:'0 🍉'}</span></button>`).join('');holder.querySelectorAll('[data-melon-boost]').forEach(btn=>btn.onclick=()=>{const b=cfg.boosts[Number(btn.dataset.melonBoost)];const now=loadState();if(Number(b.cost||0)>Number(now?.melons||0)){toast('Za mało Melonów na ten boost.');return}selected={cost:Number(b.cost||0),bonus:Number(b.bonus||0),label:b.label||`+${b.bonus} p.p.`};renderBoostButtons();refreshPreviews()});
+}
+function parseOdds(btn){if(!btn)return null;const text=btn.innerText||'';const plus=[...text.matchAll(/(\d+(?:[.,]\d+)?)%\s*→\s*\+(\d+)\s*PKT/gi)][0];const minus=[...text.matchAll(/(\d+(?:[.,]\d+)?)%\s*→\s*-(\d+)\s*PKT/gi)][0];if(!plus||!minus)return null;return{basePlus:Number(plus[1].replace(',','.')),plusPoints:Number(plus[2]),minusPoints:-Number(minus[2]),decisionGood:/DECYZJA\s+ROZSĄDNA/i.test(text)} }
+function refreshPreviews(){document.querySelectorAll('#choiceGrid .choice').forEach(btn=>{const odds=parseOdds(btn);if(!odds)return;btn.querySelector('.melon-odds-preview')?.remove();const eff=clamp(odds.basePlus+selected.bonus,0,Number(cfg.maxPositiveChance||95));const d=document.createElement('div');d.className='melon-odds-preview';d.innerHTML=selected.bonus>0?`🍉 Po wsparciu: <b>${eff}%</b> na +${odds.plusPoints} PKT <small>(+${Math.round(eff-odds.basePlus)} p.p.)</small>`:`🍉 Możesz kupić większą szansę przed wyborem.`;btn.appendChild(d)})}
+function showForChoices(){const p=ensurePanel();if(!p)return;const buttons=[...document.querySelectorAll('#choiceGrid .choice')];if(!buttons.length){p.classList.add('hidden');return}selected={cost:0,bonus:0,label:'Bez wsparcia'};p.classList.remove('hidden');renderBoostButtons();refreshPreviews()}
+function captureChoice(e){const btn=e.target.closest?.('#choiceGrid .choice');if(!btn)return;const odds=parseOdds(btn);if(!odds)return;const s=loadState();if(selected.cost>Number(s?.melons||0)){e.preventDefault();e.stopImmediatePropagation();toast('Za mało Melonów — wybierz tańszy boost.');return}clickCtx={...odds,boost:{...selected},beforeScore:Number(s?.score||0),beforeMelons:Number(s?.melons||0),buttonText:btn.innerText||''}}
+function updateDom(state,extraLines=[]){if($('moneyValue'))$('moneyValue').textContent=state.melons;if($('scoreValue'))$('scoreValue').textContent=state.score;const level=Math.max(1,Math.floor(Number(state.score||0)/250)+1);state.level=level;state.bestLevel=Math.max(Number(state.bestLevel||1),level);if($('levelValue'))$('levelValue').textContent=level;if($('bestLevel'))$('bestLevel').textContent=state.bestLevel;const inside=Number(state.score||0)%250;if($('levelProgressFill'))$('levelProgressFill').style.width=`${Math.round(inside/250*100)}%`;if($('levelProgressText'))$('levelProgressText').textContent=`${inside} / 250 XP do poziomu ${level+1}`;const res=$('eventResult');if(res&&extraLines.length){res.textContent+=`\n\n${extraLines.join('\n')}`;res.classList.remove('hidden')}const first=document.querySelector('#historyList .entry .detail');if(first&&extraLines.length)first.textContent+=` ${extraLines.join(' ')}`}
+function processAfterChoice(){if(!clickCtx)return;const ctx=clickCtx;clickCtx=null;let state=loadState();if(!state)return;const lines=[];state.melons=Math.max(0,Number(state.melons||0)-ctx.boost.cost);if(ctx.boost.cost>0)lines.push(`🍉 Melon Boost: -${ctx.boost.cost} Melonów za ${ctx.boost.label}.`);
+  const resultText=$('eventResult')?.textContent||'';
+  const rolledNegative=/WYNIK LOSOWANIA:[^\n]*→\s*-\d+\s*PKT/i.test(resultText);
+  if(ctx.boost.bonus>0&&rolledNegative){const effective=clamp(ctx.basePlus+ctx.boost.bonus,0,Number(cfg.maxPositiveChance||95));const denominator=Math.max(.0001,100-ctx.basePlus);const rescueChance=clamp((effective-ctx.basePlus)/denominator,0,1);if(secureRandom()<rescueChance){const correction=ctx.plusPoints-ctx.minusPoints;state.score=Math.max(0,Number(state.score||0)+correction);lines.push(`✨ Boost zadziałał: negatywny rzut został zamieniony na +${ctx.plusPoints} PKT.`);if(Array.isArray(state.history)&&state.history[0]){state.history[0].detail=`${state.history[0].detail||''} Melon Boost uratował wynik: +${ctx.plusPoints} PKT zamiast ${ctx.minusPoints} PKT.`;state.history[0].outcome='positive'}}else{lines.push(`🎲 Boost nie uratował rzutu. Końcowa szansa na plus wynosiła ${effective}%.`)}}
+  if(ctx.decisionGood&&secureRandom()<clamp(Number(cfg.goodDecisionRewardChance??.45),0,1)){const min=Math.max(0,Math.trunc(Number(cfg.goodDecisionRewardMin??0))),max=Math.max(min,Math.trunc(Number(cfg.goodDecisionRewardMax??20)));const reward=randint(min,max);if(reward>0){state.melons=Number(state.melons||0)+reward;lines.push(`🍉 Bonus za dobrą decyzję: +${reward} Melonów.`);if(Array.isArray(state.history)&&state.history[0])state.history[0].detail=`${state.history[0].detail||''} Bonus walutowy: +${reward} Melonów.`}else lines.push('🍉 Tym razem dobra decyzja nie przyniosła dodatkowych Melonów.')}
+  saveState(state);updateDom(state,lines);selected={cost:0,bonus:0,label:'Bez wsparcia'};renderBoostButtons();
+}
+function bind(){document.addEventListener('click',captureChoice,true);document.addEventListener('click',e=>{if(e.target.closest?.('#choiceGrid .choice'))setTimeout(processAfterChoice,0)},false);const grid=$('choiceGrid');if(grid)new MutationObserver(()=>setTimeout(showForChoices,0)).observe(grid,{childList:true,subtree:true});window.addEventListener('storage',()=>renderBoostButtons())}
+async function init(){await loadConfig();ensurePanel();bind();showForChoices();if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./service-worker.js?v=7.4.0').catch(()=>{})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
