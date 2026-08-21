@@ -1,4 +1,4 @@
-const CACHE='melonawka-sim-v7-5-1';
+const CACHE='melonawka-sim-v7-6';
 const STATIC=['./','./index.html','./styles-v7.css','./discord-v74.css','./discord-nav-v75.css','./app-v73.js','./melon-economy-v74.js','./discord-nav-v75.js','./users-live-v751.js','./manifest.json','./icon.svg'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(STATIC)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));

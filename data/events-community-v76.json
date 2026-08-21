@@ -1,0 +1,317 @@
+[
+  {
+    "id": "community_among_us_jajko",
+    "title": "Granie w Amonga",
+    "category": "GRY",
+    "description": "Gracie w Among Us na HydeParku. Dostajesz rolę impostora. Zmieniasz się w jajko żeby kogoś zabić, ale niestety widzi to Chunky i natychmiast klika emergency meeting. Co robisz?",
+    "weight": 10,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Idziesz w zaparte i mówisz że coś mu się pojebało, a w ogóle to na jajko to się kiedyś Twój kolega ogolił.",
+        "result": "Bronisz swojej wersji wydarzeń do samego końca.",
+        "effects": {"popularity": 10, "controversy": 10, "trust": -10},
+        "outcome": "positive",
+        "pointChances": [{"chance": 62, "points": 15}, {"chance": 38, "points": -10}],
+        "melonReward": {"chance": 28, "min": 2, "max": 8}
+      },
+      {
+        "label": "Przyznajesz się do winy i zostajesz wygłosowany.",
+        "result": "Przyznajesz się i odpadasz z rundy.",
+        "effects": {"controversy": -5, "trust": 10},
+        "outcome": "negative",
+        "pointChances": [{"chance": 42, "points": 10}, {"chance": 58, "points": -10}],
+        "melonReward": {"chance": 8, "min": 1, "max": 4}
+      }
+    ]
+  },
+  {
+    "id": "community_propozycja_dyktatora",
+    "title": "Propozycja Dyktatora",
+    "category": "DRAMA",
+    "description": "Dyktator przychodzi do Ciebie z propozycją zakończenia życia Markowi Papale.",
+    "weight": 5,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Odmawiasz, mówiąc, że nie będziesz cynglem komunistycznego dyktatora.",
+        "result": "Odmawiasz udziału w propozycji.",
+        "effects": {"popularity": 10, "trust": 5, "controversy": -5},
+        "outcome": "positive",
+        "pointChances": [{"chance": 82, "points": 25}, {"chance": 18, "points": -10}],
+        "melonReward": {"chance": 52, "min": 5, "max": 16}
+      },
+      {
+        "label": "Przyjmujesz propozycję, licząc, że dzięki niej dyktator nagrodzi Cię nominacją na moderatora.",
+        "result": "Ryzykujesz reputacją dla obietnicy awansu.",
+        "effects": {"controversy": 10, "trust": -10},
+        "outcome": "negative",
+        "pointChances": [{"chance": 18, "points": 10}, {"chance": 82, "points": -25}],
+        "melonReward": {"chance": 4, "min": 1, "max": 3}
+      }
+    ]
+  },
+  {
+    "id": "community_swieta_zlotopolice",
+    "title": "Święta Bożego Narodzenia",
+    "category": "SPOŁECZNOŚĆ",
+    "description": "Jak co roku oglądana jest na głosowym Gwiazdka w Złotopolicach.",
+    "weight": 7,
+    "minTurn": 10,
+    "enabled": true,
+    "choices": [
+      {
+        "label": "Oglądam razem z głosowym, czasem zareaguję, a po seansie zostaję i rozmawiam z innymi.",
+        "result": "Wspólny seans wzmacnia twoją obecność w społeczności.",
+        "effects": {"reputation": 3, "activity": 2, "popularity": 2},
+        "outcome": "positive",
+        "pointChances": [{"chance": 78, "points": 20}, {"chance": 22, "points": -5}],
+        "melonReward": {"chance": 48, "min": 4, "max": 14}
+      },
+      {
+        "label": "Mam w dupie, nie będę oglądał, a jeszcze napiszę że oglądacie jakieś gówno (nigdy nie oglądałem).",
+        "result": "Wchodzisz w konflikt z uczestnikami wspólnego seansu.",
+        "effects": {"reputation": -20, "activity": 2, "controversy": 15},
+        "outcome": "negative",
+        "pointChances": [{"chance": 16, "points": 10}, {"chance": 84, "points": -30}],
+        "melonReward": {"chance": 3, "min": 1, "max": 3}
+      }
+    ]
+  },
+  {
+    "id": "community_kibel",
+    "title": "Kibel",
+    "category": "GŁOSOWY",
+    "description": "Informujesz kolegów z głosowego, że idziesz na kibel.",
+    "weight": 8,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {"label": "Srasz", "result": "Nic szczególnego się nie dzieje.", "effects": {}, "outcome": "positive", "pointChances": [{"chance": 50, "points": 0}, {"chance": 50, "points": 0}], "melonReward": {"chance": 5, "min": 1, "max": 2}},
+      {"label": "Nie srasz", "result": "Nic szczególnego się nie dzieje.", "effects": {}, "outcome": "negative", "pointChances": [{"chance": 50, "points": 0}, {"chance": 50, "points": 0}], "melonReward": {"chance": 0, "min": 0, "max": 0}}
+    ]
+  },
+  {
+    "id": "community_videofan_merchant",
+    "title": "Videofan merchant",
+    "category": "MODERACJA",
+    "description": "Wracasz po banie za bezprawne użycie oznaczenia wszystkich użytkowników. Jedna z użytkowniczek proponuje ponowne użycie go przy powrocie - co robisz?",
+    "weight": 8,
+    "minTurn": 6,
+    "enabled": true,
+    "choices": [
+      {"label": "Uczę się na błędach, nie zrobię drugi raz tego samego.", "result": "Pokazujesz, że wyciągnąłeś wnioski z poprzedniej sytuacji.", "effects": {"trust": 10, "reputation": 10, "controversy": -5, "popularity": -5}, "outcome": "positive", "pointChances": [{"chance": 84, "points": 30}, {"chance": 16, "points": -10}], "melonReward": {"chance": 55, "min": 6, "max": 18}},
+      {"label": "@everyone, niech wszyscy wiedzą, że wróciłem.", "result": "Powrót od razu zamienia się w kolejną aferę.", "effects": {"controversy": 15, "popularity": 10, "reputation": -10}, "outcome": "negative", "pointChances": [{"chance": 20, "points": 10}, {"chance": 80, "points": -25}], "melonReward": {"chance": 6, "min": 1, "max": 4}}
+    ]
+  },
+  {
+    "id": "community_muzyczki_machen",
+    "title": "Muzyczki machen",
+    "category": "GRY",
+    "description": "Na kanale głosowym użytkownicy grają w muzyczki na WhatAMusic, a Ty zostajesz jednym z uczestników gry.",
+    "weight": 10,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {"label": "Zgadujesz tytuły i wykonawców piosenek oraz powiększasz swoją wiedzę muzyczną.", "result": "Dobrze odnajdujesz się w muzycznej zabawie.", "effects": {"controversy": -10, "reputation": 10, "trust": 5}, "outcome": "positive", "pointChances": [{"chance": 80, "points": 25}, {"chance": 20, "points": -10}], "melonReward": {"chance": 50, "min": 4, "max": 15}},
+      {"label": "Za każdym razem wpisujesz Akona jako wykonawcę, nawet jeśli pokazuje że jest to hasło na 15 liter.", "result": "Twoje odpowiedzi szybko stają się memem.", "effects": {"controversy": 15, "trust": -10, "reputation": -10, "popularity": 10}, "outcome": "negative", "pointChances": [{"chance": 32, "points": 10}, {"chance": 68, "points": -20}], "melonReward": {"chance": 10, "min": 1, "max": 5}}
+    ]
+  },
+  {
+    "id": "community_nekrolog",
+    "title": "Nekrolog",
+    "category": "SPOŁECZNOŚĆ",
+    "description": "Pojawiła się na #ogólny informacja o śmierci znanego dziennikarza. Jeden z użytkowników napisał, że to musi być duża strata dla kolegów z pracy.",
+    "weight": 6,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {"label": "Przyjmujesz to do wiadomości, wyrażasz zaskoczenie samą śmiercią dziennikarza.", "result": "Reagujesz spokojnie i bez nakręcania dyskusji.", "effects": {"reputation": 3, "activity": 1, "popularity": -3, "controversy": -3, "trust": 3}, "outcome": "positive", "pointChances": [{"chance": 76, "points": 15}, {"chance": 24, "points": -5}], "melonReward": {"chance": 36, "min": 3, "max": 10}},
+      {"label": "Ganisz użytkownika i piszesz żeby się opamiętał, gdyż dziennikarz dopiero co zmarł.", "result": "Niepotrzebnie eskalujesz rozmowę.", "effects": {"reputation": -5, "activity": 3, "popularity": 5, "controversy": 5, "trust": -1}, "outcome": "negative", "pointChances": [{"chance": 28, "points": 10}, {"chance": 72, "points": -15}], "melonReward": {"chance": 5, "min": 1, "max": 4}}
+    ]
+  },
+  {
+    "id": "community_humanista",
+    "title": "Wykształcenie humanistyczne",
+    "category": "DYSKUSJE",
+    "description": "Wywiązała się wśród użytkowników dyskusja na temat aktualnie popularnego serialu. W pewnym momencie ktoś użył zwrotu „Przestańcie mi go spojlerować!”.",
+    "weight": 9,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {"label": "Nie reagujesz na to w żaden sposób.", "result": "Pozwalasz rozmowie iść dalej bez językowej awantury.", "effects": {"activity": -10, "popularity": -5, "controversy": -5, "trust": 5}, "outcome": "positive", "pointChances": [{"chance": 70, "points": 15}, {"chance": 30, "points": -10}], "melonReward": {"chance": 30, "min": 2, "max": 9}},
+      {"label": "Zaczynasz awanturę o słowo „spojlerować”, gdyż poprawnie powinno się pisać „spoilować”. Chwalisz się, że w przeciwieństwie do innych masz wykształcenie humanistyczne, więc musisz mieć rację.", "result": "Dyskusja zamienia się w spór o język i wykształcenie.", "effects": {"reputation": -5, "activity": 15, "popularity": 10, "controversy": 15, "trust": -5}, "outcome": "negative", "pointChances": [{"chance": 30, "points": 10}, {"chance": 70, "points": -20}], "melonReward": {"chance": 8, "min": 1, "max": 5}}
+    ]
+  },
+  {
+    "id": "community_casado_bernal",
+    "title": "Casado czy Bernal - to który kurwa jest synem kogo?",
+    "category": "DYSKUSJE",
+    "description": "Popełniłeś błąd w rozmowie na temat wzrostu Marka Casado myląc go z Markiem Bernalem i twój współrozmówca to zauważył.",
+    "weight": 7,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {"label": "Garda z pokory - przyznaj się do błędu i kontynuuj konwersację.", "result": "Przyznanie się do pomyłki działa na twoją korzyść.", "effects": {"trust": 15, "reputation": 10, "controversy": -10}, "outcome": "positive", "pointChances": [{"chance": 86, "points": 30}, {"chance": 14, "points": -10}], "melonReward": {"chance": 58, "min": 5, "max": 18}},
+      {"label": "Co ty pierdolisz człowieku?! - pokłóć się i wyjdź z serwera na pół roku.", "result": "Zamiast przyznać się do błędu, eskalujesz konflikt.", "effects": {"controversy": 15, "popularity": 10, "reputation": -15}, "outcome": "negative", "pointChances": [{"chance": 15, "points": 10}, {"chance": 85, "points": -30}], "melonReward": {"chance": 3, "min": 1, "max": 3}}
+    ]
+  },
+  {
+    "id": "community_nutka_dekadencji",
+    "title": "Nutka dekadencji z Koziełłem",
+    "category": "INTEGRACJA",
+    "description": "Adrian Kozioł proponuje Ci setunię na midzie w Rogowie. Co robisz?",
+    "weight": 6,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {"label": "No kurwa, proste że walimy, w końcu to tutejsza tradycja dla nowoprzybyłych!", "result": "Dołączasz do integracji i zyskujesz punkty u ekipy.", "effects": {"trust": 10, "activity": 10, "controversy": -5}, "outcome": "positive", "pointChances": [{"chance": 72, "points": 20}, {"chance": 28, "points": -10}], "melonReward": {"chance": 35, "min": 3, "max": 12}},
+      {"label": "Jestem pizda, wymiękam.", "result": "Wycofujesz się z integracji.", "effects": {"controversy": 15, "popularity": 10, "trust": -10}, "outcome": "negative", "pointChances": [{"chance": 35, "points": 10}, {"chance": 65, "points": -20}], "melonReward": {"chance": 6, "min": 1, "max": 4}}
+    ]
+  },
+  {
+    "id": "community_cheat_f1_4fun",
+    "title": "Przyłapanie na cheatowaniu w lidze 4fun",
+    "category": "LIGA 4FUN",
+    "description": "Włodarze ligi F1 2018 zapraszają cię na rozmowę na temat możliwości używania przez ciebie programu Cheat Engine.",
+    "weight": 6,
+    "minTurn": 5,
+    "enabled": true,
+    "choices": [
+      {"label": "Przyznajesz się do winy i bijesz się w pierś.", "result": "Bierzesz odpowiedzialność za swoje zachowanie.", "effects": {"reputation": 5, "trust": 5, "controversy": -5}, "outcome": "positive", "pointChances": [{"chance": 74, "points": 20}, {"chance": 26, "points": -10}], "melonReward": {"chance": 38, "min": 3, "max": 12}},
+      {"label": "Cytujesz Hitlera i nie przyznajesz się do winy.", "result": "Rozmowa dyscyplinarna zmienia się w kompletny chaos.", "effects": {"controversy": 15, "popularity": 10, "trust": -10, "reputation": -10}, "outcome": "negative", "pointChances": [{"chance": 12, "points": 10}, {"chance": 88, "points": -30}], "melonReward": {"chance": 2, "min": 1, "max": 2}}
+    ]
+  },
+  {
+    "id": "community_cs_piatka",
+    "title": "Uda nam się zebrać piątkę do CS-a?",
+    "category": "GRY",
+    "description": "Koledzy z głosowego zapraszają cię do zagrania w Counter-Strike 2.",
+    "weight": 11,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {"label": "jeeeeedziemyyyyy panowieeeeee", "result": "Dołączasz do składu i grasz ze znajomymi.", "effects": {"trust": 10, "reputation": 10, "controversy": -10}, "outcome": "positive", "pointChances": [{"chance": 83, "points": 25}, {"chance": 17, "points": -10}], "melonReward": {"chance": 52, "min": 4, "max": 16}},
+      {"label": "Ja nie jestem Snax - wyciszasz się w pizdu na 5 godzin.", "result": "Znikasz z głosowego zamiast dołączyć do gry.", "effects": {"reputation": -10, "trust": -10, "controversy": 20}, "outcome": "negative", "pointChances": [{"chance": 20, "points": 10}, {"chance": 80, "points": -25}], "melonReward": {"chance": 5, "min": 1, "max": 4}}
+    ]
+  },
+  {
+    "id": "community_ping_everyone",
+    "title": "Ping everyone",
+    "category": "MODERACJA",
+    "description": "Pingujesz everyone na Melonawce, pytasz Melona o zgodę?",
+    "weight": 9,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {"label": "Pytam o zgodę.", "result": "Najpierw upewniasz się, że ping jest potrzebny.", "effects": {"trust": 10, "reputation": 10, "controversy": -5}, "outcome": "positive", "pointChances": [{"chance": 85, "points": 25}, {"chance": 15, "points": -10}], "melonReward": {"chance": 54, "min": 5, "max": 17}},
+      {"label": "Pinguję bez zgody.", "result": "Powiadomienie wszystkich wywołuje irytację.", "effects": {"controversy": 15, "popularity": 10, "trust": -10, "reputation": -10}, "outcome": "negative", "pointChances": [{"chance": 18, "points": 10}, {"chance": 82, "points": -25}], "melonReward": {"chance": 4, "min": 1, "max": 3}}
+    ]
+  },
+  {
+    "id": "community_pilka_zly_kanal",
+    "title": "Wiadomość związana z piłką nożną na złym kanale",
+    "category": "MODERACJA",
+    "description": "Publikujesz piłkarskiego newsa na kanale #sport po czym Adik zwraca ci uwagę.",
+    "weight": 9,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {"label": "Usuwasz wiadomość i wysyłasz ją na dobrym kanale.", "result": "Korygujesz pomyłkę bez niepotrzebnej dyskusji.", "effects": {"trust": 5}, "outcome": "positive", "pointChances": [{"chance": 75, "points": 15}, {"chance": 25, "points": -5}], "melonReward": {"chance": 34, "min": 2, "max": 10}},
+      {"label": "Kłócisz się, że piłka nożna to też sport i nie usuwasz wiadomości.", "result": "Technicznie masz argument, ale konflikt eskaluje.", "effects": {"controversy": 10, "popularity": 5, "reputation": -10}, "outcome": "negative", "pointChances": [{"chance": 33, "points": 10}, {"chance": 67, "points": -20}], "melonReward": {"chance": 7, "min": 1, "max": 5}}
+    ]
+  },
+  {
+    "id": "community_afera_po_zlotym_melonie",
+    "title": "Afera po Złotym Melonie",
+    "category": "ZŁOTE MELONY",
+    "description": "Zajmujesz 2. miejsce w kategorii Użytkownik Roku i czujesz się przez ten fakt głęboko rozczarowany, gdyż uważasz, że powinieneś wygrać.",
+    "weight": 5,
+    "minTurn": 53,
+    "enabled": true,
+    "choices": [
+      {"label": "Zostawiasz dumę w sobie i dziękujesz ludziom za głosy, zapowiadając walkę o zwycięstwo w kolejnym roku.", "result": "Przyjmujesz wynik z klasą i przekuwasz go w motywację.", "effects": {"reputation": 10, "activity": 10}, "outcome": "positive", "pointChances": [{"chance": 88, "points": 35}, {"chance": 12, "points": -10}], "melonReward": {"chance": 65, "min": 8, "max": 20}},
+      {"label": "Reagujesz emocjonalnie, obrażasz się na serwer i zmniejszasz swoją aktywność, docinając w tym temacie w każdej wypowiedzi po Złotych Melonach, licząc, że w taki sposób zwiększysz swoją rozpoznawalność.", "result": "Rozczarowanie przeradza się w długą dramę.", "effects": {"reputation": -5, "trust": -15, "controversy": 10}, "outcome": "negative", "pointChances": [{"chance": 15, "points": 10}, {"chance": 85, "points": -30}], "melonReward": {"chance": 3, "min": 1, "max": 3}}
+    ]
+  },
+  {
+    "id": "community_wskrzeszenie_kanalu",
+    "title": "Wskrzeszenie kanału",
+    "category": "SERWER",
+    "description": "Melon zamknął twój ukochany kanał tematyczny, lecz odkrywasz, że zapomniał on wyłączyć na nim tworzenie wątków.",
+    "weight": 6,
+    "minTurn": 4,
+    "enabled": true,
+    "choices": [
+      {"label": "Tworzysz wątek i udajesz, że kanał jest otwarty jak gdyby nigdy nic się nie stało.", "result": "Obchodzisz zamknięcie kanału przez wątek.", "effects": {"reputation": 5, "activity": 5, "popularity": 5, "controversy": 5}, "outcome": "positive", "pointChances": [{"chance": 60, "points": 20}, {"chance": 40, "points": -15}], "melonReward": {"chance": 25, "min": 2, "max": 10}},
+      {"label": "Godzisz się ze stratą kanału i nic nie robisz.", "result": "Akceptujesz decyzję i odpuszczasz temat.", "effects": {"activity": -5, "popularity": -5, "controversy": -5}, "outcome": "negative", "pointChances": [{"chance": 48, "points": 10}, {"chance": 52, "points": -10}], "melonReward": {"chance": 10, "min": 1, "max": 5}}
+    ]
+  },
+  {
+    "id": "community_meloman",
+    "title": "Meloman",
+    "category": "MUZYKA",
+    "description": "Naszła cię nagła ochota na słuchanie muzyki.",
+    "weight": 9,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {"label": "Włączasz radio internetowe.", "result": "Słuchasz muzyki bez angażowania całego serwera.", "effects": {"activity": -3, "controversy": -3}, "outcome": "positive", "pointChances": [{"chance": 68, "points": 10}, {"chance": 32, "points": -5}], "melonReward": {"chance": 30, "min": 2, "max": 8}},
+      {"label": "Uruchamiasz Boteusza na kanale tekstowym w MAX2, dzięki czemu każdy, kto wejdzie na ten kanał dostaje automatycznie oznaczenie od Boteusza.", "result": "Automatyczne oznaczenia szybko zaczynają przeszkadzać innym.", "effects": {"reputation": -5, "activity": 3, "popularity": 3, "controversy": 5}, "outcome": "negative", "pointChances": [{"chance": 32, "points": 10}, {"chance": 68, "points": -15}], "melonReward": {"chance": 6, "min": 1, "max": 4}}
+    ]
+  },
+  {
+    "id": "community_delfiny_krat",
+    "title": "Delfiny Krat",
+    "category": "TELETURNIEJE",
+    "description": "Jesteś wielkim fanem teleturniejów i twoje życie obraca się tylko wokół nich.",
+    "weight": 8,
+    "minTurn": 2,
+    "enabled": true,
+    "choices": [
+      {"label": "Wymieniasz się spostrzeżeniami na temat teleturniejów.", "result": "Rozmawiasz o swojej pasji bez spamowania innych.", "effects": {"reputation": 3, "activity": 3, "controversy": -5, "trust": 3}, "outcome": "positive", "pointChances": [{"chance": 77, "points": 20}, {"chance": 23, "points": -5}], "melonReward": {"chance": 44, "min": 3, "max": 13}},
+      {"label": "Piszesz caps lockiem, żeby twoje wiadomości były lepiej widoczne. Tworzysz własny serwer na temat teleturniejów bez jakiejkolwiek moderacji i próbujesz zaprosić ludzi z Melonawki wysyłając im co chwila nieaktualny link.", "result": "Próby promocji szybko męczą innych użytkowników.", "effects": {"reputation": -10, "activity": 10, "popularity": 10, "controversy": 15, "trust": -5}, "outcome": "negative", "pointChances": [{"chance": 24, "points": 10}, {"chance": 76, "points": -25}], "melonReward": {"chance": 5, "min": 1, "max": 4}}
+    ]
+  },
+  {
+    "id": "community_kamerkowe_poznanie",
+    "title": "Kamerkowe poznanie",
+    "category": "GŁOSOWY",
+    "description": "Podczas pokazywania swojego nowego kompletu pościeli marki Pierzynix do pokoju wchodzi Twoja rodzicielka.",
+    "weight": 7,
+    "minTurn": 1,
+    "enabled": true,
+    "choices": [
+      {"label": "Lecę dalej z pokazywaniem pokoju i mówię ludziom z głosowego że to mama.", "result": "Podchodzisz do sytuacji bez niepotrzebnej paniki.", "effects": {"popularity": 3, "trust": 5}, "outcome": "positive", "pointChances": [{"chance": 74, "points": 15}, {"chance": 26, "points": -5}], "melonReward": {"chance": 38, "min": 3, "max": 11}},
+      {"label": "Robię z tego dym, chowam telefon, wyłączam kamerę, a w tle słychać kłótnię.", "result": "W tle słychać kłótnię, a sytuacja robi się niezręczna.", "effects": {"reputation": -7, "trust": -6}, "outcome": "negative", "pointChances": [{"chance": 25, "points": 10}, {"chance": 75, "points": -20}], "melonReward": {"chance": 4, "min": 1, "max": 3}}
+    ]
+  },
+  {
+    "id": "community_sprawa_sadowa",
+    "title": "Sprawa sądowa",
+    "category": "DYSKUSJE",
+    "description": "Pojawia się informacja, że jakaś osoba ma sprawę sądową i podane są widełki, ile lat jej grozi.",
+    "weight": 6,
+    "minTurn": 3,
+    "enabled": true,
+    "choices": [
+      {"label": "Odnosisz się do sprawy w merytoryczny sposób.", "result": "Trzymasz się informacji, które rzeczywiście są znane.", "effects": {"reputation": 3, "activity": 3}, "outcome": "positive", "pointChances": [{"chance": 79, "points": 20}, {"chance": 21, "points": -5}], "melonReward": {"chance": 42, "min": 3, "max": 12}},
+      {"label": "Piszesz wyłącznie o tym, że kara na pewno będzie nieadekwatna, bo sędzia jest z nieodpowiedniego obozu do twoich poglądów (tak naprawdę nie wiadomo nawet kto sędziuje).", "result": "Dyskusja odpływa w spekulacje mimo braku informacji o składzie sądu.", "effects": {"reputation": -3, "activity": 5, "popularity": 3, "controversy": 5}, "outcome": "negative", "pointChances": [{"chance": 30, "points": 10}, {"chance": 70, "points": -15}], "melonReward": {"chance": 6, "min": 1, "max": 4}}
+    ]
+  },
+  {
+    "id": "community_wyczytanie_zlotych_melonow",
+    "title": "Wyczytanie wyników na Złotych Melonach",
+    "category": "ZŁOTE MELONY",
+    "description": "Admirał Melonov prosi cię o odczytanie wyników jednej z kategorii na Złotych Melonach.",
+    "weight": 5,
+    "minTurn": 40,
+    "enabled": true,
+    "choices": [
+      {"label": "Zgadzam się i odczytuję wyniki.", "result": "Pomagasz przy gali i dobrze wywiązujesz się z zadania.", "effects": {"reputation": 5, "activity": 2}, "outcome": "positive", "pointChances": [{"chance": 84, "points": 25}, {"chance": 16, "points": -5}], "melonReward": {"chance": 58, "min": 5, "max": 18}},
+      {"label": "Każę mu spierdalać.", "result": "Odmawiasz w najbardziej konfliktowy możliwy sposób.", "effects": {"activity": -5, "controversy": 5, "popularity": 2}, "outcome": "negative", "pointChances": [{"chance": 18, "points": 10}, {"chance": 82, "points": -20}], "melonReward": {"chance": 3, "min": 1, "max": 3}}
+    ]
+  }
+]
