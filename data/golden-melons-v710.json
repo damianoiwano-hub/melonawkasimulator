@@ -1,4 +1,5 @@
 [
+  {"id":"uzytkownik_roku","name":"Użytkownik Roku","icon":"👑","tone":"gold","description":"Najważniejsza nagroda gali za całokształt aktywności, reputacji i wpływu na społeczność.","overall":true},
   {"id":"alkoholik_serwera","name":"Alkoholik serwera","icon":"🍻","tone":"amber","description":"Najbardziej imprezowa i zakręcona energia serwera."},
   {"id":"rak_roku","name":"Rak roku","icon":"🦀","tone":"crimson","description":"Nagroda za najbardziej absurdalne, męczące albo memicznie rakowe akcje roku."},
   {"id":"family_friendly","name":"Family friendly użytkownik roku","icon":"🌈","tone":"mint","description":"Za najbardziej bezpieczną, pozytywną i przyjazną atmosferę."},
