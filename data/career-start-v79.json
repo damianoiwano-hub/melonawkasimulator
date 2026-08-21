@@ -48,11 +48,11 @@
     "helper": {"reputation": 6, "activity": 2, "popularity": 0, "controversy": -1, "trust": 8}
   },
   "limits": {
-    "reputation": [5, 75],
-    "activity": [10, 75],
-    "popularity": [0, 45],
+    "reputation": [5, 74],
+    "activity": [10, 79],
+    "popularity": [0, 59],
     "controversy": [5, 55],
-    "trust": [5, 72],
-    "melons": [40, 240]
+    "trust": [5, 74],
+    "melons": [40, 249]
   }
 }
