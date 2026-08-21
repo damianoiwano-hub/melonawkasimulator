@@ -2,21 +2,172 @@
 # Jeden nick w każdej linii. Linie zaczynające się od # lub // są ignorowane.
 # Edytuj ten plik w repozytorium, aby aktualizować pulę losowania.
 
-Iwan111
 Melon
-Olos
-Myszowór
-Chunky
-Lawrenc
-Primożowy
-Kartofel
+c3po
+Dawid Kucharski
+ParrotAntics
+KejDzi
+KoxuHacks
 Koziełło
-Kebiarz
+Misiek7
 Kenaj
-Egzo
-Kubys
-Grzesiu
+Olos
+Primożowy
+Rurcio
+Matteo0919
+Papa Dymil
+Sebastian Kuźniak
+Iwanosik
+Mar
+powerr
+t.foxman
+Kebiarz
+Maluch
+Enemix
+Chunky
+Alpha_134
+merqlen
 Katner
-FanGerwyna
-OlaGa
+Domenox
+hubi
+szymix
+LameElite
+Niju
+Freddson
+Artur Mazurkiewicz
+Nioch 
+Herox
+kacperwp;pw
+Kamacho
+butrque87
+kube
+LoFeK
+langumager
+Pawel
+Piter93
+Senor Loco
+vardeun
+karol.progamer1
+Kręciołek
+majster_12
+Paweł567
+Unluck
+sugiyamakitoyaka
+Zaurozaur
+Alt one
+_maciaek37_
+adii344
+Adik
+Adixon
+AdrianW
+agata
+Albigracz
+Antihype
+araxe
+Artutmaz
+Ayrton Senna
+Bart
+Bartik
+Bartosz
+bucu
+Caro
+cegla
+Cloudy Official
+Czysiu
+Damian
+DamianPS
+Dareczekb
+DAWIDKE
+DEJUM
+Dekiel Dave Rose'owy
+Doktorek
+Dominik
+Domir
+DonMateo
+dwskkx
+Dziki
+Egzo
+El Primoż
+Emma Paton, ale z Polski
+eNterro
+fanStefanka
+Green
+Greg
+grong
+grzesiu_official
+Gumer
+gwajka
+cheeto
+Hienej
+Iga
+Igor
+Iri
+ita
+Lawrenc
+Jankos 
+Janusz Tracz
+JIMMY J
+jimmy wang yang
+John Lennon
+Kartofel
+kerolix
+Knóe 
+kolega
+Konrad
+kowaleyrOo
+kubi.elo
+Kubys
+Lelga Warszawa
+Lumberjack
+Matelski
+mateush05
+mateusz2001
+MatiR
+matius
+Mionsz
+Misio
+Mmek Play
+Myszowór
+fangerwyna
+Neliuss
+no i gowno ci do tego225
+nykser
+OlaGa14
+OsamaBombLaden
 KubaDVD
+Żania
+patrijk42333
+pawcio
+Paweł
+Pawlix2000
+pit
+Polak
+Poland
+Phill De Vibe
+ProLemon
+Przemek 
+R2-D2
+Rarytas
+ProRock
+rolnik
+Roman Reigns
+Rurcio
+Różowy Leszek
+SangreSani
+shun
+Silento
+Sportowiec06
+Sprytny Świstak67
+Telir
+Trinket9
+K03a
+video fan
+WHAT
+Wojtyla
+worldshowoff
+Proxiss
+Yossi Kenay
+zasadzior441
+Żekens 
+HostQL
+
