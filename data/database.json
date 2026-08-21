@@ -1,5 +1,5 @@
 {
-  "databaseVersion": "7.12.0",
+  "databaseVersion": "7.13.0",
   "updated": "2026-08-21",
   "packs": [
     "../events-v5.json",
@@ -43,6 +43,19 @@
       {"label": "+10 p.p.", "cost": 15, "bonus": 10},
       {"label": "+20 p.p.", "cost": 30, "bonus": 20},
       {"label": "+30 p.p.", "cost": 50, "bonus": 30}
-    ]
+    ],
+    "highStatRisk": {
+      "enabled": true,
+      "threshold": 70,
+      "maxPenalty": 20,
+      "perPoint": 0.6,
+      "levelStart": 6,
+      "levelPenalty": 0.8,
+      "difficulty": {
+        "easy": 0.7,
+        "normal": 1.0,
+        "hard": 1.25
+      }
+    }
   }
 }
