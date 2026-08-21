@@ -1,0 +1,12 @@
+[
+  {"id":"alkoholik_serwera","name":"Alkoholik serwera","icon":"🍻","tone":"amber","description":"Najbardziej imprezowa i zakręcona energia serwera."},
+  {"id":"rak_roku","name":"Rak roku","icon":"🦀","tone":"crimson","description":"Nagroda za najbardziej absurdalne, męczące albo memicznie rakowe akcje roku."},
+  {"id":"family_friendly","name":"Family friendly użytkownik roku","icon":"🌈","tone":"mint","description":"Za najbardziej bezpieczną, pozytywną i przyjazną atmosferę."},
+  {"id":"progres_roku","name":"Progres roku","icon":"📈","tone":"emerald","description":"Za największy zauważalny rozwój i zmianę na plus."},
+  {"id":"bezbek_serwera","name":"Bezbek serwera","icon":"🥱","tone":"slate","description":"Za wyjątkowo suche żarty i legendarny poziom bezbeku."},
+  {"id":"toxic_serwera","name":"Toxic serwera","icon":"☣️","tone":"violet","description":"Za najbardziej toksyczną aurę i największy potencjał do dram."},
+  {"id":"voice_user_roku","name":"Użytkownik roku - kanały głosowe","icon":"🎙️","tone":"blue","description":"Dla osoby najbardziej kojarzonej z aktywnością na kanałach głosowych."},
+  {"id":"regres_roku","name":"Regres roku","icon":"📉","tone":"rose","description":"Za najbardziej spektakularny zjazd formy w porównaniu z poprzednim okresem."},
+  {"id":"smieszek_serwera","name":"Śmieszek serwera","icon":"😂","tone":"yellow","description":"Za najlepszy humor, memy i regularne rozkręcanie atmosfery."},
+  {"id":"anon_serwera","name":"Anon serwera","icon":"🕶️","tone":"indigo","description":"Dla najbardziej tajemniczej lub najmniej przewidywalnej postaci serwera."}
+]

@@ -1,17 +1,20 @@
 {
-  "databaseVersion": "7.9.0",
+  "databaseVersion": "7.10.0",
   "updated": "2026-08-21",
   "packs": [
     "../events-v5.json",
     "events-community-v76.json"
   ],
   "automaticEventChance": 0.28,
+  "weeklyEventsPerWeek": 1,
+  "automaticEventPolicy": "replace_regular",
   "automaticPacks": [
     "automatic-events.json"
   ],
   "usersFile": "users.txt",
   "achievementsFile": "achievements-v79.json",
   "careerStartFile": "career-start-v79.json",
+  "goldenMelonsCategoriesFile": "golden-melons-v710.json",
   "decisionPointDefaults": {
     "positive": {
       "plusChanceMin": 65,
