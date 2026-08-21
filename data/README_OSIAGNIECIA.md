@@ -1,8 +1,8 @@
-# Osiągnięcia — Melonawka Simulator V7.8
+# Osiągnięcia — Melonawka Simulator V7.9
 
 Baza osiągnięć znajduje się w pliku:
 
-`data/achievements-v78.json`
+`data/achievements-v79.json`
 
 Każdy wpis może zawierać:
 
@@ -25,9 +25,9 @@ Każdy wpis może zawierać:
   "category": "ROZWÓJ",
   "rarity": "rare",
   "description": "Opis osiągnięcia widoczny w kolekcji.",
-  "requirement": "Osiągnij poziom 5.",
+  "requirement": "Osiągnij poziom 8.",
   "conditions": [
-    {"metric": "level", "operator": "gte", "value": 5}
+    {"metric": "level", "operator": "gte", "value": 8}
   ]
 }
 ```
@@ -47,6 +47,7 @@ Jeżeli `conditions` zawiera kilka warunków, wszystkie muszą zostać spełnion
 Bezpośrednie pola kariery:
 
 - `eventCount`
+- `autoEventCount`
 - `goodChoices`
 - `badChoices`
 - `streak`
@@ -58,6 +59,7 @@ Bezpośrednie pola kariery:
 - `popularity`
 - `controversy`
 - `trust`
+- `difficulty`
 
 Metryki wyliczane:
 
@@ -69,4 +71,14 @@ Metryki wyliczane:
 - `galaWinCount` — liczba zwycięstw nicku aktywnej kariery,
 - `ending` — zakończenie kariery: `moderator` albo `ban`.
 
-Po zmianie pliku osiągnięć wystarczy zaktualizować plik w repozytorium. Silnik V7.8 pobiera bazę z pliku wskazanego przez `achievementsFile` w `data/database.json`.
+## Balans V7.9
+
+Progi osiągnięć są celowo ustawione powyżej maksymalnych parametrów możliwych do wylosowania na starcie kariery. Oznacza to, że osiągnięcia statystyczne trzeba wypracować podczas eventów, zakupów i długiego rozwoju profilu.
+
+Kategoria `HARDCORE` może korzystać z warunku:
+
+```json
+{"metric":"difficulty","operator":"eq","value":"hard"}
+```
+
+Po zmianie bazy wystarczy zaktualizować plik wskazany przez `achievementsFile` w `data/database.json`.
