@@ -1,0 +1,86 @@
+(()=>{'use strict';
+const AUTO='melon_auto_v5',WALLET='melon_wallet_v74',SLOT='melon_slot_v5_',OPT='melon_game_options_v77',BACKUP='melon_backup_v77',LAST='melon_last_finished_v77';
+const defaults={blindOdds:false,decisionTimer:0,confirmRisky:true,autoBackup:true,animations:true,compactHistory:false};
+let settings=loadJson(OPT)||{...defaults},resetting=false,timerId=null,timerEnd=0,storageSet=Storage.prototype.setItem,storageRemove=Storage.prototype.removeItem;
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+function loadJson(k){try{return JSON.parse(localStorage.getItem(k))}catch{return null}}
+function toast(text){let el=$('#v77Toast');if(!el){el=document.createElement('div');el.id='v77Toast';el.className='v77-toast';document.body.appendChild(el)}el.textContent=text;el.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('show'),2600)}
+function current(){return loadJson(AUTO)}
+function normalizeSettings(){settings={...defaults,...settings};settings.decisionTimer=[0,15,30,45].includes(Number(settings.decisionTimer))?Number(settings.decisionTimer):0}
+normalizeSettings();
+
+// Blokuje zapis zakończonej kariery z beforeunload podczas pełnego resetu.
+Storage.prototype.setItem=function(k,v){if(this===localStorage&&resetting&&k===AUTO)return;return storageSet.call(this,k,v)};
+Storage.prototype.removeItem=function(k){return storageRemove.call(this,k)};
+
+function saveSettings(){storageSet.call(localStorage,OPT,JSON.stringify(settings));applySettings();renderOptions()}
+function applySettings(){
+ document.body?.classList.toggle('v77-blind-odds',!!settings.blindOdds);
+ document.body?.classList.toggle('v77-no-animations',!settings.animations);
+ document.body?.classList.toggle('v77-compact-history',!!settings.compactHistory);
+ const ver=$('.mini-user span');if(ver)ver.textContent='● online • V7.7';
+ restartDecisionTimer();
+}
+function weekInfo(s){const turn=Math.max(1,Number(s?.turn||1)),year=2026+Math.floor((turn-1)/52),week=((turn-1)%52)+1;return{year,week}}
+function slotInfo(n){const s=loadJson(SLOT+n);if(!s)return null;const w=weekInfo(s);return{s,meta:s._saveMeta||{},year:w.year,week:w.week}}
+function fmtDate(x){try{return new Date(x).toLocaleString('pl-PL',{dateStyle:'short',timeStyle:'short'})}catch{return'—'}}
+function saveSlot(n){const s=current();if(!s)return toast('Brak aktywnej kariery do zapisania.');const copy=structuredClone(s);copy.melons=Math.max(0,Number(localStorage.getItem(WALLET)??copy.melons??0));copy._saveMeta={savedAt:new Date().toISOString(),version:'7.7'};localStorage.setItem(SLOT+n,JSON.stringify(copy));toast(`Zapisano karierę w slocie ${n}.`);renderOptions()}
+function loadSlot(n){const x=slotInfo(n);if(!x)return toast(`Slot ${n} jest pusty.`);if(!confirm(`Wczytać slot ${n}: ${x.s.nickname||'Użytkownik'}? Bieżący postęp zostanie zastąpiony.`))return;storageSet.call(localStorage,AUTO,JSON.stringify(x.s));storageSet.call(localStorage,WALLET,String(Math.max(0,Number(x.s.melons||0))));sessionStorage.setItem('melon_v77_loaded_slot',String(n));location.reload()}
+function deleteSlot(n){if(!slotInfo(n))return;if(!confirm(`Usunąć zapis ze slotu ${n}?`))return;localStorage.removeItem(SLOT+n);toast(`Usunięto slot ${n}.`);renderOptions()}
+function writeBackup(label='AUTO'){const s=current();if(!s)return false;const copy=structuredClone(s);copy.melons=Math.max(0,Number(localStorage.getItem(WALLET)??copy.melons??0));copy._saveMeta={savedAt:new Date().toISOString(),version:'7.7',label};storageSet.call(localStorage,BACKUP,JSON.stringify(copy));return true}
+function loadBackup(){const s=loadJson(BACKUP);if(!s)return toast('Nie ma jeszcze kopii bezpieczeństwa.');if(!confirm(`Wczytać kopię bezpieczeństwa kariery ${s.nickname||'Użytkownik'}?`))return;storageSet.call(localStorage,AUTO,JSON.stringify(s));storageSet.call(localStorage,WALLET,String(Math.max(0,Number(s.melons||0))));location.reload()}
+function clearRuntime(){
+ const keep=new Set([OPT,BACKUP,LAST]);
+ const remove=[];
+ for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(!k)continue;if(k.startsWith(SLOT))continue;if(keep.has(k))continue;if(k===AUTO||k===WALLET||k.startsWith('melon_'))remove.push(k)}
+ remove.forEach(k=>storageRemove.call(localStorage,k));
+ for(let i=sessionStorage.length-1;i>=0;i--){const k=sessionStorage.key(i);if(k&&k.startsWith('melon_'))sessionStorage.removeItem(k)}
+}
+function fullReset(source){
+ const s=current();
+ const msg=s?.ended?'Rozpocząć nową karierę od zera? Ręczne sloty zapisu zostaną zachowane.':'Rozpocząć nową karierę od zera? Bieżący niezapisany postęp zostanie utracony.';
+ if(!confirm(msg))return;
+ if(s){try{const copy=structuredClone(s);copy._saveMeta={savedAt:new Date().toISOString(),version:'7.7',label:source||'RESET'};storageSet.call(localStorage,LAST,JSON.stringify(copy));storageSet.call(localStorage,BACKUP,JSON.stringify(copy))}catch{}}
+ resetting=true;clearRuntime();
+ sessionStorage.setItem('melon_v77_fresh_start','1');
+ location.replace(`${location.pathname}?fresh=${Date.now()}`);
+}
+function bindResetFix(){
+ document.addEventListener('click',e=>{
+   const btn=e.target.closest?.('#endingNewCareerBtn,#newCareerBtn');if(!btn)return;
+   e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();fullReset(btn.id);
+ },true);
+}
+function gameplayHtml(){return`<section class="v77-option-section"><div class="v77-section-head"><div><span class="v77-kicker">ROZGRYWKA</span><h3>Urozmaicenia kariery</h3></div></div><div class="v77-option-grid">
+<label class="v77-setting"><span><b>Ukryte szanse</b><small>Nie pokazuj procentów przed decyzją.</small></span><input type="checkbox" data-v77-setting="blindOdds" ${settings.blindOdds?'checked':''}></label>
+<label class="v77-setting"><span><b>Limit czasu</b><small>Po upływie czasu gra wybierze losową odpowiedź.</small></span><select data-v77-setting="decisionTimer"><option value="0" ${settings.decisionTimer===0?'selected':''}>Bez limitu</option><option value="45" ${settings.decisionTimer===45?'selected':''}>45 sekund</option><option value="30" ${settings.decisionTimer===30?'selected':''}>30 sekund</option><option value="15" ${settings.decisionTimer===15?'selected':''}>15 sekund</option></select></label>
+<label class="v77-setting"><span><b>Potwierdzaj ryzyko</b><small>Pytaj przed kliknięciem decyzji ryzykownej.</small></span><input type="checkbox" data-v77-setting="confirmRisky" ${settings.confirmRisky?'checked':''}></label>
+<label class="v77-setting"><span><b>Automatyczny backup</b><small>Twórz kopię zapasu po każdym rozegranym tygodniu.</small></span><input type="checkbox" data-v77-setting="autoBackup" ${settings.autoBackup?'checked':''}></label>
+<label class="v77-setting"><span><b>Animacje interfejsu</b><small>Wyłącz dla spokojniejszego i szybszego interfejsu.</small></span><input type="checkbox" data-v77-setting="animations" ${settings.animations?'checked':''}></label>
+<label class="v77-setting"><span><b>Kompaktowa historia</b><small>Zmniejsza wpisy historii kariery.</small></span><input type="checkbox" data-v77-setting="compactHistory" ${settings.compactHistory?'checked':''}></label>
+</div></section>`}
+function savesHtml(){
+ const rows=[1,2,3,4,5].map(n=>{const x=slotInfo(n);if(!x)return`<div class="v77-slot empty"><div><strong>SLOT ${n}</strong><span>Pusty zapis</span></div><div class="v77-slot-actions"><button class="btn small" data-v77-save="${n}">ZAPISZ</button></div></div>`;const s=x.s;return`<div class="v77-slot"><div><strong>SLOT ${n} • ${esc(s.nickname||'Użytkownik')}</strong><span>Rok ${x.year}, tydz. ${x.week}/52 • LVL ${Number(s.level||1)} • ${Number(s.melons||0)} 🍉 • ${fmtDate(x.meta.savedAt)}</span></div><div class="v77-slot-actions"><button class="btn small" data-v77-save="${n}">NADPISZ</button><button class="btn small primary" data-v77-load="${n}">WCZYTAJ</button><button class="btn small danger" data-v77-delete="${n}">USUŃ</button></div></div>`}).join('');
+ const b=loadJson(BACKUP);return`<section class="v77-option-section"><div class="v77-section-head"><div><span class="v77-kicker">ZAPIS GRY</span><h3>Menedżer zapisów</h3></div><button class="btn small" id="v77QuickBackup">UTWÓRZ BACKUP</button></div><div class="v77-slots">${rows}</div><div class="v77-backup"><div><b>Kopia bezpieczeństwa</b><span>${b?`${esc(b.nickname||'Użytkownik')} • ${fmtDate(b._saveMeta?.savedAt)}`:'Brak kopii bezpieczeństwa'}</span></div><button class="btn small" id="v77LoadBackup" ${b?'':'disabled'}>WCZYTAJ BACKUP</button></div><p class="v77-note">Sloty są niezależne od automatycznego zapisu kariery. Nowa kariera nie usuwa ręcznych slotów.</p></section>`}
+function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderOptions(){const mount=$('#v77OptionsMount');if(!mount)return;mount.innerHTML=gameplayHtml()+savesHtml()+`<div class="v77-options-footer"><button class="btn small" id="v77Defaults">PRZYWRÓĆ DOMYŚLNE OPCJE</button><span>Ustawienia są zapisywane automatycznie.</span></div>`;bindOptionsUi()}
+function bindOptionsUi(){
+ $$('[data-v77-setting]').forEach(el=>el.onchange=()=>{const k=el.dataset.v77Setting;settings[k]=el.type==='checkbox'?el.checked:Number(el.value);saveSettings()});
+ $$('[data-v77-save]').forEach(b=>b.onclick=()=>saveSlot(Number(b.dataset.v77Save)));
+ $$('[data-v77-load]').forEach(b=>b.onclick=()=>loadSlot(Number(b.dataset.v77Load)));
+ $$('[data-v77-delete]').forEach(b=>b.onclick=()=>deleteSlot(Number(b.dataset.v77Delete)));
+ const qb=$('#v77QuickBackup');if(qb)qb.onclick=()=>{if(writeBackup('RĘCZNY')){toast('Utworzono kopię bezpieczeństwa.');renderOptions()}else toast('Brak aktywnej kariery.')};
+ const lb=$('#v77LoadBackup');if(lb)lb.onclick=loadBackup;
+ const d=$('#v77Defaults');if(d)d.onclick=()=>{settings={...defaults};saveSettings();toast('Przywrócono ustawienia domyślne.')};
+}
+function setupOptionsModal(){const modal=$('#optionsModal');if(!modal)return;modal.querySelector('.modal-window')?.classList.add('v77-options-window');renderOptions();const btn=$('#optionsBtn');if(btn)btn.addEventListener('click',()=>setTimeout(renderOptions,0));}
+function bindRiskConfirm(){document.addEventListener('click',e=>{const btn=e.target.closest?.('#choiceGrid .choice');if(!btn||!settings.confirmRisky||btn.dataset.v77Confirmed==='1')return;if(!/DECYZJA\s+RYZYKOWNA/i.test(btn.innerText||''))return;e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();if(confirm('To decyzja ryzykowna. Na pewno chcesz ją podjąć?')){btn.dataset.v77Confirmed='1';setTimeout(()=>btn.click(),0)}},true)}
+function ensureTimerUi(){let el=$('#v77DecisionTimer');if(el)return el;const grid=$('#choiceGrid');if(!grid)return null;el=document.createElement('div');el.id='v77DecisionTimer';el.className='v77-decision-timer hidden';grid.parentNode.insertBefore(el,grid);return el}
+function stopDecisionTimer(){if(timerId){clearInterval(timerId);timerId=null}const el=$('#v77DecisionTimer');if(el)el.classList.add('hidden')}
+function restartDecisionTimer(){stopDecisionTimer();const sec=Number(settings.decisionTimer||0),buttons=$$('#choiceGrid .choice');if(!sec||!buttons.length)return;const el=ensureTimerUi();if(!el)return;timerEnd=Date.now()+sec*1000;el.classList.remove('hidden');const tick=()=>{const left=Math.max(0,Math.ceil((timerEnd-Date.now())/1000));el.innerHTML=`⏱️ Czas na decyzję: <b>${left}s</b>`;if(left<=0){stopDecisionTimer();const current=$$('#choiceGrid .choice');if(current.length){const b=current[Math.floor(Math.random()*current.length)];b.dataset.v77Confirmed='1';toast('Czas minął — wylosowano decyzję.');b.click()}}};tick();timerId=setInterval(tick,250)}
+function observeChoices(){const grid=$('#choiceGrid');if(!grid)return;new MutationObserver(()=>setTimeout(restartDecisionTimer,0)).observe(grid,{childList:true,subtree:true})}
+function observeAutosave(){const turn=$('#turnSubtitle');if(!turn)return;let last='';new MutationObserver(()=>{const now=turn.textContent||'';if(now===last)return;last=now;if(settings.autoBackup)setTimeout(()=>writeBackup('AUTO'),50)}).observe(turn,{childList:true,characterData:true,subtree:true})}
+function initFreshGuard(){if(sessionStorage.getItem('melon_v77_fresh_start')){sessionStorage.removeItem('melon_v77_fresh_start');storageRemove.call(localStorage,AUTO);storageRemove.call(localStorage,WALLET)}}
+function init(){initFreshGuard();bindResetFix();setupOptionsModal();bindRiskConfirm();observeChoices();observeAutosave();applySettings();if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./service-worker.js?v=7.7.0').catch(()=>{});if(sessionStorage.getItem('melon_v77_loaded_slot')){const n=sessionStorage.getItem('melon_v77_loaded_slot');sessionStorage.removeItem('melon_v77_loaded_slot');setTimeout(()=>toast(`Wczytano slot ${n}.`),500)}}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
