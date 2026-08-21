@@ -1,6 +1,6 @@
 {
-  "databaseVersion": "7.3.0",
-  "updated": "2026-08-19",
+  "databaseVersion": "7.4.0",
+  "updated": "2026-08-21",
   "packs": [
     "../events-v5.json"
   ],
@@ -26,5 +26,17 @@
       "minusMultiplierMin": 0.9,
       "minusMultiplierMax": 1.25
     }
+  },
+  "melonEconomy": {
+    "goodDecisionRewardChance": 0.45,
+    "goodDecisionRewardMin": 0,
+    "goodDecisionRewardMax": 20,
+    "maxPositiveChance": 95,
+    "boosts": [
+      {"label": "Bez wsparcia", "cost": 0, "bonus": 0},
+      {"label": "+10 p.p.", "cost": 15, "bonus": 10},
+      {"label": "+20 p.p.", "cost": 30, "bonus": 20},
+      {"label": "+30 p.p.", "cost": 50, "bonus": 30}
+    ]
   }
 }
