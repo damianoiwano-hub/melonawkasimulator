@@ -1,5 +1,5 @@
 {
-  "databaseVersion": "7.8.0",
+  "databaseVersion": "7.9.0",
   "updated": "2026-08-21",
   "packs": [
     "../events-v5.json",
@@ -10,7 +10,8 @@
     "automatic-events.json"
   ],
   "usersFile": "users.txt",
-  "achievementsFile": "achievements-v78.json",
+  "achievementsFile": "achievements-v79.json",
+  "careerStartFile": "career-start-v79.json",
   "decisionPointDefaults": {
     "positive": {
       "plusChanceMin": 65,
