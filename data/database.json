@@ -1,8 +1,9 @@
 {
-  "databaseVersion": "7.5.1",
+  "databaseVersion": "7.6.0",
   "updated": "2026-08-21",
   "packs": [
-    "../events-v5.json"
+    "../events-v5.json",
+    "events-community-v76.json"
   ],
   "automaticEventChance": 0.28,
   "automaticPacks": [
