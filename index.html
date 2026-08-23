@@ -10,15 +10,16 @@
 <meta property="og:type" content="website">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles-v7.css?v=7.13.0">
-<link rel="stylesheet" href="discord-v74.css?v=7.13.0">
-<link rel="stylesheet" href="discord-nav-v75.css?v=7.13.0">
-<link rel="stylesheet" href="game-options-v77.css?v=7.13.0">
-<link rel="stylesheet" href="achievements-v78.css?v=7.13.0">
-<link rel="stylesheet" href="start-balance-v79.css?v=7.13.0">
-<link rel="stylesheet" href="color-v710.css?v=7.13.0">
-<link rel="stylesheet" href="gala-fix-v711.css?v=7.13.0">
-<link rel="stylesheet" href="gala-fix-v712.css?v=7.13.0">
+<link rel="stylesheet" href="styles-v7.css?v=7.14.0">
+<link rel="stylesheet" href="discord-v74.css?v=7.14.0">
+<link rel="stylesheet" href="discord-nav-v75.css?v=7.14.0">
+<link rel="stylesheet" href="game-options-v77.css?v=7.14.0">
+<link rel="stylesheet" href="achievements-v78.css?v=7.14.0">
+<link rel="stylesheet" href="start-balance-v79.css?v=7.14.0">
+<link rel="stylesheet" href="color-v710.css?v=7.14.0">
+<link rel="stylesheet" href="gala-fix-v711.css?v=7.14.0">
+<link rel="stylesheet" href="gala-fix-v712.css?v=7.14.0">
+<link rel="stylesheet" href="relations-v714.css?v=7.14.0">
 </head>
 <body>
 <div class="discord-shell">
@@ -44,7 +45,7 @@
       <div class="channel special">złote-melony</div>
       <div class="channel">historia-serwera</div>
     </div>
-    <div class="discord-userbar"><div class="mini-avatar">🍉</div><div class="mini-user"><strong>Melonawka Sim</strong><span>● online • V7.13</span></div></div>
+    <div class="discord-userbar"><div class="mini-avatar">🍉</div><div class="mini-user"><strong>Melonawka Sim</strong><div class="version-v714">● online • V7.14</div></div></div>
   </aside>
 
   <main class="discord-main">
@@ -74,7 +75,7 @@
         <aside class="col">
           <div class="panel profile"><div class="avatar">🍉</div><h2 id="profileNick">Użytkownik</h2><div class="role" id="profileRole">NOWICJUSZ</div>
             <div class="numbers"><div><span>LVL</span><strong id="levelValue">1</strong></div><div><span>STAŻ</span><strong id="tenureValue">0 tyg.</strong></div><div><span>PUNKTY</span><strong id="scoreValue">0</strong></div></div>
-            <div class="level-progress-wrap"><div class="level-progress-head"><span>POSTĘP POZIOMU</span><b id="levelProgressText">0 / 250 XP do poziomu 2</b></div><div class="level-progress"><div id="levelProgressFill"></div></div></div>
+            <div class="level-progress-wrap"><div class="level-progress-head"><span>POSTĘP POZIOMU</span><b id="levelProgressText">0 / 300 XP do poziomu 2</b></div><div class="level-progress"><div id="levelProgressFill"></div></div></div>
             <div class="mini"><div><span>Status</span><b id="statusValue">Aktywny</b></div><div><span>Melony</span><b id="moneyValue">100</b></div><div><span>Seria</span><b id="streakValue">0</b></div></div>
           </div>
           <div class="panel stats"><h3>PARAMETRY UŻYTKOWNIKA</h3><div id="statsBars" class="bars"></div></div>
@@ -89,7 +90,7 @@
         <aside class="col side">
           <div class="panel summary"><div class="eyebrow">BILANS KARIERY</div><div class="summary-grid"><div><span>Eventy</span><strong id="eventsCount">0</strong></div><div><span>Pozytywne</span><strong id="goodChoices">0</strong></div><div><span>Negatywne</span><strong id="badChoices">0</strong></div><div><span>Zdarzenia losowe</span><strong id="autoEventsCount">0</strong></div><div><span>Najwyższy LVL</span><strong id="bestLevel">1</strong></div></div></div>
           <div class="panel milestones"><h3>OSIĄGNIĘCIA</h3><div id="milestonesList" class="milestones-list"></div></div>
-          <div class="panel career-goals"><h3>MOŻLIWE ZAKOŃCZENIA</h3><div class="goal moderator"><b>🛡️ ZOSTAJESZ MODERATOREM</b><span>LVL 10+, reputacja 75+, zaufanie 80+, kontrowersyjność maks. 35 i co najmniej 26 tygodni.</span></div><div class="goal ban"><b>🔨 DOSTAJESZ BANA</b><span>Reputacja lub zaufanie spada do 3 albo kontrowersyjność dobija do 98.</span></div></div>
+          <div class="panel career-goals"><h3>MOŻLIWE ZAKOŃCZENIA</h3><div class="goal moderator"><b>🛡️ ZOSTAJESZ MODERATOREM</b><span>LVL 10+, reputacja 75+, zaufanie 80+, kontrowersyjność maks. 35 i co najmniej 26 tygodni. Od V7.14 każdy kolejny poziom wymaga większej liczby XP.</span></div><div class="goal ban"><b>🔨 DOSTAJESZ BANA</b><span>Reputacja lub zaufanie spada do 3 albo kontrowersyjność dobija do 98.</span></div></div>
           <div class="panel golden-melons-card"><div class="eyebrow">COROCZNA GALA</div><h3>🏆 ZŁOTE MELONY</h3><div class="gala-year">Edycja <strong id="goldenMelonsYear">2026</strong></div><p id="goldenMelonsStatus">Gala uruchomi się automatycznie w 52. tygodniu.</p><button class="btn wide gold" id="goldenMelonsBtn">PODGLĄD GALI</button></div>
           <div class="panel quick"><h3>SZYBKIE AKCJE</h3><div class="db-status" id="dbStatusGame">Ładowanie bazy eventów…</div><button class="btn wide" id="exportSaveBtn">⬇ EKSPORTUJ ZAPIS</button><label class="btn wide filebtn">⬆ IMPORTUJ ZAPIS<input type="file" id="importSaveInput" accept=".json"></label><button class="btn wide danger" id="newCareerBtn">↻ NOWA KARIERA</button></div>
         </aside>
@@ -108,13 +109,15 @@
 
 <div id="endingModal" class="modal hidden"><div class="modal-window ending-window"><div class="ending-icon" id="endingIcon">🏁</div><div class="eyebrow">KONIEC KARIERY</div><h2 id="endingTitle">KARIERA ZAKOŃCZONA</h2><p id="endingText"></p><button class="btn primary big" id="endingNewCareerBtn">ROZPOCZNIJ NOWĄ KARIERĘ OD POZIOMU 1</button></div></div>
 <div id="toast" class="toast hidden"></div>
-<script src="game-options-v77.js?v=7.13.0"></script>
-<script src="app-v73.js?v=7.13.0"></script>
-<script src="melon-economy-v74.js?v=7.13.0"></script>
-<script src="discord-nav-v75.js?v=7.13.0"></script>
-<script src="users-live-v751.js?v=7.13.0"></script>
-<script src="achievements-v79.js?v=7.13.0"></script>
-<script src="start-balance-v79.js?v=7.13.0"></script>
-<script src="v712-systems.js?v=7.13.0"></script>
-<script src="gala-fix-v712.js?v=7.13.0"></script>
+<script src="game-options-v77.js?v=7.14.0"></script>
+<script src="app-v714.js?v=7.14.0"></script>
+<script src="melon-economy-v74.js?v=7.14.0"></script>
+<script src="discord-nav-v75.js?v=7.14.0"></script>
+<script src="users-live-v751.js?v=7.14.0"></script>
+<script src="achievements-v79.js?v=7.14.0"></script>
+<script src="start-balance-v79.js?v=7.14.0"></script>
+<script src="v712-systems.js?v=7.14.0"></script>
+<script src="relations-v714.js?v=7.14.0"></script>
+<script src="gala-fix-v712.js?v=7.14.0"></script>
+<script src="gala-sync-v714.js?v=7.14.0"></script>
 </body></html>

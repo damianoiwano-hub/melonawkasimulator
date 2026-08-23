@@ -1,0 +1,26 @@
+[
+  {
+    "id": "first_post",
+    "title": "Pierwszy większy post",
+    "category": "SPOŁECZNOŚĆ",
+    "description": "Po raz pierwszy masz okazję napisać coś, co zobaczy spora część Melonawki. Pierwszego większego posta nie da się przeżyć drugi raz.",
+    "weight": 14,
+    "minTurn": 1,
+    "enabled": true,
+    "oneTime": true,
+    "choices": [
+      {
+        "label": "Napisz rzeczowo",
+        "result": "Układasz pierwszy większy wpis bez przesadnego podkręcania tonu. Ludzie odpowiadają merytorycznie, a kilka osób zaczyna kojarzyć twój nick z sensownym wkładem w rozmowę.",
+        "effects": {"reputation": 6,"activity": 5,"trust": 4,"popularity": 2,"score": 30},
+        "outcome": "positive"
+      },
+      {
+        "label": "Wybierz najgorszy możliwy ton",
+        "result": "Pierwszy większy wpis od razu ustawia cię w centrum niepotrzebnego spięcia. Zamiast zapamiętać temat, część użytkowników zapamiętuje przede wszystkim twój agresywny sposób wejścia do dyskusji.",
+        "effects": {"popularity": 8,"controversy": 10,"reputation": -3,"activity": 6,"score": 18},
+        "outcome": "negative"
+      }
+    ]
+  }
+]

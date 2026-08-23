@@ -1,9 +1,10 @@
 {
-  "databaseVersion": "7.13.0",
-  "updated": "2026-08-21",
+  "databaseVersion": "7.14.0",
+  "updated": "2026-08-23",
   "packs": [
     "../events-v5.json",
-    "events-community-v76.json"
+    "events-community-v76.json",
+    "events-overrides-v714.json"
   ],
   "automaticEventChance": 0.28,
   "weeklyEventsPerWeek": 1,
@@ -15,6 +16,18 @@
   "achievementsFile": "achievements-v79.json",
   "careerStartFile": "career-start-v79.json",
   "goldenMelonsCategoriesFile": "golden-melons-v710.json",
+  "oneTimeEventIds": [
+    "first_post"
+  ],
+  "leveling": {
+    "baseXp": 300,
+    "growthPerLevel": 75,
+    "maxLevel": 50
+  },
+  "relations": {
+    "activeInteractionsPerWeek": 2,
+    "cooldownSameUserWeeks": 1
+  },
   "decisionPointDefaults": {
     "positive": {
       "plusChanceMin": 65,
